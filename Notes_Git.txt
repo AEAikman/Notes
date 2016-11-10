@@ -30,8 +30,3 @@ type abc.txt to show
 
 git reset HEAD~3
 ~ = number of commits to reverse
-
-
-test reset
-okay?
-got it
