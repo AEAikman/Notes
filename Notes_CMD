@@ -5,3 +5,10 @@ echo > abc.txt
 md
 rm
 cd
+
+
+tree /f
+to list dir structure
+
+dir
+also works

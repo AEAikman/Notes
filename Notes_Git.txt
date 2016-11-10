@@ -37,3 +37,8 @@ to remove remote
 
 git remote add origin https://github.com/AEAikman/Notes.git
 git push -u origin master
+
+git checkout to reset
+
+git config user.name 
+for username

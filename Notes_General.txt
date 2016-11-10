@@ -358,6 +358,8 @@ head and tail in export scripts
 choose 0 frame for anim
 clicking camera to constrain to viewport (camera cuts = all, on camera track = selected viewport)
 seq shift click to snap to key
+if textures keep streaming in render, try restarting engine
+
 
 
 lens
