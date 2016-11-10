@@ -30,3 +30,10 @@ type abc.txt to show
 
 git reset HEAD~3
 ~ = number of commits to reverse
+
+
+git remote rm origin
+to remove remote
+
+git remote add origin https://github.com/AEAikman/Notes.git
+git push -u origin master
