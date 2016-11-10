@@ -1,0 +1,165 @@
+set batLoc=%0
+cd ..\..
+
+
+%..\ to go up
+xcopy source dest (/y to overwrite)
+robotcopy source dest (/e to include empty folders)
+
+
+%cd% will give you the current working directory (variable)
+%~dp0 will give you the full path to the batch file's directory (static)
+
+
+set ROOT=c:\programs 
+set SRC_ROOT=%ROOT%\System\Source
+
+set curDate=%date:~10,4%%date:~7,2%%date:~4,2% for date
+
+if exist %destTwo%\%curDate% (Echo %destTwo%\%curDate% Exists & Echo %destTwo%\%curDate% Found >> Result.txt) Else (md %destTwo%\%curDate% & Echo %destTwo%\%curDate% not Found >> Result.txt)
+if else and echo to file
+
+C:\>set YYYYMMDD=%DATE:~10,4%%DATE:~4,2%%DATE:~7,2%
+
+C:\>echo %YYYYMMDD%
+20150806
+The substring arguments to extract the elements of the date string are in the format %variable:~startposition,numberofchars%, so if the "T" in Thursday in the string "Thu 08/06/2015" is at position 0, the 10th character is the "2" of 2015 and I want 4 characters, i.e., "2015", so %DATE:10,4% will give me those characters. Or you can also think of the first number as the numer of characters to be skipped, i.e., %variable:~num_chars_to_skip,numberofchars%. I can then append %DATE:~4,2% to get "08" for the month followed by %DATE:~7,2% to extract the day, i.e., "06" if the date is August 6, 2015 represented in the %DATE% variable as "Thu 08/06/2015". Reference with additional links
+
+:: = comment
+
+
+NOT USED
+
+::get list of files
+dir *.exr /b > exrs.txt
+::set result of list into variables
+set count=1
+setlocal enabledelayedexpansion
+for /f %%a in (result.txt) do (
+set line=%%a
+set var!count!=!line!
+set /a count +=1
+)
+xcopy %var1% %destOne% /y
+
+
+
+
+
+
+::get list of files
+dir *.exr /b > exrs.txt
+::set result of list into variables
+set count=1
+setlocal enabledelayedexpansion
+for /f %%a in (result.txt) do (
+set line=%%a
+set var!count!=!line!
+set /a count +=1
+)
+::for /l %%i in (1,1,5)  do copy %var1% %curDir%\EXR /y
+copy %var1% %curDir%\EXR /y
+::xcopy %var2% %curDir%\EXR /y
+
+
+IF EXIST %inputFolder%\*.%extension% GOTO exists
+
+goto end
+
+:exists
+
+echo exists
+
+:end
+
+
+
+
+
+:checkForEXR
+IF EXIST %curDir%\*.exr GOTO exists
+
+goto end
+
+:exists
+
+echo exists >> Result.txt 
+
+:end
+
+
+
+
+
+call :docopy %curDir% %destOne%
+goto :eof
+:docopy
+xcopy /S /E /I %1 %2\%~n1
+goto :eof
+
+
+
+you can use %~n to extract the name of the directory
+
+
+
+
+
+
+
+FOR %%i IN ("%file%") DO (
+ECHO filedrive=%%~di
+ECHO filepath=%%~pi
+ECHO filename=%%~ni
+ECHO fileextension=%%~xi
+)
+
+Echo. for a new line
+
+
+
+xcopy /y to overwrite /e to copy all folders
+same for robocopy
+
+SET /P variable=[promptString]
+
+The /P switch allows you to set the value of a variable to a line of input entered by the user. Displays the specified promptString before reading the line of input. The promptString can be empty.
+	
+You can use set with the /p argument:
+
+SET /P variable=[promptString]
+
+The /P switch allows you to set the value of a variable to a line of input entered by the user. Displays the specified promptString before reading the line of input. The promptString can be empty.
+So, simply use something like
+
+set /p Input=Enter some text:
+Later you can use that variable as argument to a command:
+
+myCommand %Input%
+Be careful though, that if your input might contain spaces it's probably a good idea to quote it:
+
+myCommand "%Input%"
+
+
+
+
+
+You can break up long lines with the caret ^ as long as you remember that the caret and the newline following it are completely removed. So, if there should be a space where you're breaking the line, include a space. (More on that below.)
+
+Example:
+
+copy file1.txt file2.txt
+would be written as:
+
+copy.exe file1.txt^
+ file2.txt
+
+
+
+
+ECHO %shotFullName%> tempfile.txt
+FOR %%? IN (tempfile.txt) DO ( SET /A shotNameLength=%%~z? - 2 )
+del tempfile.txt
+
+to find length
+

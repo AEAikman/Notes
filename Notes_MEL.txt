@@ -1,0 +1,36 @@
+$numTokens = `tokenize "A/B//C/D" "//" $buffer`; //encapsulation
+
+
+
+
+string $suffix = `match "teeth$" bShapeArray[0]`;
+
+print $suffix;
+
+
+
+
+
+The first argument is the input string. The second and third arguments are the starting and ending character positions within the input string. substring returns the portion of the first string argument bounded by starting and ending positions.
+Return value
+
+string	Sub-string
+MEL examples
+
+// returns the string "Hello".
+substring "Hello There" 1 5;
+
+
+
+if( `objExists surface1` ) {
+    select surface1;
+} else {
+    warning("No surface exists");
+}
+
+
+whatIs 
+to find out stuff
+
+
+polyEditUV -pu 0 -pv 0 -su -1 -sv 1 ; //mirrors uvs accross 0,0 in UV

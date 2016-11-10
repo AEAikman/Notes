@@ -1,0 +1,377 @@
+List of Lists
+
+
+Document Updates
+
+postvis control
+motion blur
+aspect ratio 1.778
+building from source
+copying projects
+marque ctrl-alt drag
+won't render (goes to my docs) = reopen render window > restart
+copying ini files
+copying programData to fix random version issue
+alt dragging to fix broken cam in ue
+if lit when they shouldn't be = Indirect Lighting Cache Quality set to off (must be movable)
+r.streaming.poolsize XXX
+r.DepthOfFieldQuality 4
+update pose and refresh bones
+Actor Hidden in Game issues
+extra head/tail
+If blend shapes affect the wrong geo, make sure that the geo is skinned to the right joints.  It may also need to be combined.
+fix ae expressions using whip
+DDC information
+click "Create a Reference to MatineeActor"
+make sure to have persistent level selected
+if greenscreen is a little dark, set ao instensity to 0
+Migration needed notes
+restarting after migrating
+decapitalize selected in "Content Selected"
+Add a glossary - Actors
+make it "Target Point Actor"
+if it renders weird, change your aa method and change it back - maybe make sure you have everything saved - change a value and change it back if things have changed in the postvisControl without saving
+click play to preview?
+explain simulate?
+rack focus only work in pie and render
+random halos, try changing the aa method
+scene capture information
+pvc display layers
+may need to close and reopen render window if not rendering out frames
+if fbx export doesn't work check fbx export plugin "FBXExportAnimationOnly"
+Custom Depth set upgrade notes
+impromptu roughness map with lerp
+migrating multiple actors of a kind
+play in editor mode outlined?
+terminology?
+actor vs object
+bool vs variable vs true vs on
+units? = cm?
+basic navigation eg content browser
+advanced settings via down arrow
+crowds?
+a general overview?
+
+MAYA ITEMS
+Maya notes
+use hRig
+Everything bound to a joint
+at most max influences of 4
+no geo parented under joints or geo
+not geo parented under geo
+When selecting geo and joints to skin, use the button Select Jnt and Geo under hAutoRig
+Otherwise the headCtrl may be selected from the rig group 
+only the skeleton and geo should be selected when skinning
+you may then select or deselect geo from the geo group
+geo can have the suffix geo
+but only the top geo group can have geo
+no subgroups
+geo delete non deformer history and freeze transforms
+Inherits Transform off on Geo group, otherwise you get double transforms
+pivot point
+combine geo if possible
+material id consciousness
+Heavy Mesh
+
+
+
+Unreal questions
+
+playing exact frames - S
+bounds - Always Tick Pose and Refresh Bones
+many skeletal animations - S in Dev
+1 frame anm offsets - S
+media texture seek not working - S in Dev
+blutility anm controls (setting looping) - ?
+sequencer camera import - S in Dev
+Save As crashing due to Saved folder - ?
+Externally referenced warning - ?
+reordering groups in BP - ?
+maintaining pivot offset - ?
+have to save to render - ?
+scrubbing plate - S in Dev
+Select All command (console command) from blutility - ?
+indirect lighting cache just appear - ?
+trash frames at end - S in Dev
+
+
+
+
+Sequencer advantages
+	
+repeatable
+rendering doesn't require purging mem etc
+Undo possible
+Save possible
+sequencer interface improvements
+No need for level blueprint, but no hide player bool
+Set Start and end time
+Custom Start Time/End Time/Warmup Time when rendering
+4k rez preset
+Can create folders with Ctrl + Shift + N
+No 300mm lens crash
+Actors can exist as spawnables in level sequence and therefore be repeated
+warm up frame count
+sequencer fbx import export
+media framework overhaul
+Bugfix: Fixed an issue where Skeletal Animations would evaluate one frame ahead of where they were supposed to be.
+replacing camera is very easy
+camera import rotation of group not necessary, but cam rotation still is. (see MayaToUnreal_Camera_007_aa.mel)
+end frame may need to be split in order to not reset.  Solution: always export extra frames
+Shift D and Shift C for Cine Preview
+sequencer is def better in terms of deleting stuff with level sequence open, saving, etc.
+better for single monitor
+make sure to have the right level sequence open
+Maya Keying Hotkeys
+Camera : (LEGACY) Must place regular camera in scene (can right-click, make sure is not CineCam), copy Field of View from Angle of View in Maya, drag cam into sequencer, make sure auto play is on in seq, select camera, click Eye icon, import, import cam fbx for seq, check frame range, double check fov, create camera cut group, click "+ camera" on camera cut group then select camera (like director track), make sure "Keep Playback Range in Selection Bounds" on in option of sequencer, make sure the correct level sequence is selected after opening a new scene, make sure it at 24 fps, render.
+
+Camera : Create level sequence and save in shot folder. Set LS to Auto Play.  In Sequencer, click the camera icon to create a camera and automatically assign it to the Camera Cuts track.  Select the new camera and click the Eye icon next to the camera, then click Import and choose your camera fbx, making sure it is for Sequencer (denoted by the _SEQ suffix in the filename).  Select the camera, and in the details panel, expand Filmback Settings, and change Sensor Width and Sensor Height based upon the Camera Aperature in mm from Maya. Double check frame rate and range.  Click the Slate icon and render 
+
+JPG very fast but less info than PNG, probably negligible advantage
+export 3 frames of head and 1 frame of tail on everything (cam and anm, but don't offset cam frames) and it should work perfectly.
+Folders and labels in sequencer
+media player/texture more streamlined
+hide player optional through "Set Cinematic mode" in PVC
+potential future alembic import
+quick lens change options in the engine with the new cine cam
+
+
+Sequencer Disadvantages
+
+no quit when done for PIE (circumvented through PostVisControl)
+Cine Cam needs aperature set
+exports need extra frames to be accurate
+Need to Create a new LS every scene and then check on autoplay
+Media framework still doesn't render correctly or scrub
+previous media framework is no longer functional
+no arrow keys to move keys or reorganize tracks
+Can't add multiple actors to the same group
+Assigning a new actor to an existing group may disrupt that ability for the original actor to be dragged into the level sequence
+
+
+
+
+
+postvis control updates
+
+make AO force UseSkybox off                n
+When removing from all layers, set vis on again n
+set near clip plane                        n
+assign all actors white?                   n
+delay a layer to play at a certain time?   maybe
+empty layer contents from postvishelper?   achievable with two buttons
+skybox scale                               maybe
+motion blur default off                    maybe
+add use layers checkbox to helper          y
+add aa method                              y
+set actor hidden in game using helper?     doesn't work, may need to use pvc
+cleanup nones?                             y
+Auto connect to helper?
+open render view
+Array of Arrays?  Make a Struct. Put an Array in it. Make a Struct Array of your struct type. Isn't Extensible...
+select hidden
+auto import animation
+migration plugin
+
+
+
+Substance Painter notes
+
+Mesh must be stored locally (i.e. on the C: Drive etc)
+Shift to contrain rotation
+alt right click for light
+m for material
+c for solo map
+Ctrl+Right or left click to control brush settings
+
+
+
+things
+
+Roto
+Tracking Camera
+Comp effects
+Animation and Mocap adjustment
+Skinning
+Destruction sims
+blueprint
+documentation
+batch
+
+
+
+
+Commands
+
+r.streaming.poolsize XXX
+r.DepthOfFieldQuality 4
+[ConsoleVariables]
+r.Streaming.PoolSize=5000
+r.Streaming.PoolSize=5000
+r.DepthOfFieldQuality=4
+r.SetNearClipPlane 10
+
+
+
+ae particular
+
+spin amplitude
+turbulence offset
+
+
+
+
+
+Feel like I do (by Disclosure)
+
+Waterfalls
+
+
+/Game/Maps/BOH0450_h009_kd_test.BOH0450_h009_kd_test:PersistentLevel.BP_PostVisControl_05_102
+PersistentLevel.BP_PostVisControl_05_102
+
+
+
+Abstract Tasks
+
+Test 4 13                                     done
+test media framework                          basically the same but a little cleaner
+Test Fabric Engine                            Wait for info from Mike
+Test NeoFur                                   who knows
+Substance Designer                            important
+update doc                                    when able
+Helper Autolink/Plugin?                       maybe
+Write inEngine Tutorial for Helper/Control    when able - see FourThirteenBackup Project.  Recreate in 4.11 and check compatibility
+extra frames from export scripts?             ask aj
+Sep cam script                                done
+python
+c++
+
+
+
+
+make move finals rename thumbnail
+
+ccMaker                                                                                  DONE
+fix moveFinals to include thumnails folder and not sep shot folder for footage           DONE
+csv make triplicate with exr shot numbers for final (with options), avid, and review     DONE
+
+
+
+
+to encapsulate:
+
+
+
+evaluationManager -mode "off";
+
+runMyStuffHere()
+
+
+
+
+
+
+DDC info
+
+
+[InstalledDerivedDataBackendGraph]
+MinimumDaysToKeepFile=7
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
+Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Shared)
+Boot=(Type=Boot, Filename=\\HALONBLADE\HBlade\InProd\AP3S\Unreal\_postvis\DDC\Boot.ddc, MaxCacheSize=512)
+Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=17, FoldersToClean=-1, Path=\\HALONBLADE\HBlade\InProd\AP3S\Unreal\_postvis\DDC)
+Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=19, FoldersToClean=-1, Path=\\HALONBLADE\HBlade\InProd\AP3S\Unreal\_postvis\DDC, EnvPathOverride=UE-SharedDataCachePath)
+AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=19, FoldersToClean=-1, Path=\\HALONBLADE\HBlade\InProd\AP3S\Unreal\_postvis\DDC2, EnvPathOverride=UE-SharedDataCachePath2)
+Pak=(Type=ReadPak, Filename=%GAMEDIR%DerivedDataCache/DDC.ddp)
+EnginePak=(Type=ReadPak, Filename=\\HALONBLADE\HBlade\InProd\AP3S\Unreal\_postvis\DDC\DDC.ddp)
+
+
+
+Z:\InProd\MEG\Unreal\SAN_SanyaBeach\Config
+
+
+
+
+
+[InstalledDerivedDataBackendGraph]
+MinimumDaysToKeepFile=7
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
+Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Shared)
+Boot=(Type=Boot, Filename=\\HALONBLADE\HBlade\InProd\MEG\Unreal\DDC\Boot.ddc, MaxCacheSize=512)
+Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=17, FoldersToClean=-1, Path=\\HALONBLADE\HBlade\InProd\MEG\Unreal\DDC)
+Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=19, FoldersToClean=-1, Path=\\HALONBLADE\HBlade\InProd\MEG\Unreal\DDC, EnvPathOverride=UE-SharedDataCachePath)
+AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=19, FoldersToClean=-1, Path=\\HALONBLADE\HBlade\InProd\MEG\Unreal\DDC2, EnvPathOverride=UE-SharedDataCachePath2)
+Pak=(Type=ReadPak, Filename=%GAMEDIR%DerivedDataCache/DDC.ddp)
+EnginePak=(Type=ReadPak, Filename=\\HALONBLADE\HBlade\InProd\MEG\Unreal\DDC\DDC.ddp)
+
+
+
+evaluation mode Dependecy Graph
+vs Parallel
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+r.ShaderDevelopmentMode=1
+
+r.LightPropagationVolume=1
+
+r.ForwardLighting=1
+
+r.ssr.quality=4
+
+r.DepthOfFieldQuality=4
+
+
+
+Asset updates
+create starter template
+modify inis
+modify post vis to postvis
+BP_MuzzleFiring
+
+relink particles
+create particle starter project
+
+fix wiki links in body
+fix Creating effects outline format
+Update Maya Preparation section with prop information
+
+
+
+Documentation notes as of NOV 2016
+cine cam and seq advanced notes
+head and tail in export scripts
+choose 0 frame for anim
+clicking camera to constrain to viewport (camera cuts = all, on camera track = selected viewport)
+seq shift click to snap to key
+
+
+lens
+23.749
+13.36
+16
+
+
+
+
+253.019928
+
+253.019928
+
+cloud seeds
+314.007141
+9643.639648

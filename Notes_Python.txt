@@ -1,0 +1,326 @@
+"your %s is in the %s" % (object, location)
+or
+
+"your " + object + " is in the " + location  
+
+
+		bShapeSuffix = bShapeName[10:20]
+		suffixToUse = bShapeSuffix + "_"
+		cmds.connectAttr ( "Head1_Head_fk.AH", bShapeName + "." + suffixToUse + "AH", f=True )
+
+
+
+
+
+python("execfile('//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/python/CHR_HeadCtrlBlendShapeConnectionsSelectObj.py')")
+to execute python file from mel shelf button
+
+
+
+To reverse a list in Python, you want to use the reverse() method.
+myList = [0,1,2,3,4,5]
+myList. reverse()
+print myList.
+
+
+
+
+
+
+
+import sys
+
+def query_yes_no(question, default="yes"):
+    """Ask a yes/no question via raw_input() and return their answer.
+
+    "question" is a string that is presented to the user.
+    "default" is the presumed answer if the user just hits <Enter>.
+        It must be "yes" (the default), "no" or None (meaning
+        an answer is required of the user).
+
+    The "answer" return value is True for "yes" or False for "no".
+    """
+    valid = {"yes": True, "y": True, "ye": True,
+             "no": False, "n": False}
+    if default is None:
+        prompt = " [y/n] "
+    elif default == "yes":
+        prompt = " [Y/n] "
+    elif default == "no":
+        prompt = " [y/N] "
+    else:
+        raise ValueError("invalid default answer: '%s'" % default)
+
+    while True:
+        sys.stdout.write(question + prompt)
+        choice = raw_input().lower()
+        if default is not None and choice == '':
+            return valid[default]
+        elif choice in valid:
+            return valid[choice]
+        else:
+            sys.stdout.write("Please respond with 'yes' or 'no' "
+                             "(or 'y' or 'n').\n")
+
+
+
+def ask_ok(prompt, retries=4, complaint='Yes or no, please!'):
+    while True:
+        ok = raw_input(prompt)
+        if ok in ('y', 'ye', 'yes'):
+            return True
+        if ok in ('n', 'no', 'nop', 'nope'):
+            return False
+        retries = retries - 1
+        if retries < 0:
+            raise IOError('refusenik user')
+        print complaint
+
+
+
+
+
+
+
+
+
+def f(a, L=[]):
+    L.append(a)
+    return L
+
+print f(1)
+print f(2)
+print f(3)
+This will print
+
+[1]
+[1, 2]
+[1, 2, 3]
+If you don’t want the default to be shared between subsequent calls, you can write the function like this instead:
+
+def f(a, L=None):
+    if L is None:
+        L = []
+    L.append(a)
+    return L
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def cheeseshop(kind, *arguments, **keywords):
+    print "-- Do you have any", kind, "?"
+    print "-- I'm sorry, we're all out of", kind
+    for arg in arguments:
+        print arg
+    print "-" * 40
+    keys = sorted(keywords.keys())
+    for kw in keys:
+        print kw, ":", keywords[kw]
+
+
+It could be called like this:
+
+cheeseshop("Limburger", "It's very runny, sir.",
+           "It's really very, VERY runny, sir.",
+           shopkeeper='Michael Palin',
+           client="John Cleese",
+           sketch="Cheese Shop Sketch")
+
+
+and of course it would print:
+
+-- Do you have any Limburger ?
+-- I'm sorry, we're all out of Limburger
+It's very runny, sir.
+It's really very, VERY runny, sir.
+----------------------------------------
+client : John Cleese
+shopkeeper : Michael Palin
+sketch : Cheese Shop Sketch
+
+
+
+
+
+
+
+To get the full path to the directory a Python file is contained in, write this in that file:
+
+import os 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+
+
+
+
+You can list all files in the current directory using:
+
+import os
+for filename in os.listdir(os.getcwd()):
+   # do your stuff
+Or you can list only some files, depending on the file pattern using the glob module:
+
+import glob
+for filename in glob.glob('*.txt'):
+   # do your stuff
+It doesn't have to be the current directory you can list them in any path you want:
+
+path = '/some/path/to/file'
+
+for filename in os.listdir(path):
+    # do your stuff
+
+for filename in glob.glob(os.path.join(path, '*.txt')):
+    # do your stuff
+Or you can even use the pipe as you specified using fileinput
+
+import fileinput
+for line in fileinput.input():
+    # do your stuff
+And then use it with piping:
+
+ls -1 | python parse.py
+
+
+
+
+
+
+
+
+>>> import os
+>>> os.getcwd()
+'C:\\Python34'
+>>> os.chdir('C:\\Windows\\System32')
+>>> os.getcwd()
+'C:\\Windows\\System32'
+
+
+
+
+
+
+
+
+s = s[:pos] + s[(pos+1):]
+
+
+
+
+
+
+
+
+[x for (y,x) in sorted(zip(Y,X))]
+to sort list X based upon Y
+
+
+
+
+
+
+
+>>> import glob
+>>> glob.glob('./[0-9].*')
+['./1.gif', './2.txt']
+>>> glob.glob('*.gif')
+['1.gif', 'card.gif']
+>>> glob.glob('?.gif')
+['1.gif']
+
+
+
+
+
+os.rename("path/to/current/file.foo", "path/to/new/desination/for/file.foo")
+
+
+
+
+	# Testing for preexisting directories
+	try:
+		os.makedirs(backupDir)
+	except:
+		pass
+
+	
+Just use an absolute path when opening the filehandle for writing.
+
+import os.path
+
+save_path = 'C:/example/'
+
+name_of_file = raw_input("What is the name of the file: ")
+
+completeName = os.path.join(save_path, name_of_file+".txt")         
+
+file1 = open(completeName, "w")
+
+toFile = raw_input("Write what you want into the field")
+
+file1.write(toFile)
+
+file1.close()
+
+
+
+
+Use str.count:
+
+>>> nStr = '000123000123'
+>>> nStr.count('123')
+2
+
+
+
+
+
+def indent(lines, amount, ch=' '):
+    padding = amount * ch
+    return padding + ('\n'+padding).join(lines.split('\n'))
+
+text = '''\
+And the Lord God said unto the serpent,
+Because thou hast done this, thou art
+cursed above all cattle, and above every
+beast of the field; upon thy belly shalt
+thou go, and dust shalt thou eat all the
+days of thy life: And I will put enmity
+between thee and the woman, and between
+thy seed and her seed; it shall bruise
+thy head, and thou shalt bruise his
+heel.
+
+3:15-King James
+'''
+
+print 'text indented 4 spaces:'
+print indent(text, 4)
+
+
+
+
+
+
+with open("example2.txt", "w") as f:
+    f.write("I am an example.")
+
+
+
+
+in cmd
+pip install pyexcel
+pip install pandas
+etc
+

@@ -1,0 +1,13 @@
+Notes_Kuadro
+
+A: Always on top
+T + Dragging the mouse Up/Down: Change the opacity
+R + dragging the mouse: Rotate the image
+Delete: Close the image
+Control+Drag: Duplicate the image
+Left/Right arrows: Navigate between the images on the same folder
+R + Left/Right: Rotate the image
+H: Flip horizontally
+V: Flip vertically
+S: Save
+Space: Bring all to top

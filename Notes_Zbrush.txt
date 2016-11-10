@@ -1,0 +1,8 @@
+Notes_Zbrush
+
+Zmodeler
+Polygroup
+Click and hold and hit alt for new poly group
+
+may need to close maya and click GoZ to reinstall
+or even delete local shelf and do so

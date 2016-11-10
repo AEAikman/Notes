@@ -1,0 +1,12 @@
+Notes_Maya
+
+If Cam Orbit breaks
+Selection object
+View >
+Look at Selection 
+
+
+Ctrl+1
+Isolate Selection
+
+To Edge ring can't be used properly with symmetry on

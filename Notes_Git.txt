@@ -1,0 +1,28 @@
+Notes_Git
+
+
+
+add
+commit
+push
+pull
+
+
+git commit
+enter your message following the presented guidelines
+press Esc to make sure you are out of the insert mode
+then type :wq Enter 
+
+
+To list 
+git ls-tree -r master --name-only
+
+
+q to exit command shell details
+
+use putty and pageant to control ssh
+
+
+git add -A to add
+
+type abc.txt to show
