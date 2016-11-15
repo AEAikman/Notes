@@ -1,5 +1,7 @@
 Notes_Kuadro
 
+Right-click tray icon and select "About" to see hotkeys
+
 A: Always on top
 T + Dragging the mouse Up/Down: Change the opacity
 R + dragging the mouse: Rotate the image
@@ -11,3 +13,5 @@ H: Flip horizontally
 V: Flip vertically
 S: Save
 Space: Bring all to top
+Shift+Alt+Left click to zoom
+Shift+F to frame Window to image

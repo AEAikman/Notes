@@ -358,6 +358,7 @@ head and tail in export scripts
 choose 0 frame for anim
 clicking camera to constrain to viewport (camera cuts = all, on camera track = selected viewport)
 seq shift click to snap to key
+right-clicking to load
 if textures keep streaming in render, try restarting engine
 
 
@@ -377,3 +378,8 @@ lens
 cloud seeds
 314.007141
 9643.639648
+
+
+
+select objects filter for root script
+
