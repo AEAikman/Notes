@@ -10,3 +10,26 @@ Ctrl+1
 Isolate Selection
 
 To Edge ring can't be used properly with symmetry on
+
+Alt+V to Toggle playback
+
+To even out two locations
+select both objects
+select x attribute
+press enter
+select z and enter
+viola
+
+
+return key exits field
+num enter keye remains in field
+
+focus
+camera
+group both separately
+point constr cam group to focus
+motion path constrain focus group 
+set frame range
+
+
+assign objects to diplay layer to set color

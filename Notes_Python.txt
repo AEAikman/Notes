@@ -324,3 +324,20 @@ pip install pyexcel
 pip install pandas
 etc
 
+
+Inputs
+
+applicant = input("Enter the applicant's name: ")
+interviewer = input("Enter the interviewer's name: ")
+time = input("Enter the appointment time: ")
+print(interviewer, "will interview", applicant, "at", time)
+
+
+to loop indefinitely
+
+while True:
+    x = input("Enter a list limit for trangular numbers or press enter to quit: ")
+    if x == "":
+        break
+    tResult = triangularNumbersArray(x)
+    print tResult

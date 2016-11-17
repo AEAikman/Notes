@@ -360,7 +360,9 @@ clicking camera to constrain to viewport (camera cuts = all, on camera track = s
 seq shift click to snap to key
 right-clicking to load
 if textures keep streaming in render, try restarting engine
-
+sequencer keying issues
+camera script
+make sure to update ls if saving as in a ls
 
 
 lens
@@ -383,3 +385,21 @@ cloud seeds
 
 select objects filter for root script
 
+23
+21 010
+
+
+
+
+
+(X=-17278.617188,Y=-22346.431641,Z=17858.263672)
+
+
+
+
+54th floor building height in cm
+16459.2 cm by 10 ft floor height
+17670 cm by supposedly more elegant solution
+
+earth radius cm
+637099000
