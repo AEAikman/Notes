@@ -1,0 +1,3472 @@
+
+    menuItem
+        -label "Maint" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -altModifier 0
+        -optionModifier 0
+        -commandModifier 0
+        -ctrlModifier 0
+        -shiftModifier 0
+        -optionBox 0
+        -enable 1
+        -data 0
+        -radialPosition "N" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem2;
+
+        menuItem
+            -label "FreezeTrans" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "FreezeTransformations;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/FreezeTransforms.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+        menuItem
+            -label "CenterPivot" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "CenterPivot;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/centerPivot.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+        menuItem
+            -label "DeleteHistory" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "DeleteHistory;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/DeleteHistory.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem17;
+
+        menuItem
+            -label "Windows" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem20;
+
+            menuItem
+                -label "MarkingMenus" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "MarkingMenuPreferencesWindow;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "ScriptEd" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ScriptEditor;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Prefs" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PreferencesWindow;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "UV Ed" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "TextureViewWindow;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "HyperShade" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "HypershadeWindow;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "PluginManager" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PluginManager;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "Namespace Ed" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "NamespaceEditor;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "Show All UI Elements" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShowUIElements" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconDisplay.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+        setParent -m ..;
+
+        menuItem
+            -label "FileManage" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem21;
+
+            menuItem
+                -label "SelAll" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "import hAutoRig\nreload(hAutoRig)\nan = hAutoRig.hAnim()\nan.controls_select(an.all)" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "hAnim_metal_b01.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "SelRoot" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "import hAutoRig\nreload(hAutoRig)\nan = hAutoRig.hAnim()\nan.controls_select(an.root)" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "hAnim_metal_b02.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Far Clip to 9,000,000" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".farClipPlane\") 900000000;\r\n    }" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "ClippingPlanes_08.xpm" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Far Clip to 9,000" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".farClipPlane\") 9000;\r\n    }" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "ClippingPlanes_05.xpm" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "Near Clip to 100" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".nearClipPlane\") 100;\r\n    }" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "ClippingPlanes_04.xpm" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "Near Clip to .01" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $cameras[] = `ls -cameras`;\n\nfor ($thisCamera in $cameras) {\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\n    setAttr ($thisCamera + \".nearClipPlane\") .01;\n    }" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "ClippingPlanes_01.xpm" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "Save Preferences" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SavePreferences" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconFile.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Optimize Scene Size" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "OptimizeScene" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconFile.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Open Scene..." 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "OpenScene" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "E" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "menuIconFile.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+        menuItem
+            -label "Playblast and Pivot" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+            menuItem
+                -label "Playblast" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source GUI_Playblast;postvisPlayblast;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "PlayblastButton.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Set Pivot To Origin" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "xform -ws -a -rp 0 0 0" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "menuEditorMenuItem3" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Move to Abs Origin" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "$obj=`ls -sl`;\nmove -rpr 0 0 0 $obj;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+        setParent -m ..;
+
+        menuItem
+            -label "PhoenixTools C Aaron Aikman" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "# Aaron Aikman Copyright 2014\n# PhoenixTools\n\n# Startup\nimport maya.cmds as cmds\nimport maya.mel\n\n##########################################################################################\n######################################  \tUI      ######################################\n##########################################################################################\n\n# Defining the Window\ndef phoenixTools():\n\tpToolsWindow = cmds.window(menuBar=True, title=\"Phoenix Tools by Aaron Aikman 2014  Version 1.0.25\", width=435, height=500)\n\t\n\tform = cmds.formLayout()\n\ttabs = cmds.tabLayout()\n\tcmds.formLayout( form, edit=True, attachForm=((tabs, 'top', 0), (tabs, 'left', 0), (tabs, 'bottom', 0), (tabs, 'right', 0)) )\n\n\n\t######################################  CREATION  ######################################\n\n\n\tchild1 = cmds.scrollLayout( 'scrollLayout0' )\n\n\n\n\t#################\n\t##  Polygons   ##\n\t#################\n\n\tcmds.frameLayout( label='Polygons', borderStyle='out', cll=True, width=400)\n\tcmds.separator(style='none')\n\n\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\n\tcmds.button(label=\"Cube\", command=\"cmds.polyCube()\")\n\tcmds.button(label=\"2x2 Cube\", command=\"cmds.polyCube(w=1, h=1, d=1, sx=2, sy=2, sz=2)\")\n\tcmds.button(label=\"4x4 Cube\", command=\"cmds.polyCube(w=1, h=1, d=1, sx=4, sy=4, sz=4)\")\n\tcmds.button(label=\"Human Ref\", command=\"cmds.polyCube(w=32, h=96, d=32, sx=1, sy=1, sz=1)\")\n\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Sphere\", command=\"cmds.polySphere()\")\n\tcmds.button(label=\"Diode Sphere\", command=\"cmds.polySphere(sx=4, sy=3)\")\n\tcmds.button(label=\"8x8 Sphere\", command=\"cmds.polySphere(sx=8, sy=8)\")\n\tcmds.button(label=\"12x12 Sphere\", command=\"cmds.polySphere(sx=12, sy=12)\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Plane\", command=\"cmds.polyPlane()\")\n\tcmds.button(label=\"1x1 Plane\", command=\"cmds.polyPlane(w=1, h=1, sx=1, sy=1)\")\n\tcmds.button(label=\"4x4 Plane\", command=\"cmds.polyPlane(w=1, h=1, sx=4, sy=4)\")\n\tcmds.button(label=\"Floor Plane\", command=\"cmds.polyPlane(w=1000, h=1000, sx=1, sy=1)\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Cylinder\", command=\"cmds.polyCylinder()\")\n\tcmds.button(label=\"Tri Cylinder\", command=\"cmds.polyCylinder(sx=3, sy=1, sz=1)\")\n\tcmds.button(label=\"12 Cylinder\", command=\"cmds.polyCylinder(sx=12, sy=1, sz=1)\")\n\tcmds.button(label=\"12x4 Cylinder\", command=\"cmds.polyCylinder(sx=12, sy=4, sz=1)\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Torus\", command=\"cmds.polyTorus()\")\n\tcmds.button(label=\"Quad Torus\", command=\"cmds.polyTorus(sx=4, sy=4)\")\n\tcmds.button(label=\"Disk\", command=\"makeDisk()\")\n\tcmds.button(label=\"Prism\", command=\"cmds.polyPrism()\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Cone\", command=\"cmds.polyCone()\")\n\tcmds.button(label=\"Helix\", command=\"cmds.polyHelix()\")\n\tcmds.button(label=\"Pipe\", command=\"cmds.polyPipe()\")\n\tcmds.button(label=\"Pyramid\", command=\"cmds.polyPyramid()\")\n\n\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\t#################\n\t##     Misc    ##\n\t#################\n\n\tcmds.frameLayout( label='Miscellaneous', borderStyle='out', cll=True, width=400)\n\n\t\n\tcmds.button(label=\"Create Geometry Tool\", command=\"maya.mel.eval('setToolTo polyCreateFacetContext ;')\")\n\tcmds.button(label=\"CV Curve Tool\", command=\"cmds.CVCurveTool()\")\n\tcmds.button(label=\"EP Curve Tool\", command=\"cmds.EPCurveTool()\")\n\tcmds.button(label=\"Locator\", command=\"cmds.spaceLocator()\")\n\n\n\t\n\n\tcmds.setParent( '..' )\n\n\tcmds.setParent( '..' )\n\n\n\t######################################  MODELING  ######################################\n\n\n\tchild2 = cmds.scrollLayout( 'scrollLayout1' )\n\n\t\n\t#################\n\t##  Mirroring  ##\n\t#################\n\n\n\tcmds.frameLayout( label='Mirroring', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator (style=\"none\")\n\t\n\tcmds.radioButtonGrp('mDir', label='Direction', labelArray3=['X', 'Y', 'Z'], numberOfRadioButtons=3, select=1, cal=(1, 'right'), cw4=(80, 30, 30, 30))\n\tcmds.radioButtonGrp('mirrorMode', label='Mode', labelArray3=['Duplicate', 'Instance', 'Combined Geo'], numberOfRadioButtons=3, select=1, cal=(1, 'right'), cw4=(80, 70, 70, 100))\n\t\n\tcmds.rowLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Mirror Object\", command=\"mirrorGeo()\", ann='Select object and place pivot point on symmetry line')\n\t\n\tcmds.setParent( '..' )\n\n\tcmds.separator (style=\"none\")\n\n\tcmds.setParent( '..' )\n\n\t##############\n\t##  Pivots \t##\n\t##############\n\n\tcmds.frameLayout( label='Pivot Manipulation', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\tcmds.radioButtonGrp('pivPos', label='Pivot Location', labelArray2=['Bottom', 'Center'], numberOfRadioButtons=2, select=1, cal=(1, 'right'), cw3=(80, 60, 60))\n\t\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Move Pivots\", command=\"movePivots()\", ann='Select one or more objects to adjust the pivot point of.\\nTool creates a temporary group and will alter the hierarchy.')\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Move Object to Origin\", command=\"cmds.move(rpr=True)\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator(style='none')\n\n\n\tcmds.setParent( '..' )\n\n\t##############\n\t##  Manip \t##\n\t##############\n\n\tcmds.frameLayout( label='Manipulator Orientation', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\n\tcmds.radioButtonGrp('manip', label=' ', labelArray2=['World Space', 'Object Space'], numberOfRadioButtons=2, select=1, cal=(1, 'right'), cw3=(80, 100, 60))\n\t\n\n\tcmds.rowLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\n\tcmds.button(label=\"Set Manipulator\", command=\"setManip()\", ann='Sets all transformation manipulators to world space or object space')\n\t\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\n\t##############\n\t##   Holes\t##\n\t##############\n\n\tcmds.frameLayout( label='Hole Creation', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\n\n\tcmds.intSliderGrp(\"numSides\", l='Number of Sides', field=True, v=8, min=3, max=100, fmx=10000, cal=(1, 'right'), cw3=(100, 100, 200))\n\t\n\n\tcmds.rowColumnLayout(numberOfColumns=4)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Create Disk\", command=\"makeDisk()\", ann='Creates a disk at the origin point')\n\tcmds.text('                         ')\n\tcmds.button(label=\"Help\", command=\"makeHoleHelp()\", ann='Click for instructions')\n\tcmds.setParent( '..' )\n\n\tcmds.gridLayout( numberOfColumns=2, cellWidthHeight=(200, 25) )\n\tcmds.button(label=\"Snap Together Tool\", command=\"maya.mel.eval('setToolTo snapTogetherToolCtx;')\", ann='Click the face on the first object to be snapped into location\\nafter clicking the face on the second object\\nThen press enter')\n\t\n\n\tcmds.button(label=\"Combine\", command=\"cmds.polyUnite()\")\n\n\tcmds.button(label=\"Make Hole Tool\", command=\"maya.mel.eval('MakeHoleTool;')\", ann='Select the face being cut into\\nThen select the face to become the hole\\nThen press enter')\n\tcmds.button(label=\"Quadrangulate Geo\", command=\"autoQuad()\", ann='Select an N-gon to automatically quadrangulate')\n\n\n\tcmds.setParent( '..' )\n\tcmds.separator(style='none')\n\tcmds.separator(style='single')\n\tcmds.separator(style='none')\n\tcmds.button(label=\"Make Hole Based On Geo\", command=\"makeHolebyGeo()\", ann='Create a smaller face based upon the number of sides of the selected face')\n\tcmds.separator(style='none')\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\n\t##############\n\t## Creasing ##\n\t##############\n\n\tcmds.frameLayout( label='Creasing', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\tcmds.text('                         ')\n\tcmds.button(label=\"Toggle Soft Edge Display\", command=\"toggleSoftEdges()\", ann='Toggle dashed lines for soft edges')\n\n\tcmds.setParent( '..' )\n\tcmds.floatSliderGrp(\"crsAmt\", field=True, v=10, min=0.0, max=10, label='Crease Amount', cal=(1, 'right'), cw3=(90, 100, 210))\n\t\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Crease Hard Edges\", command=\"creaseHardEdges()\")\n\tcmds.text('                         ')\n\tcmds.button(label=\"Uncrease All\", command=\"unCrease()\", ann='Uncreases the edges of the selected object')\n\n\t\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\tcmds.setParent( '..' )\n\n\n\t######################################  UNWRAPPING  ######################################\n\n\tchild3 = cmds.scrollLayout( 'scrollLayout2' )\n\n\n\t#################\n\t## UV Creation ##\n\t#################\n\n\tcmds.frameLayout( label='UV Creation', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\t\n\t\n\tcmds.button(label=\"Unwrap Selected Faces\", command=\"unwrapSelectedFaces()\", ann='Unwraps the selected faces into contiguous shells')\n\n\n\tcmds.setParent( '..' )\n\n\n\tcmds.separator(style='single')\n\n\tcmds.radioButtonGrp('mode', label='Mode', labelArray2=['Unstretched', 'Optimized'], numberOfRadioButtons=2, select=1, cal=(1, 'right'), cw3=(80, 100, 100))\n\t\n\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\n\t\n\tcmds.button(label=\"Unwrap Cylindrical\", command=\"unwrapCylindrical()\", ann='Select a seam of the cylindrical object to unfold\\nUnstretched mode will have no distortion,but will be less optimal for UV placement\\nOptimized mode will unwrap into a shell where each face is a square\\nAn optimized pipe can then be unfolded using Unfold Pipe')\n\n\n\n\tcmds.setParent( '..' )\n\n\n\tcmds.separator(style='single')\n\n\tcmds.floatSliderGrp('nSAngle', l='Smoothing Angle', field=True, v=45, min=0.5, max=179.5, cal=(1, 'right'), cw3=(100, 100, 200))\n\t\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Set Normal Smoothing Angle\", command=\"setNormalAngle()\", ann='Sets smoothing angle for object')\n\n\n\t\n\n\tcmds.text('                         ')\n\tcmds.text('                         ')\n\tcmds.text('                         ')\n\t\n\n\tcmds.button(label=\"Toggle Soft Edge Display\", command=\"toggleSoftEdges()\", ann='Toggle dashed lines for soft edges')\n\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.rowColumnLayout(numberOfColumns=3)\n\n\tcmds.text('                         ')\n\n\tcmds.button(label=\"Harden Edge\", command=\"cmds.polySoftEdge(a=0)\")\n\tcmds.button(label=\"Soften Edge\", command=\"cmds.polySoftEdge(a=180)\")\n\tcmds.setParent( '..' )\n\n\n\tcmds.separator(style='single')\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\n\tcmds.text('                         ')\n\n\t\n\tcmds.checkBox('lyt', label='Layout', value=True)\n\tcmds.text('                         ')\n\n\n\tcmds.checkBox('unf', label='Unfold', value=True)\n\n\tcmds.text('                         ')\n\t\n\tcmds.button(label=\"Unwrap by Smoothing Angle\", command=\"unwrapByAngle()\", ann=\"\"\"Creates UV shells for the selected object based upon the object's edge normals.\"\"\")\n\n\n\n\n\tcmds.text('                         ')\n\n\n\tcmds.button(label=\"Unwrap by Selected Seams\", command=\"unwrapBySeams()\", ann=\"\"\"Creates UV shells for the object using the selected edges as seams.\"\"\")\n\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\n\t#################\n\t## UV Editing  ##\n\t#################\n\n\tcmds.frameLayout( label='UV Editing', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\tcmds.gridLayout( numberOfColumns=2, cellWidthHeight=(200, 25) )\n\t\n\tcmds.button(label=\"Unfold Vertical Pipe\", command=\"unfoldPipe(2)\", ann='Select the UVs of an unfolded pipe or cylindrical object\\nthat run around the pipe (i.e.that are not touching the origin or insertion of the pipe)\\nIf the width is only one face, select the entire shell\\nUse this option for UVs that are tall')\n\tcmds.button(label=\"Unfold Horizontal Pipe\", command=\"unfoldPipe(1)\", ann='Select the UVs of an unfolded pipe or cylindrical object\\nthat run around the pipe (i.e.that are not touching the origin or insertion of the pipe)\\nIf the width is only one face, select the entire shell\\nUse this option for UVs that are wide')\n\tcmds.button(label=\"Select Uvs Edge to Loop\", command=\"selectUvEdgeLoop()\", ann='Select an edge to convert selection to uv edge loop')\n\tcmds.button(label=\"Straighten Border\", command=\"straightenUVBorder()\", ann='Select a line of border UVs to straighten the UVS in between the furthest UVS')\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\t####################\n\t## UV Management  ##\n\t####################\n\n\tcmds.frameLayout( label='UV Management', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\t\n\tcmds.radioButtonGrp('rot', label='Rotation', labelArray3=['None', '90 Deg', 'Free'], numberOfRadioButtons=3, select=3, cal=(1, 'right'), cw4=(80, 60, 60, 60))\n\t\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Layout UVs\", command=\"layoutUVs()\")\n\n\n\n\tcmds.setParent( '..' )\n\n\n\tcmds.separator(style='single')\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\n\tcmds.text('                         ')\n\n\tcmds.checkBox('cH', label='Clear Child History', value=False)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Transfer UVs\", command=\"transferUVs()\", ann='Select the parent object to derive UVs from\\nand then any children to copy the UVs to\\nChildren will become UV instances of the parent unless Child History is cleared\\nKeeping History tends to slow down performance')\n\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\tcmds.setParent( '..' )\n\t\n\tcmds.tabLayout( tabs, edit=True, tabLabel=((child1, 'Creation'), (child2, 'Modeling'), (child3, 'Unwrapping')) )\n\n\n\tcmds.showWindow(pToolsWindow)\n\n\n##########################################################################################\n######################################  Procedures  ######################################\n##########################################################################################\n\n\n\ndef setNormalAngle():\n\tnSAngle = cmds.floatSliderGrp('nSAngle', q=True, v=True)\n\tcmds.polySoftEdge (a=str(nSAngle))\n\ndef makeHoleHelp():\n        help ='In order to create a hole\\n\\nCreate a disk\\nSnap the disk to the desired face\\nScale the disk the desired hole size\\nCombine the object and the disk\\nUse the Make Hole Tool\\nSelect the object face and then the disk\\n\\n'\n        cmds.confirmDialog(title='Make Hole Help', button='OK', message=str(help));\n        return\n \ndef creaseHardEdges():\n\t#crsAmt = 10\n\tcrsAmt = cmds.floatSliderGrp ( 'crsAmt', q=True, value=True )\n\tcmds.selectType( pe=True ) # Selects Edges\n\tcmds.polySelectConstraint( m=3, t=0x8000, sm=1 ) # Constrains selection to hard edges\n\tcmds.polyCrease( value=crsAmt )\n\tcmds.polySelectConstraint( sm=0 ) # Turns off contraint\n\ndef unCrease():\n\tcmds.selectType ( pe=True ) # Selects Edges\n\tif (cmds.polyCrease ( q=True, value=True ) > 0 ): # Tests to see if there are creases\n\t\tcmds.polyCrease ( value=0.0 ) # Uncreases\n\ndef toggleSoftEdges():\n\n\n\talreadySoft = cmds.polyOptions (q=True, allEdges=True) # Queries edge normals\n\t\n\t# Toggling edges\n\tif (alreadySoft[0] == True):\n\t\tcmds.polyOptions (softEdge=True) \n\telse:\n\t\tcmds.polyOptions (allEdges=True)\n\n\ndef unwrapCylindrical():\n\t# Variables and selection\n\tmode = cmds.radioButtonGrp('mode', q=True, select=True)\n\tseam = cmds.ls( sl=True )\n\n\tcmds.SelectEdgeRingSp()\n\tcmds.ConvertSelectionToContainedFaces()\n\n\tbody = cmds.ls ( sl=True )\n\t\n\t# Chooses desired seams\n\tnumEdges = (len(seam))\n\tif (numEdges == 1):\n\t\tseamSel = (seam[0])\n\telse:\n\t\tseamSel = (seam[0:numEdges])\n\n\tbodySel = (body[0:(len(body))])\n\t\t\n\t# Unwraps with or without unfolding\n\n\tif (mode == 1):\n\t\tcmds.polyPlanarProjection ()\n\t\tcmds.select (seamSel, r=True)\n\t\tcmds.polyMapCut()\n\t\tcmds.unfold()\n\n\telif (mode == 2):\n\t\tcmds.select (bodySel, r=True)\n\t\tcmds.ConvertSelectionToFaces()\n\t\tshell = cmds.ls( sl=True)\n\t\tcmds.polyForceUV (unitize=True)\n\n\t\tcmds.ConvertSelectionToContainedEdges()\n\n\t\tcmds.select (seamSel, d=True)\n\t\tcmds.polyMapSewMove()\n\t\tcmds.select(shell, r=True)\n\t\tcmds.ConvertSelectionToUVs()\n\t\tcmds.polyLayoutUV()\n\t\tcmds.select (shell, r=True)\n\n\n\n\n\ndef unwrapSelectedFaces():\n\tcmds.polyPlanarProjection()\n\tcmds.unfold()\n\n\ndef unwrapBySeams():\n\n\t# Variables and Selection\n\tunf= cmds.checkBox('unf', q=True, v=True)\n\tlyt = cmds.checkBox('lyt', q=True, v=True)\n\tselEdges= cmds.ls( sl=True )\n\tcmds.ConvertSelectionToShell()\n\n\n\tcmds.polyForceUV( unitize=True)\n\tcmds.ConvertSelectionToEdges()\n\tcmds.select(selEdges, d=True)\n\tcmds.polyMapSewMove()\n\n\t# Unfold if chosen\n\tif (unf==1):\n\t\tcmds.unfold()\n\n\t# Layout if chosen\n\tif (lyt == 1):\n\t\tcmds.select(selEdges)\n\t\tcmds.ConvertSelectionToShell()\n\t\tcmds.ConvertSelectionToUVs()\n\t\tcmds.polyLayoutUV( sc=1, ws=True, rbf=2 )\n\ndef unwrapByAngle():\n\tunf = cmds.checkBox('unf', q=True, v=True)\n\tlyt = cmds.checkBox('lyt', q=True, v=True)\n\t\n\n\t\n\tcmds.polyForceUV( unitize=True)\n\tcmds.selectType( pe=True )\n\tcmds.polySelectConstraint( m=3, t=0x8000, sm=2 ) # Constrains selection to soft edges\n\tselEdges= cmds.ls( sl=True )\n\tcmds.polyMapSewMove()\n\tcmds.polySelectConstraint( sm=0 ) # Turns off constraint\n\n\t# Unfold if chosen\n\tif (unf==1):\n\t\tcmds.unfold()\n\n\t# Layout if chosen\n\tif (lyt == 1):\n\t\tcmds.select(selEdges)\n\t\tcmds.ConvertSelectionToShell()\n\t\tcmds.ConvertSelectionToUVs()\n\t\tcmds.polyLayoutUV( sc=1, ws=True, rbf=2 )\n\t\n\ndef selectUvEdgeLoop():\n\tcmds.SelectEdgeLoopSp()\n\tcmds.ConvertSelectionToUVs()\n\ndef straightenUVBorder():\n\tcmds.polyStraightenUVBorder()\n\tcmds.unfold( oa=1, us=False)\n\ndef layoutUVs():\n\t# Variables and selection\n\trot = cmds.radioButtonGrp('rot', q=True, sl=True)\n\tcmds.ConvertSelectionToShell()\n\tcmds.ConvertSelectionToUVs()\n\t# Choosing rotation mode\n\tif (rot==1):\n\t\tlayoutSettings ='polyMultiLayoutUV -lm 1 -sc 1 -rbf 0 -fr 1 -ps 0.2 -l 2 -psc 2 -su 1 -sv 1 -ou 0 -ov 0;'\n\telif (rot==2):\n\t\tlayoutSettings ='polyMultiLayoutUV -lm 1 -sc 1 -rbf 1 -fr 1 -ps 0.2 -l 2 -psc 2 -su 1 -sv 1 -ou 0 -ov 0;'\n\telse:\n\t\tlayoutSettings ='polyMultiLayoutUV -lm 1 -sc 1 -rbf 2 -fr 1 -ps 0.2 -l 2 -psc 2 -su 1 -sv 1 -ou 0 -ov 0;'\n\tmaya.mel.eval(str(layoutSettings)) # Actual layout command\n\t\n\t\n\ndef unfoldPipe(dir):\n\t# Defining direction\n\tif (dir==1):\n\t\tfirst=1\n\t\tsecond=2\n\telif (dir==2):\n\t\tfirst=2\n\t\tsecond=1\n\tcmds.unfold(oa=first, us=False)\n\tmaya.mel.eval(\"polySelectBorderShell 0;\") # Selecting UV Shell\n\tcmds.unfold(oa=second, us=False)\n\ndef transferUVs():\n\tcH = cmds.checkBox('cH', q=True, v=True)\n\n\n\tsel= cmds.ls( sl=True )\n\tfor i in range (len(sel)):\n\n\t\t# Handling multiple objects\n\t\tif (len(sel)>2):\n\t\t\tcmds.select(sel[0], r=True)\n\t\t\tcmds.select(sel[i], add=True)\n\t\t\tcmds.transferAttributes( transferUVs=2, sampleSpace=5)\n\t\t\t\n\t\telif (len(sel)==2):\n\t\t\tcmds.transferAttributes( transferUVs=2, sampleSpace=5)\n\t\t\t\n\t\telse:\n\t\t\tcmds.error ('Please select the source object first, and at least one target object.')\n\n\t# Deleting History if chosen\n\tif (cH==1):\n\t\tcmds.select(sel[1:len(sel)])\n\t\tcmds.DeleteHistory()\n\n\tcmds.select(sel, r=True)\n\ndef makeHolebyGeo():\n\tcmds.polyPoke()\n\tcmds.ConvertSelectionToVertices()\n\tcmds.ShrinkPolygonSelectionRegion()\n\tmaya.mel.eval(\"polyChamferVtx 1 0.25 0;\")\n\ndef makeDisk():\n\tnumSides = cmds.intSliderGrp('numSides', q=True, v=True)\n\n\n\tcmds.polyCylinder(sx=numSides)\n\tsel = cmds.ls (sl=True)\n\tcmds.select (sel[0] +\".f[\" + str(numSides) + \"]\") # Selecting cap\n\tmaya.mel.eval('GrowPolygonSelectionRegion;')\n\tcmds.delete() # Deleting all but one cap\n\tcmds.select (sel[0])\n\tcmds.xform (cp=True)\n\tcmds.move(rpr=True) # Moving Centered disk to origin\n\t\t\ndef autoQuad():\n\tcmds.polyTriangulate()\n\tcmds.polyQuad()\n\n \ndef movePivots():\n\n\tpivPos = cmds.radioButtonGrp('pivPos', q=True, sl=True)\n\n\tsel = cmds.ls (sl=True)\n\n\t# Testing for number of selected objects\n\tif (len(sel)<1):\n\t\tcmds.error ('No objects selected')\n\telif (len(sel)==1):\n\t\tif (pivPos == 1):\n\t\t\t\tcmds.xform(cp=True) # Centering Pivot\n\t\telse:\n\t\t\tbBox = cmds.xform(q=True, ws=True, bb=True) # Querying bound box info\n\t\t\tcenterPos = cmds.xform(q=True, ws=True, sp=True) #Querying transform info\n\t\t\tcmds.xform(piv=(centerPos[0], bBox[1], centerPos[2]), ws=True, ) # Adjusting pivot\n\telse:\n\t\tcmds.group(sel, n='pivotTempGrp', w=True) # Creating temporary group\n\t\tobjCenter = cmds.objectCenter('pivotTempGrp')\n\t\tobjBB = cmds.xform('pivotTempGrp', q=True, ws=True, bb=True) # Querying bound box info for group\n\t\tyAverage = ((objBB[1] + objBB[4])/2) # Calculating height\n\t\tfor i in range(len(sel)):\n\t\t\tcmds.select(sel[i])\n\t\t\tif (pivPos == 1):\n\t\t\t\tcmds.xform(piv=(objCenter[0], objBB[1], objCenter[2]), ws=True)\n\t\t\telse:\n\t\t\t\tcmds.xform(piv=(objCenter[0], yAverage, objCenter[2]), ws=True)\n\n\t\t# Deleting temporary group\n\t\tcmds.ungroup ('pivotTempGrp')\n\t\t\n\tcmds.select(sel)\n\ndef setManip():\n\n\tmanip = cmds.radioButtonGrp('manip', q=True, sl=True)\n\n\t# Setting to World Space\n\tif (manip == 1):\n\t\tcmds.manipMoveContext ('Move', e=True, mode=2)\n\t\tcmds.manipRotateContext ('Rotate', e=True, mode=1)\n\t\tcmds.manipScaleContext ('Scale', e=True, mode=2)\n\n\t# Setting to Object Space\n\telif (manip == 2):\n\t\tcmds.manipMoveContext ('Move', e=True, mode=0)\n\t\tcmds.manipRotateContext ('Rotate', e=True, mode=0)\n\t\tcmds.manipScaleContext ('Scale', e=True, mode=0)\n\n\tmaya.mel.eval('SelectToolOptionsMarkingMenu; MarkingMenuPopDown;') # Changing Tool to selection\n\n\ndef mirrorGeo():\n\t# Variables and selection\n\tmirrorMode = cmds.radioButtonGrp('mirrorMode', q=True, sl=True)\n\tmDir = cmds.radioButtonGrp('mDir', q=True, sl=True)\n\tsel =cmds.ls(sl=True)\n\n\t# Duplication type\n\tif (mirrorMode==1):\n\t\tcmds.duplicate()\n\telif (mirrorMode==2):\n\t\tcmds.instance()\n\telse:\n\t\tnewHalf = cmds.duplicate()\n\n\t# Scaling\n\tif (mDir==1):\n\t\tcmds.scale(-1, 1, 1)\n\telif (mDir==2):\n\t\tcmds.scale(1, -1, 1)\n\telse:\n\t\tcmds.scale(1, 1, -1)\n\n\t# Merging Copy\n\tif (mirrorMode==3):\n\t\tcmds.select(sel[0], r=True)\n\t\tcmds.select(newHalf, add=True)\n\t\tcmds.polyUnite()\n\t\tcmds.ConvertSelectionToVertices()\n\t\tcmds.polyMergeVertex  (d=0.001, am=1, ch=1)\n\t\tcmds.select(sel[0])\n\n\t\n# Run\nphoenixTools()" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "pythonFamily.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem6;
+
+    setParent -m ..;
+
+    menuItem
+        -label "Export" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -altModifier 0
+        -optionModifier 0
+        -commandModifier 0
+        -ctrlModifier 0
+        -shiftModifier 0
+        -optionBox 0
+        -enable 1
+        -data 0
+        -radialPosition "E" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem3;
+
+        menuItem
+            -label "ExportSel" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "ExportSelection;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "E" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem7;
+
+        menuItem
+            -label "Import" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "Import;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem8;
+
+        menuItem
+            -label "MayaToUnreal_Camera" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "//select scene cameras and run this script\n\n//script makes a copy of scene camera and bakes it with transforms that match Unreal camera transforms\n\n\nsource \"hunreal/MayaToUnreal_Camera.mel\";" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "hunreal/MayaToUnreal_Camera.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem9;
+
+        menuItem
+            -label "MayaToUnreal_hRig" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "//THIS SCRIPT IS NOT UNDOABLE!  Save scene before exporting scene components to fbx.\n\n\n//for all hRig characters selected:\n\n//imports referenced asset, bakes animation and constraints\n//creates a locator at the origin with the asset top joint as a child node\n//pulls the geo group out of the hierarchy\n\n\nsource \"hunreal/MayaToUnreal_hRig.mel\";" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "hunreal/MayaToUnreal_hRig.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem10;
+
+        menuItem
+            -label "MayaToUnreal_Prop" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "//THIS SCRIPT IS NOT UNDOABLE!  Save scene before exporting scene components to fbx.\n\n\n//for all prop assets in scene selected:\n\n//imports referenced asset, bakes animation and constraints\n//creates a locator at the origin with the asset top joint as a child node\n//pulls the geo group out of the hierarchy\n\n\n\nsource \"hunreal/MayaToUnreal_Prop.mel\";" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "hunreal/MayaToUnreal_Prop.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem11;
+
+        menuItem
+            -label "make Unreal-ready fbx" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "//this script should be run from an asset scene file.  \n\n//creates an fbx file of your asset ready for importing into Unreal engine\n\n\n    source \"hunreal/ASSET_createEngineReadyFBXFromAsset.mel\";\n" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "hunreal/icon32_assetFBX.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem12;
+
+        menuItem
+            -label "MayaToUnreal_Sims" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "//THIS SCRIPT IS NOT UNDOABLE!  Save scene before exporting scene components to fbx.\n\n//Recommend baking all simulations before executing this script:\n\n//creates a joint for every simulation object\n//skins sim objects to respective joints\n//bakes animation\n//opens export dialogue box\n\n\nsource \"hunreal/MayaToUnreal_Sims.mel\";\n" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "hunreal/MayaToUnreal_Sim.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem13;
+
+        menuItem
+            -label "source \"C:/Users/Public/Pixologic/GoZApps/Maya/GoZBrushFromMaya...." 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "source \"C:/Users/Public/Pixologic/GoZApps/Maya/GoZBrushFromMaya.mel\"\n" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "C:/Users/aaikman/Documents/maya/2016/prefs/icons/GoZBrush.xpm" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+    setParent -m ..;
+
+    menuItem
+        -label "Object" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -altModifier 0
+        -optionModifier 0
+        -commandModifier 0
+        -ctrlModifier 0
+        -shiftModifier 0
+        -optionBox 0
+        -enable 1
+        -data 0
+        -radialPosition "S" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem4;
+
+        menuItem
+            -label "Cleanup" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "CleanupPolygonOptions;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+        menuItem
+            -label "Snapping" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem6;
+
+            menuItem
+                -label "Snap Together" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "setToolTo snapTogetherToolCtx;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Transform Components" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "performPolyMove \"\" 0" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyMoveVertex.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem7;
+
+        menuItem
+            -label "menuEditorMenuItem8" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "MovePolygonComponentOptions" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem8;
+
+        menuItem
+            -label "Deformers" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem11;
+
+            menuItem
+                -label "Bend" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "Bend;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Lattice 5x5x5" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "lattice  -divisions 5 5 5 -objectCentered true;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Lattice 5x5x15" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "lattice  -divisions 5 5 15 -objectCentered true;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+        setParent -m ..;
+
+        menuItem
+            -label "AutoQuad Options" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+            menuItem
+                -label "AutoQuad" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "Triangulate; Quadrangulate;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Fill Hole and AutoQuad" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "FillHole; Triangulate; Quadrangulate;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "FillHole" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "FillHole;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Combine Options" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+            menuItem
+                -label "Combine" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CombinePolygons" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "polyUnite.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Separate" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SeparatePolygon" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "polySeparate.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Combine n Merge" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "polyUnite; polyMergeVertex  -d 0.1;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+        setParent -m ..;
+
+        menuItem
+            -label "AutoQuad" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "Triangulate; Quadrangulate;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+    setParent -m ..;
+
+    menuItem
+        -label "Components" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -altModifier 0
+        -optionModifier 0
+        -commandModifier 0
+        -ctrlModifier 0
+        -shiftModifier 0
+        -optionBox 0
+        -enable 1
+        -data 0
+        -radialPosition "SW" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem5;
+
+        menuItem
+            -label "Split Polygon" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "SplitPolygonTool;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+        menuItem
+            -label "TransformComp" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "MovePolygonComponent;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+        menuItem
+            -label "SlideEdge" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "SlideEdgeTool;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+        menuItem
+            -label "Split Edge" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+            menuItem
+                -label "Split Half" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SplitEdgeRingTool;\npolySelectEditCtx -e -div 1 polySelectEditContext;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Split Fourths" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SplitEdgeRingTool;\npolySelectEditCtx -e -div 3 polySelectEditContext;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Split Equidistant" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SplitEdgeRingTool;\npolySelectEditCtx -e -splitType 0 polySelectEditContext; intSliderGrp -e -enable 0 selectEditSplitDivisionsSlider; checkBoxGrp -e -enable 0 selectEditUseEqualMultiplierCheckBox;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Split Relative" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SplitEdgeRingTool;\npolySelectEditCtx -e -splitType 1 polySelectEditContext; intSliderGrp -e -enable 0 selectEditSplitDivisionsSlider; checkBoxGrp -e -enable 0 selectEditUseEqualMultiplierCheckBox;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Split Normal" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SplitEdgeRingTool;\n" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Split Thirds" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SplitEdgeRingTool;\npolySelectEditCtx -e -div 2 polySelectEditContext;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Sculpting" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+            menuItem
+                -label "Smooth Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetMeshSmoothTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Smooth.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "menuEditorMenuItem2" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShowMeshSmoothToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Sculpt Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetMeshSculptTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Sculpt.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "menuEditorMenuItem4" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShowMeshSculptToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Grab Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetMeshGrabTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Grab.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "menuEditorMenuItem6" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShowMeshGrabToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "Bulge Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetMeshBulgeTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Bulge.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "menuEditorMenuItem8" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShowMeshBulgeToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "Pinch Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetMeshPinchTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Pinch.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+            menuItem
+                -label "menuEditorMenuItem10" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShowMeshPinchToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem10;
+
+            menuItem
+                -label "Fill Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetMeshFillTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Fill.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem11;
+
+            menuItem
+                -label "menuEditorMenuItem12" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShowMeshFillToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem12;
+
+            menuItem
+                -label "Flatten Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetMeshFlattenTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Flatten.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem13;
+
+            menuItem
+                -label "menuEditorMenuItem14" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShowMeshFlattenToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem14;
+
+            menuItem
+                -label "Knife Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetMeshKnifeTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Knife.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem15;
+
+            menuItem
+                -label "menuEditorMenuItem16" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShowMeshKnifeToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem16;
+
+        setParent -m ..;
+
+    setParent -m ..;
+
+    menuItem
+        -label "Display" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -altModifier 0
+        -optionModifier 0
+        -commandModifier 0
+        -ctrlModifier 0
+        -shiftModifier 0
+        -optionBox 0
+        -enable 1
+        -data 0
+        -radialPosition "NE" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem1;
+
+        menuItem
+            -label "Isolate" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "ToggleIsolateSelect;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+        menuItem
+            -label "Set All Camera and Image Plane Attrs" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "import setCamAttrs\nreload(setCamAttrs)\nsetCamAttrs.main()" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/createCamAttrs.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+        menuItem
+            -label "Add Alpha Gain Attribute" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "import createAGAttr\nreload(createAGAttr)\ncreateAGAttr.display()" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/createAlpha.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+        menuItem
+            -label "Show All UI Elements" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "ShowUIElements" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "menuIconDisplay.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+    setParent -m ..;
+
+    menuItem
+        -label "Normals" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -altModifier 0
+        -optionModifier 0
+        -commandModifier 0
+        -ctrlModifier 0
+        -shiftModifier 0
+        -optionBox 0
+        -enable 1
+        -data 0
+        -radialPosition "SE" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem6;
+
+        menuItem
+            -label "Set Angle" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "polySoftEdge;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+        menuItem
+            -label "Unlock Normals" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "polyNormalPerVertex -ufn true" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "E" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyNormalUnlock.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+        menuItem
+            -label "Soften Edge" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "SoftPolyEdgeElements 1" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polySoftEdge.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+        menuItem
+            -label "Harden Edge" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "SoftPolyEdgeElements 0" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyHardEdge.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+        menuItem
+            -label "Reverse" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "ReversePolygonNormals" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyNormal.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem8;
+
+        menuItem
+            -label "menuEditorMenuItem9" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "ReversePolygonNormalsOptions" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem9;
+
+        menuItem
+            -label "Conform" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "ConformPolygonNormals" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyNormalsConform.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem10;
+
+        menuItem
+            -label "Average" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "polyAverageNormal -prenormalize 1 -allowZeroNormal 0 -postnormalize 0 -distance 0.1 -replaceNormalXYZ 1 0 0 " 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyNormalAverage.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem11;
+
+        menuItem
+            -label "menuEditorMenuItem12" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "AveragePolygonNormalsOptions" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem12;
+
+        menuItem
+            -label "Lock Normals" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "polyNormalPerVertex -fn true" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "polyNormalLock.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem13;
+
+    setParent -m ..;
+
+    menuItem
+        -label "Instances" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -altModifier 0
+        -optionModifier 0
+        -commandModifier 0
+        -ctrlModifier 0
+        -shiftModifier 0
+        -optionBox 0
+        -enable 1
+        -data 0
+        -radialPosition "W" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem7;
+
+        menuItem
+            -label "Instance X" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "instance; scale -r -1 1 1;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+        menuItem
+            -label "Instance Z" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "instance; scale -r 1 1 -1;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "E" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+        menuItem
+            -label "Instance Y" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "instance; scale -r 1 -1 1;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+    setParent -m ..;
+
+    menuItem
+        -label "Curve UV Rig Snap" 
+        -divider 0
+        -subMenu 1
+        -tearOff 0
+        -altModifier 0
+        -optionModifier 0
+        -commandModifier 0
+        -ctrlModifier 0
+        -shiftModifier 0
+        -optionBox 0
+        -enable 1
+        -data 0
+        -radialPosition "NW" 
+        -allowOptionBoxes 1
+        -enableCommandRepeat 1
+        -italicized 0
+        -boldFont 1
+        -sourceType "mel" 
+        -longDivider 1
+        menuEditorMenuItem8;
+
+        menuItem
+            -label "CV Curve" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "CVCurveTool;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+        menuItem
+            -label "Rigging" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "E" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+            menuItem
+                -label "Bind Skin" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SmoothBindSkin" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "smoothSkin.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "menuEditorMenuItem2" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SmoothBindSkinOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Paint Skin Weights" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ArtPaintSkinWeightsTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "paintSkinWeights.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "menuEditorMenuItem4" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ArtPaintSkinWeightsToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Blend Shapes" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateBlendShape" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "blendShape.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "menuEditorMenuItem6" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateBlendShapeOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "Parent Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ParentConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "parentConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "menuEditorMenuItem8" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ParentConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "Point Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PointConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "posConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+            menuItem
+                -label "menuEditorMenuItem10" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PointConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem10;
+
+            menuItem
+                -label "Orient Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "OrientConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "orientConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem11;
+
+            menuItem
+                -label "menuEditorMenuItem12" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "OrientConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem12;
+
+            menuItem
+                -label "Aim Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "AimConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "aimConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem13;
+
+            menuItem
+                -label "menuEditorMenuItem14" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "AimConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem14;
+
+            menuItem
+                -label "Pole Vector Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PoleVectorConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "poleVectorConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem15;
+
+            menuItem
+                -label "menuEditorMenuItem16" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PoleVectorConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem16;
+
+        setParent -m ..;
+
+        menuItem
+            -label "EP Curve Tool" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "EPCurveTool" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "curveEP.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+        menuItem
+            -label "menuEditorMenuItem4" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "EPCurveToolOptions" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+        menuItem
+            -label "Snapping" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+            menuItem
+                -label "AhSnap" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"UTIL_snapObject.mel\" ;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/Snap.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "AhSwap" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "import swapObjects\nreload(swapObjects)\nswapObjects.display()" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/Swap.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Snap Together Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "setToolTo snapTogetherToolCtx" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "snapTogetherTool.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Point to Point" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SnapPointToPoint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "pointToPoint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Align Objects" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "performAlignObjects 0" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "alignObjects.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Position Along Curve" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PositionAlongCurve" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "positionAlongCurve.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Create UVs Based On Cam" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "polyProjection -type Planar -md p" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem6;
+
+        menuItem
+            -label "Paint Vertex Color Tool" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "PaintVertexColorTool" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "paintVertexColour.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem7;
+
+        menuItem
+            -label "menuEditorMenuItem8" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "PaintVertexColorToolOptions" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem8;
+
+        menuItem
+            -label "Set..." 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "SetDrivenKeyOptions" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "menuIconKeys.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem9;
+
+        menuItem
+            -label "Rebuild" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "performRebuildCurveSet 1 1 0 0.01 4 3 1 0 0 1 0 1 0.05" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "rebuildCurve.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem13;
+
+    setParent -m ..;
+
+setParent -m ..;
+
