@@ -341,3 +341,18 @@ while True:
         break
     tResult = triangularNumbersArray(x)
     print tResult
+
+
+
+There are two ways to do this. First is like this:
+
+while True:             # Loop continuously
+    inp = raw_input()   # Get the input
+    if inp == "":       # If it is a blank line...
+        break           # ...break the loop
+The second is like this:
+
+inp = raw_input()       # Get the input
+while inp != "":        # Loop until it is a blank line
+    inp = raw_input()   # Get the input again
+Note that if you are on Python 3.x, you will need to replace raw_input with input.

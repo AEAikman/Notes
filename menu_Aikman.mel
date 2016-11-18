@@ -347,58 +347,6 @@
             menuEditorMenuItem21;
 
             menuItem
-                -label "SelAll" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "import hAutoRig\nreload(hAutoRig)\nan = hAutoRig.hAnim()\nan.controls_select(an.all)" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "hAnim_metal_b01.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "SelRoot" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "import hAutoRig\nreload(hAutoRig)\nan = hAutoRig.hAnim()\nan.controls_select(an.root)" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "hAnim_metal_b02.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
                 -label "Far Clip to 9,000,000" 
                 -divider 0
                 -subMenu 0
@@ -412,7 +360,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NE" 
+                -radialPosition "N" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -438,7 +386,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "E" 
+                -radialPosition "NE" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -542,7 +490,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "N" 
+                -radialPosition "NW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -2639,7 +2587,7 @@
     setParent -m ..;
 
     menuItem
-        -label "Curve UV Rig Snap" 
+        -label "Curve UV Rig Snap Sel" 
         -divider 0
         -subMenu 1
         -tearOff 0
@@ -2659,31 +2607,6 @@
         -sourceType "mel" 
         -longDivider 1
         menuEditorMenuItem8;
-
-        menuItem
-            -label "CV Curve" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "CVCurveTool;" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "NW" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem1;
 
         menuItem
             -label "Rigging" 
@@ -3110,56 +3033,6 @@
         setParent -m ..;
 
         menuItem
-            -label "EP Curve Tool" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "EPCurveTool" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "N" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "curveEP.png" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem3;
-
-        menuItem
-            -label "menuEditorMenuItem4" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "EPCurveToolOptions" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 1
-            -enable 1
-            -data 0
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 0
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem4;
-
-        menuItem
             -label "Snapping" 
             -divider 0
             -subMenu 1
@@ -3365,61 +3238,10 @@
             menuEditorMenuItem6;
 
         menuItem
-            -label "Paint Vertex Color Tool" 
+            -label "Selection" 
             -divider 0
-            -subMenu 0
+            -subMenu 1
             -tearOff 0
-            -command "PaintVertexColorTool" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "W" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "paintVertexColour.png" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem7;
-
-        menuItem
-            -label "menuEditorMenuItem8" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "PaintVertexColorToolOptions" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 1
-            -enable 1
-            -data 0
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 0
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem8;
-
-        menuItem
-            -label "Set..." 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "SetDrivenKeyOptions" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -3430,22 +3252,244 @@
             -data 0
             -radialPosition "SE" 
             -allowOptionBoxes 1
-            -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "menuIconKeys.png" 
-            -echoCommand 0
             -italicized 0
-            -boldFont 1
+            -boldFont 0
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem9;
+            menuEditorMenuItem10;
+
+            menuItem
+                -label "SelAll" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "import hAutoRig\nreload(hAutoRig)\nan = hAutoRig.hAnim()\nan.controls_select(an.all)" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "hAnim_metal_b01.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "SelRoot" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "import hAutoRig\nreload(hAutoRig)\nan = hAutoRig.hAnim()\nan.controls_select(an.root)" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "hAnim_metal_b02.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Filter Selection for Root" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_FilterSelectionToRoot.mel\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+        setParent -m ..;
 
         menuItem
-            -label "Rebuild" 
+            -label "Curves" 
             -divider 0
-            -subMenu 0
+            -subMenu 1
             -tearOff 0
-            -command "performRebuildCurveSet 1 1 0 0.01 4 3 1 0 0 1 0 1 0.05" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem11;
+
+            menuItem
+                -label "Rebuild" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "performRebuildCurveSet 1 1 0 0.01 4 3 1 0 0 1 0 1 0.05" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "rebuildCurve.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "EP Curve Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "EPCurveTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "curveEP.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "EPCurveToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "CV Curve" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CVCurveTool;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Skinning and SDK" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -3456,15 +3500,193 @@
             -data 0
             -radialPosition "S" 
             -allowOptionBoxes 1
-            -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "rebuildCurve.png" 
-            -echoCommand 0
             -italicized 0
             -boldFont 0
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem13;
+            menuEditorMenuItem12;
+
+            menuItem
+                -label "Set..." 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetDrivenKeyOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconKeys.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Paint Vertex Color Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PaintVertexColorTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "paintVertexColour.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PaintVertexColorToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Mirror Skin Weights" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "MirrorSkinWeights" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "mirrorSkinWeight.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Copy Skin Weights" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CopySkinWeights" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "copySkinWeight.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Copy Vertex Weights" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "artAttrSkinWeightCopy" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconSkinning.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "Paste Vertex Weights" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "artAttrSkinWeightPaste" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconSkinning.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+        setParent -m ..;
 
     setParent -m ..;
 

@@ -56,3 +56,8 @@ git config user.name
 for username
 
 git commit -m "First Commit"
+
+
+to remove a file
+git rm file1.txt
+git commit -m "remove file1.txt"
