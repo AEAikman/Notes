@@ -93,3 +93,10 @@ To ignore that folder from next commits make one file in root named .gitignore a
 .gitignore file will be look like this
 
 /FolderName
+
+
+
+
+TO REMOVE LOCAL GIT
+
+Git keeps all of its files in the .git directory. Just remove that one and init again.
