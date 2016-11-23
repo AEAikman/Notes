@@ -64,3 +64,32 @@ git commit -m "remove file1.txt"
 
 if unstaged changes persist
 git commit -a
+
+TO REMOVE FILES OR FOLDERS
+
+git rm -r one-of-the-directories
+git commit -m "Remove duplicated directory"
+git push origin <your-git-branch> (typically 'master', but not always)
+Remove directory from git but NOT local
+
+As mentioned in the comments, what you usually want to do is remove this directory from git but not delete it entirely from the filesystem (local)
+
+TO REMOVE ONLY FROM GIT
+
+git rm -r --cached myFolder
+
+MORE REMOVAL NOTES
+
+To remove folder/directory only from git repository and not from the local try 3 simple steps.
+
+Steps to remove directory
+
+git rm -r --cached FolderName
+git commit -m "Removed folder from repository"
+git push origin master
+Steps to ignore that folder in next commits
+
+To ignore that folder from next commits make one file in root named .gitignore and put that folders name into it. You can put as many as you want
+.gitignore file will be look like this
+
+/FolderName
