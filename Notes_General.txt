@@ -363,36 +363,35 @@ if textures keep streaming in render, try restarting engine
 sequencer keying issues
 camera script
 make sure to update ls if saving as in a ls
+save as ls first to avoid overwriting old one
 
 
 lens
 23.749
 13.36
+18
+
+
+
+23.8
+13.411
 16
 
 
-
-
-253.019928
-
-253.019928
 
 cloud seeds
 314.007141
 9643.639648
 
 
-
+add to halon
 select objects filter for root script
-
-23
-21 010
+alternate select edge
 
 
 
 
 
-(X=-17278.617188,Y=-22346.431641,Z=17858.263672)
 
 
 
@@ -403,3 +402,16 @@ select objects filter for root script
 
 earth radius cm
 637099000
+
+
+C:\Users\%USERPROFILE%\Desktop\playblasts
+need to match csv name
+
+top -111.7632
+bot 51.8396
+tail 10 15 XY
+
+0.0127
+
+
+12.4258
