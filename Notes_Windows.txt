@@ -1,0 +1,9 @@
+Notes_Windows
+
+If can't save anywhere, you may need to 
+Control Panel
+Sync Center
+Manage Offline Files
+Disable Offline Files
+Save
+Restart
