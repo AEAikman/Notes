@@ -33,3 +33,6 @@ set frame range
 
 
 assign objects to diplay layer to set color
+
+
+Ctrl drag value in attribute editor for fine control

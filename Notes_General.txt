@@ -364,6 +364,8 @@ sequencer keying issues
 camera script
 make sure to update ls if saving as in a ls
 save as ls first to avoid overwriting old one
+adding content from vault cache by copying to local vault cache and "adding to project"
+
 
 
 lens
@@ -415,3 +417,30 @@ tail 10 15 XY
 
 
 12.4258
+
+
+
+ECV-197
+
+shuttle 25%
+
+by 2200 reveal central park
+
+KRL Scale Down
+0.0866
+
+Lighting with luke
+particle effect
+
+
+ship_02
+.03
+
+cargo ship
+.15
+
+
+shuttle scalings
+1,2,4.3
+
+check maya env
