@@ -1,0 +1,4 @@
+Notes_VLC.txt
+
+View > Status Bar
+for speed
