@@ -531,135 +531,11 @@
             menuEditorMenuItem1;
 
         menuItem
-            -label "Playblast and Pivot" 
-            -divider 0
-            -subMenu 1
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "SW" 
-            -allowOptionBoxes 1
-            -enableCommandRepeat 1
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem5;
-
-            menuItem
-                -label "Playblast" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source GUI_Playblast;postvisPlayblast;" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "PlayblastButton.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "Set Pivot To Origin" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "xform -ws -a -rp 0 0 0" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
-                -label "menuEditorMenuItem3" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem3;
-
-            menuItem
-                -label "Move to Abs Origin" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "$obj=`ls -sl`;\nmove -rpr 0 0 0 $obj;" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem4;
-
-        setParent -m ..;
-
-        menuItem
-            -label "PhoenixTools C Aaron Aikman" 
+            -label "reload hcam" 
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "# Aaron Aikman Copyright 2014\n# PhoenixTools\n\n# Startup\nimport maya.cmds as cmds\nimport maya.mel\n\n##########################################################################################\n######################################  \tUI      ######################################\n##########################################################################################\n\n# Defining the Window\ndef phoenixTools():\n\tpToolsWindow = cmds.window(menuBar=True, title=\"Phoenix Tools by Aaron Aikman 2014  Version 1.0.25\", width=435, height=500)\n\t\n\tform = cmds.formLayout()\n\ttabs = cmds.tabLayout()\n\tcmds.formLayout( form, edit=True, attachForm=((tabs, 'top', 0), (tabs, 'left', 0), (tabs, 'bottom', 0), (tabs, 'right', 0)) )\n\n\n\t######################################  CREATION  ######################################\n\n\n\tchild1 = cmds.scrollLayout( 'scrollLayout0' )\n\n\n\n\t#################\n\t##  Polygons   ##\n\t#################\n\n\tcmds.frameLayout( label='Polygons', borderStyle='out', cll=True, width=400)\n\tcmds.separator(style='none')\n\n\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\n\tcmds.button(label=\"Cube\", command=\"cmds.polyCube()\")\n\tcmds.button(label=\"2x2 Cube\", command=\"cmds.polyCube(w=1, h=1, d=1, sx=2, sy=2, sz=2)\")\n\tcmds.button(label=\"4x4 Cube\", command=\"cmds.polyCube(w=1, h=1, d=1, sx=4, sy=4, sz=4)\")\n\tcmds.button(label=\"Human Ref\", command=\"cmds.polyCube(w=32, h=96, d=32, sx=1, sy=1, sz=1)\")\n\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Sphere\", command=\"cmds.polySphere()\")\n\tcmds.button(label=\"Diode Sphere\", command=\"cmds.polySphere(sx=4, sy=3)\")\n\tcmds.button(label=\"8x8 Sphere\", command=\"cmds.polySphere(sx=8, sy=8)\")\n\tcmds.button(label=\"12x12 Sphere\", command=\"cmds.polySphere(sx=12, sy=12)\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Plane\", command=\"cmds.polyPlane()\")\n\tcmds.button(label=\"1x1 Plane\", command=\"cmds.polyPlane(w=1, h=1, sx=1, sy=1)\")\n\tcmds.button(label=\"4x4 Plane\", command=\"cmds.polyPlane(w=1, h=1, sx=4, sy=4)\")\n\tcmds.button(label=\"Floor Plane\", command=\"cmds.polyPlane(w=1000, h=1000, sx=1, sy=1)\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Cylinder\", command=\"cmds.polyCylinder()\")\n\tcmds.button(label=\"Tri Cylinder\", command=\"cmds.polyCylinder(sx=3, sy=1, sz=1)\")\n\tcmds.button(label=\"12 Cylinder\", command=\"cmds.polyCylinder(sx=12, sy=1, sz=1)\")\n\tcmds.button(label=\"12x4 Cylinder\", command=\"cmds.polyCylinder(sx=12, sy=4, sz=1)\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Torus\", command=\"cmds.polyTorus()\")\n\tcmds.button(label=\"Quad Torus\", command=\"cmds.polyTorus(sx=4, sy=4)\")\n\tcmds.button(label=\"Disk\", command=\"makeDisk()\")\n\tcmds.button(label=\"Prism\", command=\"cmds.polyPrism()\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator (w=400, style=\"in\")\n\tcmds.gridLayout( numberOfColumns=4, cellWidthHeight=(100, 25) )\n\n\tcmds.button(label=\"Cone\", command=\"cmds.polyCone()\")\n\tcmds.button(label=\"Helix\", command=\"cmds.polyHelix()\")\n\tcmds.button(label=\"Pipe\", command=\"cmds.polyPipe()\")\n\tcmds.button(label=\"Pyramid\", command=\"cmds.polyPyramid()\")\n\n\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\t#################\n\t##     Misc    ##\n\t#################\n\n\tcmds.frameLayout( label='Miscellaneous', borderStyle='out', cll=True, width=400)\n\n\t\n\tcmds.button(label=\"Create Geometry Tool\", command=\"maya.mel.eval('setToolTo polyCreateFacetContext ;')\")\n\tcmds.button(label=\"CV Curve Tool\", command=\"cmds.CVCurveTool()\")\n\tcmds.button(label=\"EP Curve Tool\", command=\"cmds.EPCurveTool()\")\n\tcmds.button(label=\"Locator\", command=\"cmds.spaceLocator()\")\n\n\n\t\n\n\tcmds.setParent( '..' )\n\n\tcmds.setParent( '..' )\n\n\n\t######################################  MODELING  ######################################\n\n\n\tchild2 = cmds.scrollLayout( 'scrollLayout1' )\n\n\t\n\t#################\n\t##  Mirroring  ##\n\t#################\n\n\n\tcmds.frameLayout( label='Mirroring', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator (style=\"none\")\n\t\n\tcmds.radioButtonGrp('mDir', label='Direction', labelArray3=['X', 'Y', 'Z'], numberOfRadioButtons=3, select=1, cal=(1, 'right'), cw4=(80, 30, 30, 30))\n\tcmds.radioButtonGrp('mirrorMode', label='Mode', labelArray3=['Duplicate', 'Instance', 'Combined Geo'], numberOfRadioButtons=3, select=1, cal=(1, 'right'), cw4=(80, 70, 70, 100))\n\t\n\tcmds.rowLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Mirror Object\", command=\"mirrorGeo()\", ann='Select object and place pivot point on symmetry line')\n\t\n\tcmds.setParent( '..' )\n\n\tcmds.separator (style=\"none\")\n\n\tcmds.setParent( '..' )\n\n\t##############\n\t##  Pivots \t##\n\t##############\n\n\tcmds.frameLayout( label='Pivot Manipulation', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\tcmds.radioButtonGrp('pivPos', label='Pivot Location', labelArray2=['Bottom', 'Center'], numberOfRadioButtons=2, select=1, cal=(1, 'right'), cw3=(80, 60, 60))\n\t\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Move Pivots\", command=\"movePivots()\", ann='Select one or more objects to adjust the pivot point of.\\nTool creates a temporary group and will alter the hierarchy.')\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Move Object to Origin\", command=\"cmds.move(rpr=True)\")\n\n\tcmds.setParent( '..' )\n\tcmds.separator(style='none')\n\n\n\tcmds.setParent( '..' )\n\n\t##############\n\t##  Manip \t##\n\t##############\n\n\tcmds.frameLayout( label='Manipulator Orientation', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\n\tcmds.radioButtonGrp('manip', label=' ', labelArray2=['World Space', 'Object Space'], numberOfRadioButtons=2, select=1, cal=(1, 'right'), cw3=(80, 100, 60))\n\t\n\n\tcmds.rowLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\n\tcmds.button(label=\"Set Manipulator\", command=\"setManip()\", ann='Sets all transformation manipulators to world space or object space')\n\t\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\n\t##############\n\t##   Holes\t##\n\t##############\n\n\tcmds.frameLayout( label='Hole Creation', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\n\n\tcmds.intSliderGrp(\"numSides\", l='Number of Sides', field=True, v=8, min=3, max=100, fmx=10000, cal=(1, 'right'), cw3=(100, 100, 200))\n\t\n\n\tcmds.rowColumnLayout(numberOfColumns=4)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Create Disk\", command=\"makeDisk()\", ann='Creates a disk at the origin point')\n\tcmds.text('                         ')\n\tcmds.button(label=\"Help\", command=\"makeHoleHelp()\", ann='Click for instructions')\n\tcmds.setParent( '..' )\n\n\tcmds.gridLayout( numberOfColumns=2, cellWidthHeight=(200, 25) )\n\tcmds.button(label=\"Snap Together Tool\", command=\"maya.mel.eval('setToolTo snapTogetherToolCtx;')\", ann='Click the face on the first object to be snapped into location\\nafter clicking the face on the second object\\nThen press enter')\n\t\n\n\tcmds.button(label=\"Combine\", command=\"cmds.polyUnite()\")\n\n\tcmds.button(label=\"Make Hole Tool\", command=\"maya.mel.eval('MakeHoleTool;')\", ann='Select the face being cut into\\nThen select the face to become the hole\\nThen press enter')\n\tcmds.button(label=\"Quadrangulate Geo\", command=\"autoQuad()\", ann='Select an N-gon to automatically quadrangulate')\n\n\n\tcmds.setParent( '..' )\n\tcmds.separator(style='none')\n\tcmds.separator(style='single')\n\tcmds.separator(style='none')\n\tcmds.button(label=\"Make Hole Based On Geo\", command=\"makeHolebyGeo()\", ann='Create a smaller face based upon the number of sides of the selected face')\n\tcmds.separator(style='none')\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\n\t##############\n\t## Creasing ##\n\t##############\n\n\tcmds.frameLayout( label='Creasing', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\tcmds.text('                         ')\n\tcmds.button(label=\"Toggle Soft Edge Display\", command=\"toggleSoftEdges()\", ann='Toggle dashed lines for soft edges')\n\n\tcmds.setParent( '..' )\n\tcmds.floatSliderGrp(\"crsAmt\", field=True, v=10, min=0.0, max=10, label='Crease Amount', cal=(1, 'right'), cw3=(90, 100, 210))\n\t\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Crease Hard Edges\", command=\"creaseHardEdges()\")\n\tcmds.text('                         ')\n\tcmds.button(label=\"Uncrease All\", command=\"unCrease()\", ann='Uncreases the edges of the selected object')\n\n\t\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\tcmds.setParent( '..' )\n\n\n\t######################################  UNWRAPPING  ######################################\n\n\tchild3 = cmds.scrollLayout( 'scrollLayout2' )\n\n\n\t#################\n\t## UV Creation ##\n\t#################\n\n\tcmds.frameLayout( label='UV Creation', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\t\n\t\n\tcmds.button(label=\"Unwrap Selected Faces\", command=\"unwrapSelectedFaces()\", ann='Unwraps the selected faces into contiguous shells')\n\n\n\tcmds.setParent( '..' )\n\n\n\tcmds.separator(style='single')\n\n\tcmds.radioButtonGrp('mode', label='Mode', labelArray2=['Unstretched', 'Optimized'], numberOfRadioButtons=2, select=1, cal=(1, 'right'), cw3=(80, 100, 100))\n\t\n\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\n\t\n\tcmds.button(label=\"Unwrap Cylindrical\", command=\"unwrapCylindrical()\", ann='Select a seam of the cylindrical object to unfold\\nUnstretched mode will have no distortion,but will be less optimal for UV placement\\nOptimized mode will unwrap into a shell where each face is a square\\nAn optimized pipe can then be unfolded using Unfold Pipe')\n\n\n\n\tcmds.setParent( '..' )\n\n\n\tcmds.separator(style='single')\n\n\tcmds.floatSliderGrp('nSAngle', l='Smoothing Angle', field=True, v=45, min=0.5, max=179.5, cal=(1, 'right'), cw3=(100, 100, 200))\n\t\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Set Normal Smoothing Angle\", command=\"setNormalAngle()\", ann='Sets smoothing angle for object')\n\n\n\t\n\n\tcmds.text('                         ')\n\tcmds.text('                         ')\n\tcmds.text('                         ')\n\t\n\n\tcmds.button(label=\"Toggle Soft Edge Display\", command=\"toggleSoftEdges()\", ann='Toggle dashed lines for soft edges')\n\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.rowColumnLayout(numberOfColumns=3)\n\n\tcmds.text('                         ')\n\n\tcmds.button(label=\"Harden Edge\", command=\"cmds.polySoftEdge(a=0)\")\n\tcmds.button(label=\"Soften Edge\", command=\"cmds.polySoftEdge(a=180)\")\n\tcmds.setParent( '..' )\n\n\n\tcmds.separator(style='single')\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\n\tcmds.text('                         ')\n\n\t\n\tcmds.checkBox('lyt', label='Layout', value=True)\n\tcmds.text('                         ')\n\n\n\tcmds.checkBox('unf', label='Unfold', value=True)\n\n\tcmds.text('                         ')\n\t\n\tcmds.button(label=\"Unwrap by Smoothing Angle\", command=\"unwrapByAngle()\", ann=\"\"\"Creates UV shells for the selected object based upon the object's edge normals.\"\"\")\n\n\n\n\n\tcmds.text('                         ')\n\n\n\tcmds.button(label=\"Unwrap by Selected Seams\", command=\"unwrapBySeams()\", ann=\"\"\"Creates UV shells for the object using the selected edges as seams.\"\"\")\n\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\n\t#################\n\t## UV Editing  ##\n\t#################\n\n\tcmds.frameLayout( label='UV Editing', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\n\tcmds.gridLayout( numberOfColumns=2, cellWidthHeight=(200, 25) )\n\t\n\tcmds.button(label=\"Unfold Vertical Pipe\", command=\"unfoldPipe(2)\", ann='Select the UVs of an unfolded pipe or cylindrical object\\nthat run around the pipe (i.e.that are not touching the origin or insertion of the pipe)\\nIf the width is only one face, select the entire shell\\nUse this option for UVs that are tall')\n\tcmds.button(label=\"Unfold Horizontal Pipe\", command=\"unfoldPipe(1)\", ann='Select the UVs of an unfolded pipe or cylindrical object\\nthat run around the pipe (i.e.that are not touching the origin or insertion of the pipe)\\nIf the width is only one face, select the entire shell\\nUse this option for UVs that are wide')\n\tcmds.button(label=\"Select Uvs Edge to Loop\", command=\"selectUvEdgeLoop()\", ann='Select an edge to convert selection to uv edge loop')\n\tcmds.button(label=\"Straighten Border\", command=\"straightenUVBorder()\", ann='Select a line of border UVs to straighten the UVS in between the furthest UVS')\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\t####################\n\t## UV Management  ##\n\t####################\n\n\tcmds.frameLayout( label='UV Management', borderStyle='out', cll=True, width=400)\n\n\tcmds.separator(style='none')\n\t\n\tcmds.radioButtonGrp('rot', label='Rotation', labelArray3=['None', '90 Deg', 'Free'], numberOfRadioButtons=3, select=3, cal=(1, 'right'), cw4=(80, 60, 60, 60))\n\t\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Layout UVs\", command=\"layoutUVs()\")\n\n\n\n\tcmds.setParent( '..' )\n\n\n\tcmds.separator(style='single')\n\n\tcmds.rowColumnLayout(numberOfColumns=2)\n\n\n\tcmds.text('                         ')\n\n\tcmds.checkBox('cH', label='Clear Child History', value=False)\n\n\tcmds.text('                         ')\n\tcmds.button(label=\"Transfer UVs\", command=\"transferUVs()\", ann='Select the parent object to derive UVs from\\nand then any children to copy the UVs to\\nChildren will become UV instances of the parent unless Child History is cleared\\nKeeping History tends to slow down performance')\n\n\n\tcmds.setParent( '..' )\n\n\tcmds.separator(style='none')\n\n\tcmds.setParent( '..' )\n\n\tcmds.setParent( '..' )\n\t\n\tcmds.tabLayout( tabs, edit=True, tabLabel=((child1, 'Creation'), (child2, 'Modeling'), (child3, 'Unwrapping')) )\n\n\n\tcmds.showWindow(pToolsWindow)\n\n\n##########################################################################################\n######################################  Procedures  ######################################\n##########################################################################################\n\n\n\ndef setNormalAngle():\n\tnSAngle = cmds.floatSliderGrp('nSAngle', q=True, v=True)\n\tcmds.polySoftEdge (a=str(nSAngle))\n\ndef makeHoleHelp():\n        help ='In order to create a hole\\n\\nCreate a disk\\nSnap the disk to the desired face\\nScale the disk the desired hole size\\nCombine the object and the disk\\nUse the Make Hole Tool\\nSelect the object face and then the disk\\n\\n'\n        cmds.confirmDialog(title='Make Hole Help', button='OK', message=str(help));\n        return\n \ndef creaseHardEdges():\n\t#crsAmt = 10\n\tcrsAmt = cmds.floatSliderGrp ( 'crsAmt', q=True, value=True )\n\tcmds.selectType( pe=True ) # Selects Edges\n\tcmds.polySelectConstraint( m=3, t=0x8000, sm=1 ) # Constrains selection to hard edges\n\tcmds.polyCrease( value=crsAmt )\n\tcmds.polySelectConstraint( sm=0 ) # Turns off contraint\n\ndef unCrease():\n\tcmds.selectType ( pe=True ) # Selects Edges\n\tif (cmds.polyCrease ( q=True, value=True ) > 0 ): # Tests to see if there are creases\n\t\tcmds.polyCrease ( value=0.0 ) # Uncreases\n\ndef toggleSoftEdges():\n\n\n\talreadySoft = cmds.polyOptions (q=True, allEdges=True) # Queries edge normals\n\t\n\t# Toggling edges\n\tif (alreadySoft[0] == True):\n\t\tcmds.polyOptions (softEdge=True) \n\telse:\n\t\tcmds.polyOptions (allEdges=True)\n\n\ndef unwrapCylindrical():\n\t# Variables and selection\n\tmode = cmds.radioButtonGrp('mode', q=True, select=True)\n\tseam = cmds.ls( sl=True )\n\n\tcmds.SelectEdgeRingSp()\n\tcmds.ConvertSelectionToContainedFaces()\n\n\tbody = cmds.ls ( sl=True )\n\t\n\t# Chooses desired seams\n\tnumEdges = (len(seam))\n\tif (numEdges == 1):\n\t\tseamSel = (seam[0])\n\telse:\n\t\tseamSel = (seam[0:numEdges])\n\n\tbodySel = (body[0:(len(body))])\n\t\t\n\t# Unwraps with or without unfolding\n\n\tif (mode == 1):\n\t\tcmds.polyPlanarProjection ()\n\t\tcmds.select (seamSel, r=True)\n\t\tcmds.polyMapCut()\n\t\tcmds.unfold()\n\n\telif (mode == 2):\n\t\tcmds.select (bodySel, r=True)\n\t\tcmds.ConvertSelectionToFaces()\n\t\tshell = cmds.ls( sl=True)\n\t\tcmds.polyForceUV (unitize=True)\n\n\t\tcmds.ConvertSelectionToContainedEdges()\n\n\t\tcmds.select (seamSel, d=True)\n\t\tcmds.polyMapSewMove()\n\t\tcmds.select(shell, r=True)\n\t\tcmds.ConvertSelectionToUVs()\n\t\tcmds.polyLayoutUV()\n\t\tcmds.select (shell, r=True)\n\n\n\n\n\ndef unwrapSelectedFaces():\n\tcmds.polyPlanarProjection()\n\tcmds.unfold()\n\n\ndef unwrapBySeams():\n\n\t# Variables and Selection\n\tunf= cmds.checkBox('unf', q=True, v=True)\n\tlyt = cmds.checkBox('lyt', q=True, v=True)\n\tselEdges= cmds.ls( sl=True )\n\tcmds.ConvertSelectionToShell()\n\n\n\tcmds.polyForceUV( unitize=True)\n\tcmds.ConvertSelectionToEdges()\n\tcmds.select(selEdges, d=True)\n\tcmds.polyMapSewMove()\n\n\t# Unfold if chosen\n\tif (unf==1):\n\t\tcmds.unfold()\n\n\t# Layout if chosen\n\tif (lyt == 1):\n\t\tcmds.select(selEdges)\n\t\tcmds.ConvertSelectionToShell()\n\t\tcmds.ConvertSelectionToUVs()\n\t\tcmds.polyLayoutUV( sc=1, ws=True, rbf=2 )\n\ndef unwrapByAngle():\n\tunf = cmds.checkBox('unf', q=True, v=True)\n\tlyt = cmds.checkBox('lyt', q=True, v=True)\n\t\n\n\t\n\tcmds.polyForceUV( unitize=True)\n\tcmds.selectType( pe=True )\n\tcmds.polySelectConstraint( m=3, t=0x8000, sm=2 ) # Constrains selection to soft edges\n\tselEdges= cmds.ls( sl=True )\n\tcmds.polyMapSewMove()\n\tcmds.polySelectConstraint( sm=0 ) # Turns off constraint\n\n\t# Unfold if chosen\n\tif (unf==1):\n\t\tcmds.unfold()\n\n\t# Layout if chosen\n\tif (lyt == 1):\n\t\tcmds.select(selEdges)\n\t\tcmds.ConvertSelectionToShell()\n\t\tcmds.ConvertSelectionToUVs()\n\t\tcmds.polyLayoutUV( sc=1, ws=True, rbf=2 )\n\t\n\ndef selectUvEdgeLoop():\n\tcmds.SelectEdgeLoopSp()\n\tcmds.ConvertSelectionToUVs()\n\ndef straightenUVBorder():\n\tcmds.polyStraightenUVBorder()\n\tcmds.unfold( oa=1, us=False)\n\ndef layoutUVs():\n\t# Variables and selection\n\trot = cmds.radioButtonGrp('rot', q=True, sl=True)\n\tcmds.ConvertSelectionToShell()\n\tcmds.ConvertSelectionToUVs()\n\t# Choosing rotation mode\n\tif (rot==1):\n\t\tlayoutSettings ='polyMultiLayoutUV -lm 1 -sc 1 -rbf 0 -fr 1 -ps 0.2 -l 2 -psc 2 -su 1 -sv 1 -ou 0 -ov 0;'\n\telif (rot==2):\n\t\tlayoutSettings ='polyMultiLayoutUV -lm 1 -sc 1 -rbf 1 -fr 1 -ps 0.2 -l 2 -psc 2 -su 1 -sv 1 -ou 0 -ov 0;'\n\telse:\n\t\tlayoutSettings ='polyMultiLayoutUV -lm 1 -sc 1 -rbf 2 -fr 1 -ps 0.2 -l 2 -psc 2 -su 1 -sv 1 -ou 0 -ov 0;'\n\tmaya.mel.eval(str(layoutSettings)) # Actual layout command\n\t\n\t\n\ndef unfoldPipe(dir):\n\t# Defining direction\n\tif (dir==1):\n\t\tfirst=1\n\t\tsecond=2\n\telif (dir==2):\n\t\tfirst=2\n\t\tsecond=1\n\tcmds.unfold(oa=first, us=False)\n\tmaya.mel.eval(\"polySelectBorderShell 0;\") # Selecting UV Shell\n\tcmds.unfold(oa=second, us=False)\n\ndef transferUVs():\n\tcH = cmds.checkBox('cH', q=True, v=True)\n\n\n\tsel= cmds.ls( sl=True )\n\tfor i in range (len(sel)):\n\n\t\t# Handling multiple objects\n\t\tif (len(sel)>2):\n\t\t\tcmds.select(sel[0], r=True)\n\t\t\tcmds.select(sel[i], add=True)\n\t\t\tcmds.transferAttributes( transferUVs=2, sampleSpace=5)\n\t\t\t\n\t\telif (len(sel)==2):\n\t\t\tcmds.transferAttributes( transferUVs=2, sampleSpace=5)\n\t\t\t\n\t\telse:\n\t\t\tcmds.error ('Please select the source object first, and at least one target object.')\n\n\t# Deleting History if chosen\n\tif (cH==1):\n\t\tcmds.select(sel[1:len(sel)])\n\t\tcmds.DeleteHistory()\n\n\tcmds.select(sel, r=True)\n\ndef makeHolebyGeo():\n\tcmds.polyPoke()\n\tcmds.ConvertSelectionToVertices()\n\tcmds.ShrinkPolygonSelectionRegion()\n\tmaya.mel.eval(\"polyChamferVtx 1 0.25 0;\")\n\ndef makeDisk():\n\tnumSides = cmds.intSliderGrp('numSides', q=True, v=True)\n\n\n\tcmds.polyCylinder(sx=numSides)\n\tsel = cmds.ls (sl=True)\n\tcmds.select (sel[0] +\".f[\" + str(numSides) + \"]\") # Selecting cap\n\tmaya.mel.eval('GrowPolygonSelectionRegion;')\n\tcmds.delete() # Deleting all but one cap\n\tcmds.select (sel[0])\n\tcmds.xform (cp=True)\n\tcmds.move(rpr=True) # Moving Centered disk to origin\n\t\t\ndef autoQuad():\n\tcmds.polyTriangulate()\n\tcmds.polyQuad()\n\n \ndef movePivots():\n\n\tpivPos = cmds.radioButtonGrp('pivPos', q=True, sl=True)\n\n\tsel = cmds.ls (sl=True)\n\n\t# Testing for number of selected objects\n\tif (len(sel)<1):\n\t\tcmds.error ('No objects selected')\n\telif (len(sel)==1):\n\t\tif (pivPos == 1):\n\t\t\t\tcmds.xform(cp=True) # Centering Pivot\n\t\telse:\n\t\t\tbBox = cmds.xform(q=True, ws=True, bb=True) # Querying bound box info\n\t\t\tcenterPos = cmds.xform(q=True, ws=True, sp=True) #Querying transform info\n\t\t\tcmds.xform(piv=(centerPos[0], bBox[1], centerPos[2]), ws=True, ) # Adjusting pivot\n\telse:\n\t\tcmds.group(sel, n='pivotTempGrp', w=True) # Creating temporary group\n\t\tobjCenter = cmds.objectCenter('pivotTempGrp')\n\t\tobjBB = cmds.xform('pivotTempGrp', q=True, ws=True, bb=True) # Querying bound box info for group\n\t\tyAverage = ((objBB[1] + objBB[4])/2) # Calculating height\n\t\tfor i in range(len(sel)):\n\t\t\tcmds.select(sel[i])\n\t\t\tif (pivPos == 1):\n\t\t\t\tcmds.xform(piv=(objCenter[0], objBB[1], objCenter[2]), ws=True)\n\t\t\telse:\n\t\t\t\tcmds.xform(piv=(objCenter[0], yAverage, objCenter[2]), ws=True)\n\n\t\t# Deleting temporary group\n\t\tcmds.ungroup ('pivotTempGrp')\n\t\t\n\tcmds.select(sel)\n\ndef setManip():\n\n\tmanip = cmds.radioButtonGrp('manip', q=True, sl=True)\n\n\t# Setting to World Space\n\tif (manip == 1):\n\t\tcmds.manipMoveContext ('Move', e=True, mode=2)\n\t\tcmds.manipRotateContext ('Rotate', e=True, mode=1)\n\t\tcmds.manipScaleContext ('Scale', e=True, mode=2)\n\n\t# Setting to Object Space\n\telif (manip == 2):\n\t\tcmds.manipMoveContext ('Move', e=True, mode=0)\n\t\tcmds.manipRotateContext ('Rotate', e=True, mode=0)\n\t\tcmds.manipScaleContext ('Scale', e=True, mode=0)\n\n\tmaya.mel.eval('SelectToolOptionsMarkingMenu; MarkingMenuPopDown;') # Changing Tool to selection\n\n\ndef mirrorGeo():\n\t# Variables and selection\n\tmirrorMode = cmds.radioButtonGrp('mirrorMode', q=True, sl=True)\n\tmDir = cmds.radioButtonGrp('mDir', q=True, sl=True)\n\tsel =cmds.ls(sl=True)\n\n\t# Duplication type\n\tif (mirrorMode==1):\n\t\tcmds.duplicate()\n\telif (mirrorMode==2):\n\t\tcmds.instance()\n\telse:\n\t\tnewHalf = cmds.duplicate()\n\n\t# Scaling\n\tif (mDir==1):\n\t\tcmds.scale(-1, 1, 1)\n\telif (mDir==2):\n\t\tcmds.scale(1, -1, 1)\n\telse:\n\t\tcmds.scale(1, 1, -1)\n\n\t# Merging Copy\n\tif (mirrorMode==3):\n\t\tcmds.select(sel[0], r=True)\n\t\tcmds.select(newHalf, add=True)\n\t\tcmds.polyUnite()\n\t\tcmds.ConvertSelectionToVertices()\n\t\tcmds.polyMergeVertex  (d=0.001, am=1, ch=1)\n\t\tcmds.select(sel[0])\n\n\t\n# Run\nphoenixTools()" 
+            -command "import am_func.am_maya_ui as mui\nimport am_func.am_maya_utils as ma\nimport am_func.am_utils as am\n\nclass ChooseProd():\n    \"\"\"\n    \n    \"\"\"\n    class Label(mui.LblGrp):\n        \"\"\"\n        Customized LblGrp\n        \"\"\"\n        ui = 'LblGrp'\n        l = 'Select the production.'\n        w = 190\n        fn = 'smallBoldLabelFont'\n        lbl = ''\n        lw = 5\n        rw = 5\n       \n        \n    class Menu(mui.OptMenuGrp):\n        \"\"\"\n        Customized OptMenuGrp\n        \"\"\"                    \n        lbl = ''\n        lw = 5        \n        rw = 5       \n        w = 190\n\n    class Button(mui.Button):\n        \"\"\"\n        Customized Button\n        \"\"\"\n        lbl = 'Set Production'        \n        def c(self, v):\n            \"\"\"\n            Dismiss layoutDialog by returning selected menu item\n            \"\"\"\n            mc.layoutDialog(dis = ChooseProd.Menu.query_v())\n    \n    \n    \n    #var call\n    lbl = 'Halon Tools'\n    w = 225\n    #class call\n    Label = Label()\n    Menu = Menu()\n    Button = Button()    \n    def dialog(self):\n        \"\"\"\n        Prompt a layout dialog and returns selected menu items\n        \"\"\"\n        return mc.layoutDialog(t = self.lbl, ui = self.build)\n    \n    def build(self):\n        \"\"\"\n        build a formLayout to be used ny layoutDialog\n        \"\"\"\n        #call basic ui element\n        form = mc.setParent(q = True)\n        mc.formLayout(form, e = True, w = self.w)\n        #update menu items list\n        self.Menu.items = am.listFolders(ma.getenv_strip('HROOT'))\n\n        #build ui class\n        lbl = self.Label.build(form)\n        menu = self.Menu.build(form)\n        but = self.Button.build(form)\n        #edit form\n        mc.formLayout(form, e = True, af = [(lbl, 'top', 5), (but, 'bottom', 5), (lbl, 'left', 5), (lbl, 'right', 5), (menu, 'left', 5), (menu, 'right', 5), \\\n        (but, 'left', 5), (but, 'right', 5)], ac = [(menu, 'top', 5, lbl), (but, 'top', 5, menu)]) \n        \n\n\n#dialog class call\nStartUp = mui.Dialog('StartUp')\nStartUp.t = 'Halon Tools Startup'\n\n#check for HROOT\nproceed = False\nhroot = ma.getenv_strip('HROOT')\nprint 'Halon Tools Startup>> HROOT:', hroot\nif not hroot:\n    StartUp.confirm(m = 'HROOT env var is not set up.\\\\nHalon Tools suite might not work properly', items = ['OK'])\nelse:\n    if not os.path.isdir(hroot):\n        confirm = StartUp.confirm(m = 'HROOT env var filepath does not exists.\\\\nHalon Tools suite might not work properly', items = ['OK'])\n    else:\n        #class call\n        ChooseProd = ChooseProd()\n        #set up optvar on startup\n        if not mc.optionVar(q = 'haloncam_prod'):\n            prod = ma.getenv_strip('LOADPROD')\n            if not prod:\n                StartUp.confirm(m = 'LOADPROD not set in Maya.env.  Please set your current project and restart Maya', items = ['OK'])\n            else:\n                mc.optionVar(sv = ['haloncam_prod', prod])\n                proceed = True\n                \n        else:\n            proceed = True\nif proceed:\n    proceed = True\n    #import hcam module\n    import hcam\n    reload(hcam)\n    #start script job for hcam\n    for job in mc.scriptJob(lj = True):\n        if 'sj_onSceneOpen' in job:\n            proceed = False\n    if proceed:\n        mc.scriptJob(e = [\"SceneOpened\", hcam.sj_onSceneOpen], per = False)\n    ui = hcam.Ui()\n    ui.build()\n\n\n" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -672,10 +548,36 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "pythonFamily.png" 
+            -image "Slate_menu.png" 
             -echoCommand 0
             -italicized 0
             -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+        menuItem
+            -label "Playblast" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "source GUI_Playblast;postvisPlayblast;" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "PlayblastButton.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem6;
@@ -755,84 +657,6 @@
             menuEditorMenuItem8;
 
         menuItem
-            -label "MayaToUnreal_Camera" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "//select scene cameras and run this script\n\n//script makes a copy of scene camera and bakes it with transforms that match Unreal camera transforms\n\n\nsource \"hunreal/MayaToUnreal_Camera.mel\";" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "NW" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "hunreal/MayaToUnreal_Camera.bmp" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem9;
-
-        menuItem
-            -label "MayaToUnreal_hRig" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "//THIS SCRIPT IS NOT UNDOABLE!  Save scene before exporting scene components to fbx.\n\n\n//for all hRig characters selected:\n\n//imports referenced asset, bakes animation and constraints\n//creates a locator at the origin with the asset top joint as a child node\n//pulls the geo group out of the hierarchy\n\n\nsource \"hunreal/MayaToUnreal_hRig.mel\";" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "N" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "hunreal/MayaToUnreal_hRig.bmp" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem10;
-
-        menuItem
-            -label "MayaToUnreal_Prop" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "//THIS SCRIPT IS NOT UNDOABLE!  Save scene before exporting scene components to fbx.\n\n\n//for all prop assets in scene selected:\n\n//imports referenced asset, bakes animation and constraints\n//creates a locator at the origin with the asset top joint as a child node\n//pulls the geo group out of the hierarchy\n\n\n\nsource \"hunreal/MayaToUnreal_Prop.mel\";" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "NE" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "hunreal/MayaToUnreal_Prop.bmp" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem11;
-
-        menuItem
             -label "make Unreal-ready fbx" 
             -divider 0
             -subMenu 0
@@ -885,7 +709,7 @@
             menuEditorMenuItem13;
 
         menuItem
-            -label "source \"C:/Users/Public/Pixologic/GoZApps/Maya/GoZBrushFromMaya...." 
+            -label "GoZ" 
             -divider 0
             -subMenu 0
             -tearOff 0
@@ -909,6 +733,84 @@
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem2;
+
+        menuItem
+            -label "MayaToUnreal_Camera" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToUnreal_Camera.mel\";" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaToUnreal_Camera.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+        menuItem
+            -label "MayaToUnreal_hRig" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToUnreal_hRig.mel\";" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaToUnreal_hRig.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+        menuItem
+            -label "MayaToUnreal_Prop" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToUnreal_Prop.mel\";" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaToUnreal_Prop.bmp" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
 
     setParent -m ..;
 
@@ -3033,7 +2935,7 @@
         setParent -m ..;
 
         menuItem
-            -label "Snapping" 
+            -label "Snapping and Pivot" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -3210,32 +3112,81 @@
                 -longDivider 1
                 menuEditorMenuItem6;
 
-        setParent -m ..;
+            menuItem
+                -label "Move to Abs Origin" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "$obj=`ls -sl`;\nmove -rpr 0 0 0 $obj;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
 
-        menuItem
-            -label "Create UVs Based On Cam" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "polyProjection -type Planar -md p" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "NE" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem6;
+            menuItem
+                -label "Set Pivot To Origin" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "xform -ws -a -rp 0 0 0" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+        setParent -m ..;
 
         menuItem
             -label "Selection" 
@@ -3254,7 +3205,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem10;
@@ -3280,7 +3231,7 @@
                 -image "hAnim_metal_b01.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
@@ -3306,7 +3257,7 @@
                 -image "hAnim_metal_b02.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -3332,12 +3283,13 @@
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
 
             menuItem
+                -label "menuEditorMenuItem4" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -3352,12 +3304,63 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Alternate Selection Window" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_AlternateSelect.mel\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Filter Selection for Roots" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_FilterSelectionToRoot.mel\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/selectRoots.bmp" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 0
                 -sourceType "mel" 
                 -longDivider 1
-                menuEditorMenuItem4;
+                menuEditorMenuItem6;
 
         setParent -m ..;
 
@@ -3378,7 +3381,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem11;
@@ -3404,7 +3407,7 @@
                 -image "rebuildCurve.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
@@ -3430,12 +3433,13 @@
                 -image "curveEP.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
 
             menuItem
+                -label "menuEditorMenuItem3" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -3453,7 +3457,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -3478,7 +3482,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
@@ -3502,7 +3506,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem12;
@@ -3528,7 +3532,7 @@
                 -image "menuIconKeys.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
@@ -3554,12 +3558,13 @@
                 -image "paintVertexColour.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
 
             menuItem
+                -label "menuEditorMenuItem3" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -3577,7 +3582,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -3603,7 +3608,7 @@
                 -image "mirrorSkinWeight.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
@@ -3629,7 +3634,7 @@
                 -image "copySkinWeight.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem5;
@@ -3655,7 +3660,7 @@
                 -image "menuIconSkinning.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -3681,10 +3686,389 @@
                 -image "menuIconSkinning.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem7;
+
+            menuItem
+                -label "Mirror Joints" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "mirrorJoint -mirrorYZ -mirrorBehavior -searchReplace \"_L\" \"_R\"" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "kinMirrorJoint_S.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "Create Joints" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "JointTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "kinJoint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+        setParent -m ..;
+
+        menuItem
+            -label "UVS" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NE" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+            menuItem
+                -label "Create UVs Based On Cam" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "polyProjection -type Planar -md p" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Merge UVs" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "polyPerformAction \"polyMergeUV -d 0.01\" v 0;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "menuEditorMenuItem3" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Animation" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem3;
+
+            menuItem
+                -label "Bake Hierarchy" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "float $startTime = `playbackOptions -q -min`;\nfloat $endTime=`playbackOptions -q -max`;\nbakeResults -simulation true -t ($startTime+\":\"+$endTime) -hierarchy below -sampleBy 1 -disableImplicitControl true -preserveOutsideKeys false -sparseAnimCurveBake false -removeBakedAttributeFromLayer false -removeBakedAnimFromLayer false -bakeOnOverrideLayer false -minimizeRotation true -controlPoints false -shape true ;\nperformEulerFilter graphEditor1FromOutliner;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/Bake.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "oaSmoothKeys" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "oaSmoothKeys" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Creation" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+            menuItem
+                -label "Create subject locator" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "mt = hcam.Tools.Measure()\nmt.subject_loc(hcam.Ui.Cam.List.sls)" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Slate_subject.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_..." 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_locatorAtSelection.mel\" ;\n" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "locator.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Import prod hCam" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "default = hcam.Tools.Default()\ncam = default.cam_import()" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Slate_Import.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Import prop from Mobu" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/ANIM_fbxToMayaProp.mel\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MobuPropMaya.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Send Prop to Mobu" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToMobu_Prop.mel\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaPropMobu.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
 
         setParent -m ..;
 
