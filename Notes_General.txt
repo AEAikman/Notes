@@ -365,6 +365,7 @@ camera script
 make sure to update ls if saving as in a ls
 save as ls first to avoid overwriting old one
 adding content from vault cache by copying to local vault cache and "adding to project"
+shift select last key of cam focal length to get frame range
 
 
 
@@ -377,8 +378,8 @@ lens
 
 23.8
 13.411
-16
-
+1
+6
 
 
 cloud seeds
@@ -444,3 +445,7 @@ shuttle scalings
 1,2,4.3
 
 check maya env
+
+duplicate and share bug
+
+67% speed on warp
