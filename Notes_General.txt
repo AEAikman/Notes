@@ -366,7 +366,12 @@ make sure to update ls if saving as in a ls
 save as ls first to avoid overwriting old one
 adding content from vault cache by copying to local vault cache and "adding to project"
 shift select last key of cam focal length to get frame range
-
+sequencer keying bug
+drag in sequencer slider to be able to use keys to move frames
+select track and use keys in seq to be able to cycle through tracks
+cine cam dof explanation
+scrub in seq after change to details to see it
+auto key to keep keys made
 
 
 lens
@@ -446,6 +451,36 @@ shuttle scalings
 
 check maya env
 
+
+#############
+Sequencer bugs
 duplicate and share bug
+reatime toggle not working
+#############
+
+
+
 
 67% speed on warp
+
+
+FOV on UE Cam
+
+150 9.05
+250 5.44
+500 2.72
+
+camera match script
+
+2730
+2710
+2320
+2330  QT
+1630
+3210
+
+2048
+1152
+
+
+(X=-443.487000,Y=4101.984863,Z=1511.831177)
