@@ -1,0 +1,150 @@
+Notes_Irfanview
+
+Space/Backspace	Load next / previous image in current directory
+Arrow Right/Arrow Left/Page Up/Page Down	Load next / previous image in current directory (when not zoomed)
+Ctrl+Page Up/Page Down	Next / previous page in a multipage image (e.g. a scan)
+Ctrl+1 ? 9	Move forward 1 - 9 images in the current directory
+Ctrl+Shift+1 ? 9	Move backward 1 - 9 images in the current directory
+Ctrl+Home/End	Load first / last image in current directory
+Home/End	Load first / last image in current directory (when not zoomed)
+X/Shift+X	Tag / untag current image
+Shift+Q	Show tagged files in Thumbnails window
+
+
+minus2. File Handling
+F2/F6	Rename file
+B	Batch convert or rename
+O	Open
+P	Properties
+S	Save as?
+Shift+E	Open image in external viewer/editor
+Ctrl+M	Open random image from current directory
+Ctrl+N	Open current image in new window
+Ctrl+P	Print
+D	Edit delete (NOTE: this command removes the file from the program\\\'s display, bit does NOT delete the file.)
+Ctrl+S	Save dialog
+Shift+R	Reopen
+Ctrl+Alt+P	Direct print image (no dialog box)
+Shift+N	New image
+
+
+minus3. View / Zoom
+Enter	Toggle fullscreen mode
+F	Toggle fit images to desktop and fit window to image
+F5/U	Refresh view
+Ctrl+H	Original size (reset zoom)
+Shift+W	Fit image to window
+[+]/=	Zoom in
+-	Zoom out
+Arrow Keys	Scroll image (when zoomed)
+Page Up/Page Down	Scroll to the top / bottom of an image (when zoomed)
+Home/End	Scroll to the left / right edge of an image (when zoomed)
+Shift+F	Fit only big images to desktop
+Shift+L	Lock/unlock zoom factor (applies to all loaded images)
+Shift+O	Fit window to image
+Ctrl+Shift+W	Toggle stretching image across all monitors
+
+
+minus4. Basic Image Editing
+H	Horizontal flip
+V	Vertical flip
+I	Image information
+L	Rotate 90 degrees left
+R	Rotate 90 degrees right
+Ctrl+U	Custom rotation dialog
+Shift+G	Enhance colors
+Shift+S	Sharpen
+Shift+U	Auto color correction
+Shift+Y	Red eye reduction (on selected area)
+
+
+minus5. Copy / Paste / Select
+Delete	Delete image
+Insert	Paste image
+F7	Move file
+F8	Copy file
+Shift+Arrow Keys	Move the selection rectangle
+Ctrl+A	Select/unselect all
+Ctrl+C	Copy
+Ctrl+V	Paste
+Shift+P	Copy current image name
+Ctrl+X	Cut
+Ctrl+Y	Crop image to selection
+Ctrl+Z	Undo
+Ctrl+Shift+Y	Auto crop image borders
+Shift+C	Create custom selection
+
+
+minus6. Main Program Window
+Esc	Close current window or dialog,exit fullscreen view, or exit program
+F1	Help
+A	About Irfanview dialog
+G	Stop .GIF animation
+T	Thumbnails window
+Tab	Switch focus between thumbnails window and main window
+Ctrl+Tab	Cycle focus in the thumbnails window
+M	Minimize the IrfanView window
+Alt+Shift+S	Show/hide status bar
+Alt+Shift+T	Show/hide toolbar bar
+Alt+Shift+M	Show/hide menu bar
+Alt+Shift+C	Show/hide window title and borders
+
+
+minus7. Fullscreen Mode
+Enter	Toggle fullscreen mode
+Esc	Exit fullscreen mode
+1	Show image as original size (1:1)
+2	Fit only large images to screen
+3	Fit all images to screen
+4	Stretch all images to screen
+5	Fit image width to screen
+6	Fit image height to screen height
+num 5	Scroll to center of image
+F	Loop through full screen image fit options
+F11	Show / hide the mouse in full screen mode (mouse reappears when moved)
+N	Toggle text display in full screen mode
+Shift+L	Lock/unlock zoom factor (applies current zoom to all loaded images)
+
+
+minus8. Slideshow Controls
+F4	Add current image to slideshow
+Shift+A	Start/stop automatic viewing (windowed slideshow)
+Ctrl+W	Start slideshow with current directory and images
+W	Slideshow dialog
+pause/break	Pause / resume an automatic slideshow
+
+
+minus9. Tools and Dialogs
+C	Capture dialog
+F3	Show image in HEX viewer
+F12	Paint dialog
+Ctrl+B	Browse subfolders dialog
+Ctrl+E	Effects dialog
+Ctrl+F	Find
+Ctrl+G	Create grayscale image
+Ctrl+Q	Edit multipage TIF file
+Ctrl+R	Resample dialog
+Ctrl+T	Insert text into selection
+Ctrl+print	Interactive screenshot tool
+Shift+T	Focuss the toolbar edit field
+Shift+V	Change canvas size
+Ctrl+Shift+A	Acquire / batch scan dialog
+Ctrl+Shift+M	Comment dialog (for JPG images)
+Ctrl+Shift+C	Set image as wallpaper - centered
+Ctrl+Shift+T	Set image as wallpaper - tiled
+Ctrl+Shift+S	Set image as wallpaper - stretched
+Ctrl+Shift+P	Set image as wallpaper - previous wallpaper
+
+
+minus10. Plugins
+(Note: the following shortcuts require the to be installed)
+F9	Start OCR plugin on image or selection
+E	Show EXIF information
+K	Filter Factory dialog
+Ctrl+K	Open Adobe filters dialog (plugin required)
+Ctrl+I	Show IPTC info
+Shift+M	Email image
+Shift+J	JPG lossless operations (plugin required)
+Ctrl+Shift+J	Lossless JPG crop (Plugin required)
+Ctrl+Shift+L	Lossless JPG rotation - left (Plugin required)
+Ctrl+Shift+R	Lossless JPG rotation - right (Plugin required)

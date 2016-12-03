@@ -1,0 +1,196 @@
+Notes_XnView.txt
+
+Keyboard shortcuts
+
+Browser Mode
+
+Help - F1
+Close - Ctrl+W
+Print - Ctrl+P
+Quit - Ctrl+Q
+
+Copy selected files - Ctrl+C
+Copy image data - Ctrl+Shift+C
+Import clipboard - Ctrl+Shift+V
+Select All - Ctrl+A
+Copy selected files into - Alt+C
+Move selected files into - Alt+M
+Delete selected files - Del
+Rename - F2
+New Folder - F7
+Describe - Ctrl+D
+Properties - Ctrl+E, Alt+Enter
+
+Refresh - Shift+R, F5
+Stop thumbnails creation - Esc
+
+Fullscreen - F11
+Show/Hide Tool Bar - Ctrl+Shift+T
+Show/Hide Status Bar - Ctrl+Shift+B
+Show/Hide Folder Tree - Ctrl+Shift+F
+Show/Hide Preview - Ctrl+Shift+P
+Next Tab - Ctrl+Tab, F8
+Previous Tab - Ctrl+Shift+Tab
+Toggle Views - F9
+Fit Image to Window - Ctrl+Shift+W
+Show text file - Ctrl+Shift+A
+Show HexaView for unknown file - Ctrl+Shift+N
+
+Open - Ctrl+O
+Open With Associated Program - F3
+Open With Associated Editor - F4
+Open in Hex mode or View In Hexa - Ctrl+H
+Search - Ctrl+F
+Slideshow - Ctrl+L
+Start Slide Show - Pause
+Stop Slide Show - Esc
+Quick Slide Show - Pause, (Space)
+Batch Convert - Ctrl+U
+Page Web - Ctrl+G
+Sequence Convert - Ctrl+N
+Options - F12
+
+Show Favourites menu - Ctrl+F1, F6
+Show/Hide Folder Tabs - Ctrl+Shift+M
+Open in external program - Alt+2, Alt+3 ...
+
+Folder history - move back/forward - Alt+left / Alt+right
+Up one level - Backspace
+Tag/untag - Ctrl+T, Insert, Space
+Rating - Ctrl+Numpad 1/2/3/4/5
+Remove Rating - Ctrl+Numpad 0
+Colour label - Ctrl+Alt+Numpad 1/2/3/4/5
+Remove Colour label - Ctrl+Alt+Numpad 0
+Create Contact Sheet - Ctrl+K
+Switch between Native and English lang. - Ctrl+F12
+Switch between all languages - Alt+F12
+Strip of images - Shift+A
+Create Multi-Page - Shift+M
+
+Image View Mode
+
+Help - F1
+Open - Ctrl+O
+Open With Associated Program - F3
+Open With Associated Editor - F4
+Open in Hex mode or View In Hexa - Ctrl+H
+Browse - Ctrl+B
+Reopen - Ctrl+R, F5
+Save - Ctrl+S
+Save as - Ctrl+Shift+S
+
+Undo - Ctrl+Z
+Cut - Ctrl+X
+Copy - Ctrl+C
+Paste - Ctrl+V
+Canvas Size - Shift+C
+Crop - Ctrl+Y
+Automatic crop - Shift+Y
+Add Text - Shift+T
+Red Eyes correction - Ctrl+E
+Import clipboard - Ctrl+Shift+V
+Select all - Ctrl+A
+Selection - Swap width & height - Tab
+Selection ratio - Free - A
+Selection ratio - Same as image - D
+Custom Selection - C
+Copy file into - Alt+C
+Move file into - Alt+M
+Delete file - Del
+Rename - F2
+Describe - Ctrl+D
+Properties - Ctrl+E, Alt+Enter
+Edit IPTC - Ctrl+I
+Edit colormap - Ctrl+M
+
+Resize - Shift+S
+Rotate -90 - Shift+L, Shift+left
+Rotate 90 - Shift+R, Shift+right
+Rotate -90 lossless (jpeg) - Ctrl+Shift+L, Ctrl+left
+Rotate 90 lossless (jpeg) - Ctrl+Shift+R, Ctrl+right
+Vertical Flip - Shift+V
+Horizontal Flip - Shift+H
+Brightness/Contrast/... - Shift+E
+
+Adobe Photoshop Plugin - Ctrl+G
+
+Fullscreen - F11, F
+Original Size - Numpad *
+Fit window to image - Ctrl+T
+Fit image to window, all - /
+Zoom + - +
+Zoom - - -
+Lock Zoom - Ctrl+Numpad /
+Next File - PageDown
+Previous File - PageUp
+Previous File - Backspace
+First File - Home
+Last File - End
+Next Page - Shift+PageDown
+Previous Page - Shift+PageUp
+Quick Slide Show - Space, Pause
+Show Mask - M
+Show information - I
+Show/Hide Tool Bar - Ctrl+Shift+T
+Show/Hide Status Bar - Ctrl+Shift+B
+Show Color Informations - Ctrl+Shift+I
+
+Search - Ctrl+F
+Slideshow - Ctrl+L
+Batch Convert - Ctrl+U
+Sequence Convert - Ctrl+N
+Edit Multipage TIFF - Ctrl+J
+Options - F12
+
+Show/Hide Folder Tabs - Ctrl+Shift+M
+Lossless crop - Ctrl+Shift+Y
+Open in external program - Alt+2, Alt+3 ...
+
+Tag/untag - T, Insert
+Move image - Numpad 2, 4, 5, 6, 8
+Centre image - Numpad 0
+Fit width - Numpad 1
+Fit height - Numpad 3
+
+Brightness '+' - Ctrl+Numpad 7
+Brightness '-' - Ctrl+Numpad 1
+Brightness Reset - Ctrl+Numpad 4
+Contrast '+' - Ctrl+Numpad 8
+Contrast '-' - Ctrl+Numpad 2
+Contrast Reset - Ctrl+Numpad 5
+Gamma '+' - Ctrl+Numpad 9
+Gamma '-' - Ctrl+Numpad 3
+Gamma Reset - Ctrl+Numpad 6
+Reset all (Brightness, Contrast, Gamma) - Ctrl+ Numpad 0
+Show previous frame - up arrow
+Show next frame - down arrow
+Switch between Native and English lang. - Ctrl+F12
+Switch between all languages - Alt+F12
+Strip of images - Shift+A
+Create Multi-Page - Shift+M
+
+Mouse shortcuts
+
+Show default Windows Explorer context menu - Ctrl+RMB
+
+Switching between modes (customizable) - LMB double-click
+Switching between modes (customizable) - MMB
+Context menu - RMB
+Previous/Next image / Scroll / Zoom (customizable) - wheel
+Fit image to window, large only - LMB+RMB
+Fit image to window, large only - RMB+LMB
+Lock zoom - LMB+MMB
+Lock zoom - RMB+MMB
+Zoom + / - - LMB+wheel
+Zoom + / - - RMB+wheel
+Zoom + / - - Ctrl+wheel
+Select files - Ctrl+LMB
+
+LMB = left mouse button
+MMB = middle mouse button
+RMB = right mouse button
+wheel = mouse wheel
+
+Notes:
+
+You can find a list of all hotkeys/shortcuts also in the XnView Help (press F1 in XnView to show).

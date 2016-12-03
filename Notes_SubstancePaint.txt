@@ -1,0 +1,8 @@
+Notes_SubstancePaint.txt
+
+Mesh must be stored locally (i.e. on the C: Drive etc)
+Shift to contrain rotation
+alt right click for light
+m for material
+c for solo map
+Ctrl+Right or left click to control brush settings

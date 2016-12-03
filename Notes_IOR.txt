@@ -1,0 +1,13 @@
+Notes_IOR
+
+Fresnel into lerp with 1 for A and IOR for B
+
+
+Index of Refraction
+
+Material	IOR Value
+Air	1.00
+Water	1.33
+Ice	1.31
+Glass	1.52
+Diamond	2.42

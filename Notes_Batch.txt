@@ -165,3 +165,28 @@ to find length
 
 
 
+TIMEOUT
+
+TIMEOUT was included in some of the Windows Resource Kits, but is now a standard command in Windows 7 and 8 (not sure about Vista).
+It waits for the specified number of seconds or a keypress, and then exits.
+So, unlike SLEEP, TIMEOUT's delay can be "bypassed" by pressing a key.
+
+TIMEOUT 10
+or
+
+TIMEOUT /T 10
+will delay execution of the next command by 10 seconds, or until a key is pressed, whichever is shorter.
+
+D:\>TIMEOUT /T 10
+
+Waiting for  0 seconds, press a key to continue ...
+You may not always want to abort the delay with a simple key press, in which case you can use TIMEOUT's optional /NOBREAK switch:
+
+D:\>TIMEOUT /T 10 /NOBREAK
+
+Waiting for  0 seconds, press CTRL+C to quit ...
+You can still abort the delay, but this requires Ctrl+C instead of just any key, and will raise an ErrorLevel 1.
+
+
+
+IF ERRORLEVEL 1 ECHO error level is 1 or more
