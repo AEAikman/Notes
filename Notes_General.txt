@@ -367,7 +367,10 @@ light falloff exponent
 split anm track to deal with visibility toggle popping in from start position
 player shown in sequncer?
 pasting must be done in an existing track
-
+sphere ref capture actor hidden in game?
+labels?
+clipping planes?
+may need to restart for render/render settings reload?
 
 lens
 23.749
@@ -453,6 +456,7 @@ duplicate and share bug
 reatime toggle not working sometimes
 visibilty toggle pop
 multiple toggle tracks missing
+labels don't update?
 #############
 
 
@@ -476,6 +480,9 @@ camera match script
 1630
 3210
 
+4310
+3410
+
 2048
 1152
 
@@ -487,9 +494,22 @@ camera match script
 
 shield
 
+namespace renamer  done
+
 \\halonblade\hblade\InProd\Orville\_previs\ORV101\027_010\rnd\ORV101_027_010_v004\ORV101_027_010_v004
 \\halonblade\hblade\InProd\Orville\_previs\ORV101\027_030\rnd\ORV101_027_030_v003\ORV101_027_030_v003
 \\halonblade\hblade\InProd\Orville\_previs\ORV101\043_010\rnd\ORV101_043_010_v002\ORV101_043_010_v002
-\\halonblade\hblade\InProd\Orville\_previs\ORV101\043_010\rnd\ORV101_043_010_v002\ORV101_043_010_v002
-
-namespace renamer
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\043_010\rnd\ORV101_032_010_v007\ORV101_032_010_v007
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\013_030\rnd\ORV101_013_030_v001\ORV101_013_030_v001
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\013_060\rnd\ORV101_013_060_v002\ORV101_013_060_v002
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\014_050\rnd\ORV101_014_050_v003\ORV101_014_050_v003
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\014_060\rnd\ORV101_014_060_v003\ORV101_014_060_v003
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\014_070\rnd\ORV101_014_070_v004\ORV101_014_070_v004
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\013_050\rnd\ORV101_013_050_v002\ORV101_013_050_v002
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\013_030\rnd\ORV101_013_030_v002\ORV101_013_030_v002
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\013_050\rnd\ORV101_013_050_v004\ORV101_013_050_v004
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\013_060\rnd\ORV101_013_060_v003\ORV101_013_060_v003
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\014_040\rnd\ORV101_014_040_v009\ORV101_014_040_v009
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\034_010\rnd\ORV101_034_010_v003\ORV101_034_010_v003
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\043_020\rnd\ORV101_043_020_v001\ORV101_043_020_v001
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\045_020\rnd\ORV101_045_020_v002\ORV101_045_020_v002

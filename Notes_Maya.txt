@@ -38,3 +38,12 @@ assign objects to diplay layer to set color
 Ctrl drag value in attribute editor for fine control
 
 Show > Selection Highlighting
+
+Shift + S for Animation/Tangent marking menu
+
+
+To see motion trails
+
+Select Object
+Animation > Visualize > Create editable motion trail
+In Viewport > Show > Motion Trails
