@@ -69,3 +69,34 @@ Pytho.sublime-build in Packages > Python to
 }
 
 or replace path accordingly
+
+
+
+Deselect
+
+Ctrl + U
+
+REDO
+Ctrl + Y
+
+Sidebar
+Ctrl + K + B
+
+SublimeGit notes
+to revert
+checkout commit
+make changes
+new branch
+commit
+checkout master
+merge with branch
+resolve conflict with ours or theirs
+
+
+
+ALSO
+use Ctrl + ; for goto word more
+
+Ctrl + M - Jump to closing paren
+
+Ctrl + Space - Autocomplete

@@ -398,7 +398,8 @@ alternate select edge
 
 
 
-
+lynda, treehouse, codeschool, udacity, freecodecamp, w3schools, mdn, and codewars﻿
+html css js
 
 
 
@@ -483,6 +484,23 @@ camera match script
 4310
 3410
 
+2340
+
+1640
+
+2340 v2
+
+
+
+
+
+
+
+change namespace > for each
+
+
+
+
 2048
 1152
 
@@ -513,3 +531,5 @@ namespace renamer  done
 \\halonblade\hblade\InProd\Orville\_previs\ORV101\034_010\rnd\ORV101_034_010_v003\ORV101_034_010_v003
 \\halonblade\hblade\InProd\Orville\_previs\ORV101\043_020\rnd\ORV101_043_020_v001\ORV101_043_020_v001
 \\halonblade\hblade\InProd\Orville\_previs\ORV101\045_020\rnd\ORV101_045_020_v002\ORV101_045_020_v002
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\023_040\rnd\ORV101_023_040_v001\ORV101_023_040_v001
+\\halonblade\hblade\InProd\Orville\_previs\ORV101\016_040\rnd\ORV101_016_040_v001\ORV101_016_040_v001
