@@ -1,0 +1,55 @@
+Notes_Documentation.txt
+
+
+Documentation notes as of NOV 2016
+cine cam and seq advanced notes
+head and tail in export scripts
+choose 0 frame for anim
+clicking camera to constrain to viewport (camera cuts = all, on camera track = selected viewport)
+seq shift click to snap to key
+right-clicking to load
+if textures keep streaming in render, try restarting engine
+sequencer keying issues
+camera script
+make sure to update ls if saving as in a ls
+save as ls first to avoid overwriting old one
+adding content from vault cache by copying to local vault cache and "adding to project"
+shift select last key of cam focal length to get frame range
+sequencer keying bug
+drag in sequencer slider to be able to use keys to move frames
+select track and use keys in seq to be able to cycle through tracks
+cine cam dof explanation
+scrub in seq after change to details to see it
+auto key to keep keys made
+light falloff exponent
+split anm track to deal with visibility toggle popping in from start position
+player shown in sequncer?
+pasting must be done in an existing track
+sphere ref capture actor hidden in game?
+labels?
+clipping planes?
+may need to restart for render/render settings reload?
+player start to hide player
+find ls in cb to insert into LS actor
+new level, new ls, mag glass, insert into ls actor
+point light setup
+light inverse falloff settings
+template ls
+make sure to open current LS when opening a new scene
+seq duplicate keys missing alt drag
+matching ls to level is very important
+if camera breaks, create a new one
+auto quit for pie?
+
+
+
+
+
+#############
+Sequencer bugs (keying etc snapping doesn't work)
+duplicate and share bug
+reatime toggle not working sometimes
+visibilty toggle pop
+multiple toggle tracks missing
+labels don't update?
+seq duplicated keys
