@@ -100,3 +100,10 @@ use Ctrl + ; for goto word more
 Ctrl + M - Jump to closing paren
 
 Ctrl + Space - Autocomplete
+
+Ctrl + Left or Right - to jump to words
+
+Ctrl + Shift + J - Expand to Indent
+Ctrl + Shift + M - Expand to Brackets
+
+if git changes are show when there are none, try restarting sublime

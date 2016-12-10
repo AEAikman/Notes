@@ -173,3 +173,7 @@ In short
 git branch my-temporary-work
 git checkout master
 git merge my-temporary-work
+
+
+to remove local file from tracking cache
+git rm --cached <file>
