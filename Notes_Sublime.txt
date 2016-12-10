@@ -107,3 +107,8 @@ Ctrl + Shift + J - Expand to Indent
 Ctrl + Shift + M - Expand to Brackets
 
 if git changes are show when there are none, try restarting sublime
+
+
+to search open files
+Ctrl + Shift + F
+<open files>

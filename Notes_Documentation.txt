@@ -40,7 +40,7 @@ seq duplicate keys missing alt drag
 matching ls to level is very important
 if camera breaks, create a new one
 auto quit for pie?
-
+pay attention to lighting channels
 
 
 
