@@ -38,10 +38,12 @@ template ls
 make sure to open current LS when opening a new scene
 seq duplicate keys missing alt drag
 matching ls to level is very important
-if camera breaks, create a new one
+if camera breaks, create a new one (watch for dof and aperture settings)
 auto quit for pie?
 pay attention to lighting channels
-
+Use mag glass on ls to make sure you are using the right one
+ls save as vs save all trickiness
+ls last key if there for end of seq
 
 
 

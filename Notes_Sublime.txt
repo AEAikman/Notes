@@ -112,3 +112,8 @@ if git changes are show when there are none, try restarting sublime
 to search open files
 Ctrl + Shift + F
 <open files>
+
+Alt + - for last cursor position
+Alt + Shift + -(minus) for last cursor position
+Ctrl + Alt + Up or Down to add cursor up or down
+Ctrl + Shift + L - to split cursors on lines

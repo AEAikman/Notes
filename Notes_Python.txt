@@ -356,3 +356,16 @@ inp = raw_input()       # Get the input
 while inp != "":        # Loop until it is a blank line
     inp = raw_input()   # Get the input again
 Note that if you are on Python 3.x, you will need to replace raw_input with input.
+
+
+
+
+CONCATENATION
+
+hello = "hello"
+world = "world"
+
+print hello + " " + world
+print "%s %s" % (hello, world)
+print "{} {}".format(hello, world)
+print ' '.join([hello, world])
