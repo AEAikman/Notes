@@ -44,6 +44,11 @@ pay attention to lighting channels
 Use mag glass on ls to make sure you are using the right one
 ls save as vs save all trickiness
 ls last key if there for end of seq
+messed up float precision?  get a decimal by moving it, then modify it
+static lighting baking?
+postvis layer update using byte or int (switch on int) for extensible layers?
+if weird shadows > check near clip plane
+for floats > use 0. instead of . etc
 
 
 

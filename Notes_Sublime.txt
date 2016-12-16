@@ -117,3 +117,135 @@ Alt + - for last cursor position
 Alt + Shift + -(minus) for last cursor position
 Ctrl + Alt + Up or Down to add cursor up or down
 Ctrl + Shift + L - to split cursors on lines
+
+Ctrl + U = last Selection
+Ctrl + Shift + U = next Selection (if in previous selection)
+
+
+
+
+
+Selection
+
+Basics
+Sublime Text works with all the standard Windows shortcuts: In addition to the arrow keys, home, end, page up, etc, there is:
+
+Ctrl+Left / Ctrl+Right: Move by words
+Ctrl+Home / Ctrl+End: Move to the beginning / end of the file
+Ctrl+L: Expand selection to line
+Expand selection to line is quite handy, it's worth giving it a try to get a feel for it. Pressing it multiple times will extend the selection by a line at a time. Pressing Ctrl+L,Backspace will delete the current line.
+
+Multiple Selections
+Use multiple selections to edit in more that one place at once. It works as a quick substitute for find and replace, or to apply the same sequence of changes to multiple lines simultaneously.
+
+To select multiple regions using the keyboard, select a block of text, then press Ctrl+Shift+L to split it into one selection per line.
+
+When you're done with using multiple selections, just press Ctrl+K to trim all but the first.
+
+Given a selected block of text, Ctrl+Shift+K will split it into two selections, one for each end.
+
+Using the Mouse
+Whether clicking, double clicking to select a word or dragging to select text, you can hold down modifier keys to work with multiple selections:
+
+Ctrl to add to the selection
+Alt to remove from the selection
+Dragging with the middle button / mouse wheel will do a column selection. You can use Ctrl and Alt with this too. Shift+Right mouse button is an alternative way to initial a column select.
+
+Dragging in the gutter (where the line numbers are), will select entire lines at once.
+
+Find
+Two handy ways to use find to work with the selection:
+
+Ctrl+F3 to find the next occurrence of the current word or selected text
+Alt+F3 to find all occurrences of the current word or selected text
+Alt+F3 gives a really simple way to do find and replace: Use it to select all occurrences of the current word or selection, then just start typing to replace or edit them all at once.
+
+
+
+
+
+
+Key Bindings
+
+All key bindings in Sublime Text are configurable, controlled by the .sublime-keymap files. This document describes the syntax of the keymap files, as well as how they're loaded to form the complete set of key bindings.
+
+The full rules for how the .sublime-keymap files are combined is given below, but the key part to remember is that user specified key bindings should be placed in Packages/User/Default.sublime-keymap.
+
+Keymap Syntax
+.sublime-keymap files are XML files containing a set of binding elements. A simple example:
+
+<bindings>
+    <binding key="ctrl+x" command="cut"/>
+    <binding key="ctrl+c" command="copy"/>
+    <binding key="ctrl+v" command="paste"/>
+</bindings>
+For a larger example, browse through the default key bindings, available from the Preferences/Default Key Bindings menu item.
+
+Key Names
+The key attribute of a binding is made up of the modifiers and the key itself. The available modifiers are ctrl, alt and shift. The available key names are a single character, or a named key, which may be one of:
+
+f1-f15,
+backquote, backslash, backspace, browser_back, browser_favorites,
+browser_forward, browser_home, browser_refresh, browser_search, browser_stop,
+capslock, clear, comma, contextmenu, delete, down, end, enter, equals, escape,
+home, insert, left, leftalt, leftbracket, leftcontrol, leftmeta, leftshift,
+leftsuper, minus, numlock, pagedown, pageup, pause, period, printscreen, quote,
+right, rightalt, rightbracket, rightsuper, scrolllock, semicolon, slash, space,
+tab, up
+Examples:
+
+ctrl+a
+ctrl+alt+a
+ctrl+delete
+Note that the order of the modifiers doesn't matter: ctrl+shift+a is the same as shift+ctrl+a.
+
+Commands
+The second part of the binding, the command, is one of the available commands exposed by Sublime Text or a plugin. The full list is available on the Commands page.
+
+Sequence Key Bindings
+Key names may be separated by commas, to indicate key bindings that should only trigger when a sequence of keys is pressed. For example:
+
+<binding key="ctrl+t,u" command="upperCase"/>
+<binding key="ctrl+t,l" command="lowerCase"/>
+In this example, pressing ctrl+t, followed by u, will convert the selection to upper case. Note that if there is a standalone key binding for ctrl+t by itself, then this will take precedence and disable the sequence bindings.
+
+If a sequence of keys starts with a sequence of simple characters, then Sublime Text will use prediction, where the characters are entered into the buffer as you type, and once the key binding is completed, the entered characters are rolled back and the command executed. For example, a binding like:
+
+<binding key="q,q" command="save"/>
+Will save the buffer when "qq" is pressed, but won't interrupt regular typing, such as when entering "qubit".
+
+Regex Key Bindings
+Regex key bindings are an extension of sequence key bindings: rather than binding to a fixed sequence of keys, they can be used to bind to a pattern of keys. For example:
+
+<binding key="alt+d,/[0-9]+/,w" command="times $1 deleteWord right"/>
+Here, pressing alt+d,8,w will delete 8 words to the right of the cursor. There are two key parts to making this happen: first is the times command, which takes two arguments: the number of times to repeat the command, and then the command to repeat. Above, the command to repeat is "deleteWord right" and the number of times to repeat it is given by $1. "$1" will be replaced by the characters that the regex actually matched.
+
+Contexts
+Using contexts, it's possible to have one sequence of keys issue different commands at different times. For example, tab, when pressed with an empty selection, simply inserts a line. However, if there's a selection that spans multiple lines, then pressing tab indents the selection. This is done via contexts:
+
+<binding key="tab" command="insertAndDecodeCharacters \t"/>
+<binding key="tab" command="indent">
+    <context name="newlineInSelection" value="true"/>
+</binding>
+The full list of available contexts is available here.
+
+Which keymap files are used
+The base name of the keymap files to use, typically 'Default' is given by the general preference 'keymap'. There is little reason to change this, but if you'd like to make a different keymap that shares none of the typical key bindings, such as a vi mode, then changing the keymap preference is the way to go.
+
+The keymap preference only gives the name of the keymap files, Default.sublime-keymap, but not the path. This is because all files with the given name in every package are combined into the loaded keymap.
+
+When the same key is bound multiple times, ordering matters to determine which binding takes precedence. First, the keymap files are sorted by path name, and loaded in that order. Bindings within a file are loaded in the order given in the file. Later bindings overwrite newer bindings.
+
+Snippets
+As well as keymap files, bindings may be sourced from snippets. Snippets have an optional tabTrigger field which, if set, generates an implied key binding. For example, this snippet:
+
+<snippet>
+    <tabTrigger>while</tabTrigger>
+    <content>while () { $0 }</content>
+</snippet>
+has an implicit key binding of:
+
+<binding key="w,h,i,l,e,tab" command="insertSnippet Packages/Foo/while.sublime-snippet"/>
+
+
+
