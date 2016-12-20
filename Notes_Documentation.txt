@@ -49,7 +49,8 @@ static lighting baking?
 postvis layer update using byte or int (switch on int) for extensible layers?
 if weird shadows > check near clip plane
 for floats > use 0. instead of . etc
-
+troubleshooting engine import issues
+choke
 
 
 #############

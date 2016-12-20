@@ -28,3 +28,8 @@ email ^[_]*([a-z0-9]+(\.|_*)?)+@([a-z][a-z0-9-]+(\.|-*\.))+[a-z]{2,6}$
 domain ^([a-z][a-z0-9-]+(\.|-*\.))+[a-z]{2,6}$
 Other regular expressions - Match no input  ^$ - Match blank input ^\s\t*$ - Match New line [\r\n]|$ - Match white Space  ^\s+$ - Match Url = ^http\:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$
 
+Better notes
+
+a{3}
+Matches exactly 3 consecutive `a` characters.
+

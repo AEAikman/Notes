@@ -5,4 +5,4 @@ vectors must be in []
 
 When rendering
 Create an Output module template,
-then you make click to add another template
+then you may click to add another template
