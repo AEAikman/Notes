@@ -531,11 +531,87 @@
             menuEditorMenuItem1;
 
         menuItem
-            -label "reload hcam" 
+            -label "Playblasting" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem2;
+
+            menuItem
+                -label "Playblast" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source GUI_Playblast;postvisPlayblast;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "PlayblastButton.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "toggle HUD" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "hud = hcam.Tools.HUD()\nhud.toggle(hcam.Ui.Cam.List.sls)" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "Slate_HUD.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Reload Current Scene No Save" 
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "import am_func.am_maya_ui as mui\nimport am_func.am_maya_utils as ma\nimport am_func.am_utils as am\n\nclass ChooseProd():\n    \"\"\"\n    \n    \"\"\"\n    class Label(mui.LblGrp):\n        \"\"\"\n        Customized LblGrp\n        \"\"\"\n        ui = 'LblGrp'\n        l = 'Select the production.'\n        w = 190\n        fn = 'smallBoldLabelFont'\n        lbl = ''\n        lw = 5\n        rw = 5\n       \n        \n    class Menu(mui.OptMenuGrp):\n        \"\"\"\n        Customized OptMenuGrp\n        \"\"\"                    \n        lbl = ''\n        lw = 5        \n        rw = 5       \n        w = 190\n\n    class Button(mui.Button):\n        \"\"\"\n        Customized Button\n        \"\"\"\n        lbl = 'Set Production'        \n        def c(self, v):\n            \"\"\"\n            Dismiss layoutDialog by returning selected menu item\n            \"\"\"\n            mc.layoutDialog(dis = ChooseProd.Menu.query_v())\n    \n    \n    \n    #var call\n    lbl = 'Halon Tools'\n    w = 225\n    #class call\n    Label = Label()\n    Menu = Menu()\n    Button = Button()    \n    def dialog(self):\n        \"\"\"\n        Prompt a layout dialog and returns selected menu items\n        \"\"\"\n        return mc.layoutDialog(t = self.lbl, ui = self.build)\n    \n    def build(self):\n        \"\"\"\n        build a formLayout to be used ny layoutDialog\n        \"\"\"\n        #call basic ui element\n        form = mc.setParent(q = True)\n        mc.formLayout(form, e = True, w = self.w)\n        #update menu items list\n        self.Menu.items = am.listFolders(ma.getenv_strip('HROOT'))\n\n        #build ui class\n        lbl = self.Label.build(form)\n        menu = self.Menu.build(form)\n        but = self.Button.build(form)\n        #edit form\n        mc.formLayout(form, e = True, af = [(lbl, 'top', 5), (but, 'bottom', 5), (lbl, 'left', 5), (lbl, 'right', 5), (menu, 'left', 5), (menu, 'right', 5), \\\n        (but, 'left', 5), (but, 'right', 5)], ac = [(menu, 'top', 5, lbl), (but, 'top', 5, menu)]) \n        \n\n\n#dialog class call\nStartUp = mui.Dialog('StartUp')\nStartUp.t = 'Halon Tools Startup'\n\n#check for HROOT\nproceed = False\nhroot = ma.getenv_strip('HROOT')\nprint 'Halon Tools Startup>> HROOT:', hroot\nif not hroot:\n    StartUp.confirm(m = 'HROOT env var is not set up.\\\\nHalon Tools suite might not work properly', items = ['OK'])\nelse:\n    if not os.path.isdir(hroot):\n        confirm = StartUp.confirm(m = 'HROOT env var filepath does not exists.\\\\nHalon Tools suite might not work properly', items = ['OK'])\n    else:\n        #class call\n        ChooseProd = ChooseProd()\n        #set up optvar on startup\n        if not mc.optionVar(q = 'haloncam_prod'):\n            prod = ma.getenv_strip('LOADPROD')\n            if not prod:\n                StartUp.confirm(m = 'LOADPROD not set in Maya.env.  Please set your current project and restart Maya', items = ['OK'])\n            else:\n                mc.optionVar(sv = ['haloncam_prod', prod])\n                proceed = True\n                \n        else:\n            proceed = True\nif proceed:\n    proceed = True\n    #import hcam module\n    import hcam\n    reload(hcam)\n    #start script job for hcam\n    for job in mc.scriptJob(lj = True):\n        if 'sj_onSceneOpen' in job:\n            proceed = False\n    if proceed:\n        mc.scriptJob(e = [\"SceneOpened\", hcam.sj_onSceneOpen], per = False)\n    ui = hcam.Ui()\n    ui.build()\n\n\n" 
+            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_ReloadSceneNoSave.mel\";" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -548,39 +624,13 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "Slate_menu.png" 
+            -image "commandButton.png" 
             -echoCommand 0
             -italicized 0
             -boldFont 1
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem2;
-
-        menuItem
-            -label "Playblast" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "source GUI_Playblast;postvisPlayblast;" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "SW" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "PlayblastButton.bmp" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 0
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem6;
+            menuEditorMenuItem7;
 
     setParent -m ..;
 
@@ -755,7 +805,7 @@
             -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaToUnreal_Camera.bmp" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem1;
@@ -781,17 +831,17 @@
             -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaToUnreal_hRig.bmp" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem3;
 
         menuItem
-            -label "MayaToUnreal_Prop" 
+            -label "PRP No Constr" 
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToUnreal_Prop.mel\";" 
+            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToUnreal_Prop_NoConstraints.mel\";" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -804,13 +854,13 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaToUnreal_Prop.bmp" 
+            -image "commandButton.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem4;
+            menuEditorMenuItem5;
 
     setParent -m ..;
 
@@ -1060,7 +1110,7 @@
         setParent -m ..;
 
         menuItem
-            -label "AutoQuad Options" 
+            -label "Faces" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -1155,6 +1205,156 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
+
+            menuItem
+                -label "Bridge" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "performPolyBridgeEdge 0" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "polyBridge.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "menuEditorMenuItem5" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "BridgeEdgeOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Duplicate" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "performPolyChipOff 0 1" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "polyDuplicateFacet.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "menuEditorMenuItem7" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "DuplicateFaceOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "Extract" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "performPolyChipOff 0 0" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "polyChipOff.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "menuEditorMenuItem9" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ExtractFaceOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
 
         setParent -m ..;
 
@@ -1283,6 +1483,80 @@
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem3;
+
+        menuItem
+            -label "Materials" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "E" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+            menuItem
+                -label "Assign New Lambert" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "createAndAssignShader lambert \"\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Assign Lambert 1" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "hyperShade -assign lambert1;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+        setParent -m ..;
 
     setParent -m ..;
 
@@ -2070,7 +2344,7 @@
             -optionBox 0
             -enable 1
             -data 0
-            -radialPosition "SE" 
+            -radialPosition "W" 
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
@@ -2107,6 +2381,102 @@
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem4;
+
+        menuItem
+            -label "ToggleXrayObject" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/ToggleXrayObj.mel\"; ToggleXrayObj();" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "E" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "commandButton.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+        menuItem
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem6;
+
+        menuItem
+            -label "ToggleXrayView" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/ToggleXrayView.mel\"; ToggleXrayView();" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SE" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "commandButton.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem7;
+
+        menuItem
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem8;
 
     setParent -m ..;
 
@@ -2486,10 +2856,58 @@
             -longDivider 1
             menuEditorMenuItem2;
 
+        menuItem
+            -label "MirrorsEdge" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/MirrorsEdge.mel\"; MirrorsEdge();" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "commandButton.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+        menuItem
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem6;
+
     setParent -m ..;
 
     menuItem
-        -label "Curve UV Rig Snap Sel" 
+        -label "Misc" 
         -divider 0
         -subMenu 1
         -tearOff 0
@@ -3035,32 +3453,6 @@
                 menuEditorMenuItem3;
 
             menuItem
-                -label "Point to Point" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SnapPointToPoint" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "pointToPoint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem4;
-
-            menuItem
                 -label "Align Objects" 
                 -divider 0
                 -subMenu 0
@@ -3133,7 +3525,7 @@
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem7;
@@ -3159,10 +3551,58 @@
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem8;
+
+            menuItem
+                -label "menuEditorMenuItem9" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+            menuItem
+                -label "MovePivotToBase" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/AAMovePivotToBase.mel\";\n" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem10;
 
             menuItem
                 -divider 0
@@ -3184,7 +3624,7 @@
                 -boldFont 0
                 -sourceType "mel" 
                 -longDivider 1
-                menuEditorMenuItem9;
+                menuEditorMenuItem11;
 
         setParent -m ..;
 
@@ -3337,11 +3777,11 @@
                 menuEditorMenuItem5;
 
             menuItem
-                -label "Filter Selection for Roots" 
+                -label "Select Roots" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_FilterSelectionToRoot.mel\";" 
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_SelectRoots.mel\";" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -3357,7 +3797,7 @@
                 -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/selectRoots.bmp" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -3840,6 +4280,54 @@
                 -longDivider 1
                 menuEditorMenuItem3;
 
+            menuItem
+                -label "UVOffset" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/UVOffset.mel\"; UVOffset();" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
         setParent -m ..;
 
         menuItem
@@ -3859,7 +4347,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem3;
@@ -3878,14 +4366,14 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "S" 
+                -radialPosition "SW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
                 -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/Bake.bmp" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
@@ -3904,17 +4392,95 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "N" 
+                -radialPosition "NW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
+
+            menuItem
+                -label "Send Prop to Mobu" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToMobu_Prop.mel\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaPropMobu.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Import prop from Mobu" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/ANIM_fbxToMayaProp.mel\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MobuPropMaya.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Change Namespace of Non-referenced Object" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_ChangeNamespace.mel\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/ChangeNamespace.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
 
         setParent -m ..;
 
@@ -3935,7 +4501,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem4;
@@ -3961,13 +4527,13 @@
                 -image "Slate_subject.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
 
             menuItem
-                -label "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_..." 
+                -label "Create Locator" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -3987,7 +4553,7 @@
                 -image "locator.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -4013,17 +4579,17 @@
                 -image "Slate_Import.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
 
             menuItem
-                -label "Import prop from Mobu" 
+                -label "wiz_controllers" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/ANIM_fbxToMayaProp.mel\";" 
+                -command "wiz_controllers ()\n" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -4036,39 +4602,13 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MobuPropMaya.bmp" 
+                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/wiz_icons/b01.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
-                menuEditorMenuItem5;
-
-            menuItem
-                -label "Send Prop to Mobu" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToMobu_Prop.mel\";" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaPropMobu.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 0
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem6;
+                menuEditorMenuItem1;
 
         setParent -m ..;
 
