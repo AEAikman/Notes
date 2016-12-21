@@ -325,7 +325,7 @@
         setParent -m ..;
 
         menuItem
-            -label "FileManage" 
+            -label "Files" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -345,110 +345,6 @@
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem21;
-
-            menuItem
-                -label "Far Clip to 9,000,000" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".farClipPlane\") 900000000;\r\n    }" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "ClippingPlanes_08.xpm" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem5;
-
-            menuItem
-                -label "Far Clip to 9,000" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".farClipPlane\") 9000;\r\n    }" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "ClippingPlanes_05.xpm" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem6;
-
-            menuItem
-                -label "Near Clip to 100" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".nearClipPlane\") 100;\r\n    }" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "ClippingPlanes_04.xpm" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem7;
-
-            menuItem
-                -label "Near Clip to .01" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "string $cameras[] = `ls -cameras`;\n\nfor ($thisCamera in $cameras) {\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\n    setAttr ($thisCamera + \".nearClipPlane\") .01;\n    }" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "ClippingPlanes_01.xpm" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem8;
 
             menuItem
                 -label "Save Preferences" 
@@ -490,7 +386,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NW" 
+                -radialPosition "S" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -502,33 +398,60 @@
                 -longDivider 1
                 menuEditorMenuItem4;
 
-        setParent -m ..;
+            menuItem
+                -label "Reload Current Scene No Save" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_ReloadSceneNoSave.mel\";" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
 
-        menuItem
-            -label "Open Scene..." 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "OpenScene" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "E" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "menuIconFile.png" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem1;
+            menuItem
+                -label "Open Scene..." 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "OpenScene" 
+                -keyEquivalent "O" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 1
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconFile.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+        setParent -m ..;
 
         menuItem
             -label "Playblasting" 
@@ -607,11 +530,10 @@
         setParent -m ..;
 
         menuItem
-            -label "Reload Current Scene No Save" 
+            -label "Pivot" 
             -divider 0
-            -subMenu 0
+            -subMenu 1
             -tearOff 0
-            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_ReloadSceneNoSave.mel\";" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -622,15 +544,136 @@
             -data 0
             -radialPosition "SE" 
             -allowOptionBoxes 1
-            -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "commandButton.png" 
-            -echoCommand 0
             -italicized 0
             -boldFont 1
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem7;
+            menuEditorMenuItem6;
+
+            menuItem
+                -label "MovePivotToBase" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/AAMovePivotToBase.mel\";\n" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "menuEditorMenuItem2" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Move to Abs Origin" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "$obj=`ls -sl`;\nmove -rpr 0 0 0 $obj;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Set Pivot To Origin" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "xform -ws -a -rp 0 0 0" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "menuEditorMenuItem5" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+        setParent -m ..;
 
     setParent -m ..;
 
@@ -957,6 +1000,162 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
+
+            menuItem
+                -label "AhSnap" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"UTIL_snapObject.mel\" ;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/Snap.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "AhSwap" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "import swapObjects\nreload(swapObjects)\nswapObjects.display()" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/Swap.bmp" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Snap Together Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "setToolTo snapTogetherToolCtx" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "snapTogetherTool.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Align Objects" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "performAlignObjects 0" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "alignObjects.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Position Along Curve" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PositionAlongCurve" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "positionAlongCurve.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "Point to Point" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SnapPointToPoint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "pointToPoint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
 
         setParent -m ..;
 
@@ -2305,11 +2504,11 @@
             menuEditorMenuItem1;
 
         menuItem
-            -label "Set All Camera and Image Plane Attrs" 
+            -label "ToggleWireframeView" 
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "import setCamAttrs\nreload(setCamAttrs)\nsetCamAttrs.main()" 
+            -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/ToggleWosView.mel\"; ToggleWosView();" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -2322,39 +2521,12 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/createCamAttrs.bmp" 
             -echoCommand 0
             -italicized 0
             -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem2;
-
-        menuItem
-            -label "Add Alpha Gain Attribute" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "import createAGAttr\nreload(createAGAttr)\ncreateAGAttr.display()" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "W" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/createAlpha.bmp" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem3;
 
         menuItem
             -label "Show All UI Elements" 
@@ -2370,7 +2542,7 @@
             -optionBox 0
             -enable 1
             -data 0
-            -radialPosition "SW" 
+            -radialPosition "W" 
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
@@ -2403,12 +2575,13 @@
             -image "commandButton.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem5;
 
         menuItem
+            -label "menuEditorMenuItem6" 
             -divider 0
             -subMenu 0
             -tearOff 0
@@ -2423,9 +2596,8 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 0
-            -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem6;
@@ -2451,12 +2623,13 @@
             -image "commandButton.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem7;
 
         menuItem
+            -label "menuEditorMenuItem8" 
             -divider 0
             -subMenu 0
             -tearOff 0
@@ -2471,12 +2644,215 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem8;
+
+        menuItem
+            -label "AnmLayout" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "setNamedPanelLayout \"AAikman_LO\"; updateToolbox();" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
             -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem9;
+
+        menuItem
+            -label "PerspOutlinerLayout" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "setNamedPanelLayout \"Persp/Outliner\"; updateToolbox();" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem10;
+
+        menuItem
+            -label "ClippingPlanes" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
             -italicized 0
             -boldFont 0
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem8;
+            menuEditorMenuItem3;
+
+            menuItem
+                -label "Far Clip to 9,000,000" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".farClipPlane\") 900000000;\r\n    }" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "ClippingPlanes_08.xpm" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Near Clip to .01" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $cameras[] = `ls -cameras`;\n\nfor ($thisCamera in $cameras) {\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\n    setAttr ($thisCamera + \".nearClipPlane\") .01;\n    }" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "ClippingPlanes_01.xpm" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Far Clip to 9,000" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".farClipPlane\") 9000;\r\n    }" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "ClippingPlanes_05.xpm" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Near Clip to 100" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".nearClipPlane\") 100;\r\n    }" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "ClippingPlanes_04.xpm" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Near Clip to .1" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".nearClipPlane\") .1;\r\n    }" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "ClippingPlanes_01.xpm" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+        setParent -m ..;
 
     setParent -m ..;
 
@@ -2877,12 +3253,13 @@
             -image "commandButton.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem5;
 
         menuItem
+            -label "menuEditorMenuItem6" 
             -divider 0
             -subMenu 0
             -tearOff 0
@@ -2897,9 +3274,8 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 0
-            -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem6;
@@ -3353,282 +3729,6 @@
         setParent -m ..;
 
         menuItem
-            -label "Snapping and Pivot" 
-            -divider 0
-            -subMenu 1
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "SW" 
-            -allowOptionBoxes 1
-            -enableCommandRepeat 1
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem5;
-
-            menuItem
-                -label "AhSnap" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"UTIL_snapObject.mel\" ;" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/Snap.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "AhSwap" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "import swapObjects\nreload(swapObjects)\nswapObjects.display()" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/Swap.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
-                -label "Snap Together Tool" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "setToolTo snapTogetherToolCtx" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "snapTogetherTool.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem3;
-
-            menuItem
-                -label "Align Objects" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "performAlignObjects 0" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "alignObjects.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem5;
-
-            menuItem
-                -label "Position Along Curve" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PositionAlongCurve" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "E" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "positionAlongCurve.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem6;
-
-            menuItem
-                -label "Move to Abs Origin" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "$obj=`ls -sl`;\nmove -rpr 0 0 0 $obj;" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem7;
-
-            menuItem
-                -label "Set Pivot To Origin" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "xform -ws -a -rp 0 0 0" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem8;
-
-            menuItem
-                -label "menuEditorMenuItem9" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem9;
-
-            menuItem
-                -label "MovePivotToBase" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/AAMovePivotToBase.mel\";\n" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 0
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem10;
-
-            menuItem
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 0
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem11;
-
-        setParent -m ..;
-
-        menuItem
             -label "Selection" 
             -divider 0
             -subMenu 1
@@ -3801,6 +3901,32 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
+
+            menuItem
+                -label "Hierarchy" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SelectHierarchy" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconSelect.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
 
         setParent -m ..;
 
@@ -4301,12 +4427,13 @@
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
 
             menuItem
+                -label "menuEditorMenuItem5" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -4321,9 +4448,8 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 0
-                -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem5;
@@ -4609,6 +4735,32 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
+
+            menuItem
+                -label "Magner's Referencer" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"GUI_ImportRefMultipleObjects_AP3S.mel\" ;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/ReferenceSign.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
 
         setParent -m ..;
 
