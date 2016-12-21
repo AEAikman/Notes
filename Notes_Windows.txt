@@ -26,3 +26,9 @@ C:\Users\The User Name\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Sta
 Use Start - Computer   OR  Windows Explorers to navigate to that.
 How to Change, Add, or Remove Startup Programs in Windows 7
 http://www.sevenforums.com/tutorials/1401-startup-programs-change.html
+
+to get rid of thumbs
+set some or all folder views to details
+or
+Performance Options 
+Turn off use thumbnails instead of icons
