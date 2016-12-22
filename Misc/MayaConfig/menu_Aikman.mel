@@ -3764,7 +3764,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NW" 
+                -radialPosition "N" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -3916,7 +3916,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "N" 
+                -radialPosition "NW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -4518,7 +4518,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NW" 
+                -radialPosition "W" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -4609,6 +4609,32 @@
                 menuEditorMenuItem5;
 
             menuItem
+                -label "Select Hierarchy And Move Keys" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SelectHierarchy;\nstring $prompt =`promptDialog -t \"move selected Keys over time\" -m \"enter an integer value\" -b \"move Key\" -b \"cancel\" -db \"move Key\" -cb \"cancel\"`;\nif($prompt==\"move Key\")\n{\n\tstring $moveKey =`promptDialog -q tx`;\n\tprint $moveKey;\n\tfloat $tcFloat=$moveKey\t;\n\tkeyframe -r -tc $tcFloat;\n}\n" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "hAnim_metal_b41.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
                 -label "move key" 
                 -divider 0
                 -subMenu 0
@@ -4629,36 +4655,10 @@
                 -image "hAnim_metal_b41.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
-
-            menuItem
-                -label "Select Hierarchy And Move Keys" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SelectHierarchy;\nstring $prompt =`promptDialog -t \"move selected Keys over time\" -m \"enter an integer value\" -b \"move Key\" -b \"cancel\" -db \"move Key\" -cb \"cancel\"`;\nif($prompt==\"move Key\")\n{\n\tstring $moveKey =`promptDialog -q tx`;\n\tprint $moveKey;\n\tfloat $tcFloat=$moveKey\t;\n\tkeyframe -r -tc $tcFloat;\n}\n" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "hAnim_metal_b41.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 0
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem7;
 
         setParent -m ..;
 
