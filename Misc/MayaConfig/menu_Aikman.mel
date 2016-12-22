@@ -1015,7 +1015,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "SW" 
+                -radialPosition "S" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -1041,7 +1041,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "W" 
+                -radialPosition "SW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -4308,6 +4308,54 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem9;
+
+            menuItem
+                -label "Paint Skin Weights" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ArtPaintSkinWeightsTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "paintSkinWeights.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem10;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ArtPaintSkinWeightsToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem11;
 
         setParent -m ..;
 
