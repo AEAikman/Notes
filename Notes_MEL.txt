@@ -34,3 +34,17 @@ to find out stuff
 
 
 polyEditUV -pu 0 -pv 0 -su -1 -sv 1 ; //mirrors uvs accross 0,0 in UV
+
+use prompt dialog
+
+string $text;
+string $result = `promptDialog
+    -title "Rename Object"
+    -message "Enter Name:"
+    -button "OK" -button "Cancel"
+    -defaultButton "OK" -cancelButton "Cancel"
+    -dismissString "Cancel"`;
+
+if ($result == "OK") {
+    $text = `promptDialog -query -text`;
+}

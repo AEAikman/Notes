@@ -47,3 +47,5 @@ To see motion trails
 Select Object
 Animation > Visualize > Create editable motion trail
 In Viewport > Show > Motion Trails
+
+key time by adding attribute, and connecting

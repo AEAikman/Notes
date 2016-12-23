@@ -52,13 +52,5 @@ for floats > use 0. instead of . etc
 troubleshooting engine import issues > Cleanup > Zbrush optimze point order, weld points, fix mesh integrity
 choke > Power
 import camera first to save folder for import
+split and drag in seq to fix end frames trick
 
-
-#############
-Sequencer bugs (keying etc snapping doesn't work)
-duplicate and share bug
-reatime toggle not working sometimes
-visibilty toggle pop
-multiple toggle tracks missing
-labels don't update?
-seq duplicated keys
