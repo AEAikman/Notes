@@ -44,7 +44,6 @@ pay attention to lighting channels
 Use mag glass on ls to make sure you are using the right one
 ls save as vs save all trickiness
 ls last key if there for end of seq
-messed up float precision?  get a decimal by moving it, then modify it
 static lighting baking?
 postvis layer update using byte or int (switch on int) for extensible layers?
 if weird shadows > check near clip plane
@@ -53,4 +52,10 @@ troubleshooting engine import issues > Cleanup > Zbrush optimze point order, wel
 choke > Power
 import camera first to save folder for import
 split and drag in seq to fix end frames trick
-
+grouping with ctrl+G
+Duplicated child unparent fixed now
+actor initial position trickiness
+seq scroll on left window only
+bug with visibility switchs stopping working - have to redo atm
+actor hidden in game track can break
+OpenStreetMapPlugin
