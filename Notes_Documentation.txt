@@ -47,7 +47,7 @@ ls last key if there for end of seq
 static lighting baking?
 postvis layer update using byte or int (switch on int) for extensible layers?
 if weird shadows > check near clip plane
-for floats > use 0. instead of . etc
+for floats (sometimes) > use 0. instead of . etc
 troubleshooting engine import issues > Cleanup > Zbrush optimze point order, weld points, fix mesh integrity
 choke > Power
 import camera first to save folder for import
@@ -59,3 +59,6 @@ seq scroll on left window only
 bug with visibility switchs stopping working - have to redo atm
 actor hidden in game track can break
 OpenStreetMapPlugin
+sequencer is not always representative of what you will get
+if sequencer is all red, you likely need to make sure you are in the correct LS
+recommended folder structure (e.g. hUnreal, Assets, etc)

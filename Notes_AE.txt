@@ -6,3 +6,23 @@ vectors must be in []
 When rendering
 Create an Output module template,
 then you may click to add another template
+
+Wiggle expression
+
+//get the specific keyframes 
+timeA = 0; 
+timeB = 1; 
+
+//wiggle properties 
+a = wiggle(40, 40); 
+b = wiggle(20, 30); 
+loc = transform.position;
+
+//condition 
+if ((time > timeA) && (time < timeB)){ 
+[a[0], b[1]]
+} 
+else
+{
+[loc[0],loc[1]];
+}
