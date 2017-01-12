@@ -183,3 +183,12 @@ to clean git repo if it hangs on Writing files git config --global http.postBuff
 To remove the last commit from git, you can simply run git reset --hard HEAD^ If you are removing multiple commits from the top, you can run git reset --hard HEAD~2 to remove the last two commits. You can increase the number to remove even more commits.
 
 https://sethrobertson.github.io/GitFixUm/fixup.html
+
+
+Undo a commit and redo
+
+$ git commit -m "Something terribly misguided"              (1)
+$ git reset HEAD~                                           (2)
+<< edit files as necessary >>                               (3)
+$ git add ...                                               (4)
+$ git commit -c ORIG_HEAD   
