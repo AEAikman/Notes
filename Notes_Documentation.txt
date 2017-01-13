@@ -62,3 +62,5 @@ OpenStreetMapPlugin
 sequencer is not always representative of what you will get
 if sequencer is all red, you likely need to make sure you are in the correct LS
 recommended folder structure (e.g. hUnreal, Assets, etc)
+to fix scale issues > target actor and scale, but no static objects
+sequencer material parameters
