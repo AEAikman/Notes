@@ -403,7 +403,7 @@
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_ReloadSceneNoSave.mel\";" 
+                -command "proc reloadSceneNoSave(){\n\tstring $scNm = `file -q -sn`;\n\tprint (\"Reloading \" + $scNm + \"\\n\");\n\tfile -open -force $scNm;\n}\n\nreloadSceneNoSave();" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -676,11 +676,10 @@
         setParent -m ..;
 
         menuItem
-            -label "Count selected objects" 
+            -label "Groups" 
             -divider 0
-            -subMenu 0
+            -subMenu 1
             -tearOff 0
-            -command "// Count selected objects\nprint (size(`ls -sl`));" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -691,37 +690,110 @@
             -data 0
             -radialPosition "E" 
             -allowOptionBoxes 1
-            -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "commandButton.png" 
-            -echoCommand 0
             -italicized 0
             -boldFont 0
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem1;
+            menuEditorMenuItem7;
 
-        menuItem
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 1
-            -enable 1
-            -data 0
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 0
-            -echoCommand 0
-            -italicized 0
-            -boldFont 0
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem5;
+            menuItem
+                -label "Group Selected Separately" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "global proc GroupAllSep(){\n\n\tstring $sel[] = `ls -sl`;\n\n\tfor ($obj in $sel) {\n\t\tstring $grpName = ($obj+\"_GRP\");\n\t\tgroup -n $grpName $obj;\n\t}\n}\n\nGroupAllSep();" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Swap Parents" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "string $sel[] = `ls -sl -tr`;\nif (size($sel) == 1){\n\t\terror \"Please select two objects\";\n\t}\nstring $objsToFlop[] = {$sel[0], $sel[1]};\nstring $objParents[] = $objsToFlop;\nclear $objParents;\n\nappendStringArray($objParents, `listRelatives -allParents $objsToFlop[0]`, 1);\nappendStringArray($objParents, `listRelatives -allParents $objsToFlop[1]`, 1);\nprint $sel;\nparent $sel[0] $objParents[1];\nparent $sel[1] $objParents[0];" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+        setParent -m ..;
 
     setParent -m ..;
 
@@ -4912,6 +4984,54 @@
                 menuEditorMenuItem5;
 
         setParent -m ..;
+
+        menuItem
+            -label "Count selected objects" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "// Count selected objects\nprint (size(`ls -sl`));" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -image "commandButton.png" 
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+        menuItem
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem6;
 
     setParent -m ..;
 
