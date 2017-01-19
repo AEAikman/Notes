@@ -369,3 +369,15 @@ print hello + " " + world
 print "%s %s" % (hello, world)
 print "{} {}".format(hello, world)
 print ' '.join([hello, world])
+
+
+
+To Copy to clipboard (make sure is string)
+
+import os
+def addToClipBoard(text):
+    command = 'echo ' + text.strip() + '| clip'
+    os.system(command)
+
+# Example
+addToClipBoard('penny lane')
