@@ -71,3 +71,7 @@ tail = 5
 emphasize the relationship between level and level sequence
 doesn't render all the way > may need to restart
 Launchy
+sequencer tends to have a number of visibility track issues
+be careful with auto key and camera
+camera imports to 0 automatically
+to slide camera in master scene, need to move all camera keys and adjust start/end frames
