@@ -75,3 +75,9 @@ sequencer tends to have a number of visibility track issues
 be careful with auto key and camera
 camera imports to 0 automatically
 to slide camera in master scene, need to move all camera keys and adjust start/end frames
+if rotation locks, slide in field transform
+Visibility is bad
+don't forget actor anm and sequencer anm
+use preroll frames in sequencer renderer if needed for post process effects etc
+
+make sure light is set to movable when keying in matinee
