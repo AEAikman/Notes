@@ -81,3 +81,4 @@ don't forget actor anm and sequencer anm
 use preroll frames in sequencer renderer if needed for post process effects etc
 
 make sure light is set to movable when keying in matinee
+source control notes (use or don't use, don't add Saved folder)
