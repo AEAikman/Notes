@@ -32,3 +32,76 @@ set some or all folder views to details
 or
 Performance Options 
 Turn off use thumbnails instead of icons
+
+
+
+
+
+WINDOWS 10
+
+
+A new focus on the desktop brings new keyboard shortcuts for desktop users, so rejoice! Here are all the new keyboard shortcuts you need to know in Windows 10.
+
+From window management with Snap and Task View to virtual desktops and the Command Prompt, there are lots of new goodies for keyboard users in Windows 10.
+
+Window Snapping
+Windows 10 offers improved support for Snap — known as “Aero Snap” on Windows 7. You can now snap windows vertically — one on top of each other, instead of side-by-side — or snap windows to a 2×2 grid.
+
+Windows Key + Left – Snap current window to the left side of the screen.
+Windows Key + Right – Snap current window the the right side of the screen.
+Windows Key + Up – Snap current window to the top of the screen.
+Windows Key + Down – Snap current window to the bottom of the screen.
+Combine these shortcuts to snap into a corner — for example, Windows Key + Left and then Windows Key + Up would snap a window into the top-left quadrant of the screen. The first two keyboard shortcuts aren’t new, but the way they work with the 2×2 snapping feature is.
+
+(You can also use the mouse — drag and drop a window to the left or right edges of your screen, or drag and drop them into one of the four corners to snap into quadrants.)
+
+windows-10-vertical-snapping-keyboard-shortcuts[4]
+
+Task View / Window Management
+The Task View is a new interface that combined an Exposé-like window switching and virtual desktops — an awful lot like Mission Control on Mac OS X. In addition to clicking the “Task View” button on the taskbar to open it, you can use these keyboard shortcuts:
+
+Windows Key + Tab – This opens the new Task View interface, and it stays open — you can release the keys. Only windows from your current virtual desktop will appear in the Task View list, and you can use the virtual desktop switcher at the bottom of the screen to switch between virtual desktops.
+Alt + Tab – This isn’t a new keyboard shortcut, and it works just like you’d expect it to. Pressing Alt+Tab lets you switch between your open Windows. Tap Tab again to flip between windows and release the keys to select a window. Alt+Tab now uses the new Task View-style larger thumbnails. Unlike Windows Key + Tab, Alt + Tab lets you switch between open windows on all virtual desktops.
+new-alt tab-interface-with-larger-thumbnails-on-windows-10
+
+Virtual Desktops
+RELATED ARTICLE
+How to Use Virtual Desktops in Windows 10
+There are also some keyboard shortcuts for quickly managing virtual desktops.
+
+Windows Key + Ctrl + D – Create a new virtual desktop and switch to it
+Windows Key + Ctrl + F4 – Close the current virtual desktop.
+Windows Key + Ctrl + Left / Right – Switch to the virtual desktop on the left or right.
+Sadly, there’s not yet a key combination that will move the current window between virtual desktops. How about Windows Key + Shift + Ctrl + Left / Right — please, Microsoft?
+
+keyboard-shortcut-to-open-task-view-on-windows-10
+
+Command Prompt
+RELATED ARTICLE
+How to Power Up the Windows 10 Command Prompt with CTRL+C and CTRL+V
+The new Command Prompt keyboard shortcuts may not be enabled by default, so be sure to open the Command Prompt’s properties window and enable them first.
+
+Copying and Pasting Text / Ctrl Key Shortcuts
+
+Ctrl + V or Shift + Insert – Pastes text at the cursor.
+Ctrl + C or Ctrl + Insert – Copies the selected text to the clipboard.
+Ctrl + A – Select all text in the current line if the line contains text. If it’s an empty line, select all text in the Command Prompt.
+RELATED ARTICLE
+42+ Text-Editing Keyboard Shortcuts That Work Almost Everywhere
+Selecting Text / Shift Key Shortcuts: Many of the standard Shift key shortcuts for text editing now finally work in the Command Prompt! These include:
+
+Shift + Left / Right / Up / Down – Moves the cursor left a character, right a character, up a line, or down a line, selecting the text along the way. Continue pressing arrow keys to select more text.
+Ctrl + Shift + Left / Right – Moves the cursor one word to the left or right, selecting that word along the way.
+Shift + Home / End – Moves the cursor to the beginning or end of the current line, selecting text along the way.
+Shift + Page Up / Page Down – Moves the cursor up or down a screen, selecting text.
+Ctrl + Shift + Home / End – Moves the cursor to the beginning or end of the “screen buffer,” selecting all text between the cursor and the beginning or end of the Command Prompt’s output.
+ctrl-and-shift-keyboard-shortcuts-in-windows-10-command-prompt
+
+More Shortcuts
+
+Ctrl + Up / Down – Moves one line up or down in the Command Prompt’s history — it’s like using the scroll bar.
+Ctrl + Page Up / Page Down – Moves one page up or down in the Command Prompt’s history — it’s like scrolling even farther.
+Ctrl + M – Enter “mark mode,” which helps for selecting text. Previously, the only way to do this was by right-clicking in the Command Prompt and selecting Mark. Thanks to the new Shift key shortcuts, this mode is no longer as important.
+Ctrl + F – Opens a Find dialog for searching the Command Prompt’s output.
+Alt + F4 – Closes the Command Prompt window.
+

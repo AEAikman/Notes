@@ -79,6 +79,10 @@ if rotation locks, slide in field transform
 Visibility is bad
 don't forget actor anm and sequencer anm
 use preroll frames in sequencer renderer if needed for post process effects etc
-
 make sure light is set to movable when keying in matinee
-source control notes (use or don't use, don't add Saved folder)
+source control notes (use or don't use, don't add Saved (or intermediate) folder)
+make sure camera enabled in fbx settings for camera export
+LAUNCHY
+Show frames through snap settings in Matinee?
+banding from texture compression (vectorDisplacement)
+auto activate on fx?
