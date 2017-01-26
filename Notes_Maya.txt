@@ -49,3 +49,7 @@ Animation > Visualize > Create editable motion trail
 In Viewport > Show > Motion Trails
 
 key time by adding attribute, and connecting
+
+
+Transfer UVS
+Use Mesh > Transfer Attributes to copy the UVs from the smoothed duplicated back to the original mesh.
