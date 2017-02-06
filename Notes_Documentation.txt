@@ -86,3 +86,14 @@ LAUNCHY
 Show frames through snap settings in Matinee?
 banding from texture compression (vectorDisplacement)
 auto activate on fx?
+Engine publish system
+when creating env reference folders, keep everything in one head folder so it can be collapsed
+make documentation have more images - be easier to read
+git for ue4?
+custom render pass for sep trans A
+actor merging update (Window > Developer Tools > Actor Merging Tab)
+buffer visualization
+make use of lighting model for holdout?
+for stencil post process, make sure stencil is enabled in rendering
+for holdout Apply post process Material (e.g. stencil), then add Post Tone HDR Color to custom render pass and render
+make sure to reopen render settings if needed
