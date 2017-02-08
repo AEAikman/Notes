@@ -70,7 +70,6 @@ head = 1
 tail = 5
 emphasize the relationship between level and level sequence
 doesn't render all the way > may need to restart
-Launchy
 sequencer tends to have a number of visibility track issues
 be careful with auto key and camera
 camera imports to 0 automatically
@@ -82,7 +81,7 @@ use preroll frames in sequencer renderer if needed for post process effects etc
 make sure light is set to movable when keying in matinee
 source control notes (use or don't use, don't add Saved (or intermediate) folder)
 make sure camera enabled in fbx settings for camera export
-LAUNCHY
+<<< LAUNCHY documention >>>
 Show frames through snap settings in Matinee?
 banding from texture compression (vectorDisplacement)
 auto activate on fx?
