@@ -53,3 +53,13 @@ key time by adding attribute, and connecting
 
 Transfer UVS
 Use Mesh > Transfer Attributes to copy the UVs from the smoothed duplicated back to the original mesh.
+
+
+FLUIDS
+
+Emit from object
+Omni or Surface
+Auto resize
+border both sides
+
+turbulence

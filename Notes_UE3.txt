@@ -1,0 +1,3 @@
+Notes_UE3.txt
+
+If Decal doesn't show up > Check detail mode

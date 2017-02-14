@@ -26,3 +26,8 @@ else
 {
 [loc[0],loc[1]];
 }
+
+
+Set region of interest
+Composition > Crop to Region of interest
+
