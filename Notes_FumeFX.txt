@@ -1,0 +1,7 @@
+Notes_FumeFX.txt
+
+cache
+then extra details > Wavelets
+sim wavelets
+set cache wavelets for that extra info
+can us PP/Retimer/PostProcess for baking out wavelet or retiming or warp info
