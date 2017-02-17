@@ -97,3 +97,4 @@ for stencil post process, make sure stencil is enabled in rendering
 for holdout Apply post process Material (e.g. stencil), then add Post Tone HDR Color to custom render pass and render
 make sure to reopen render settings if needed
 blueprint interface for postvishelper to Postvis control? or would that be too global?
+custom render pass with holdout as final image and PostProcess Tone map
