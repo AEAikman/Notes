@@ -1,0 +1,16 @@
+Python for perforce notes 
+
+Find latest changelist number of a directory:
+
+p4.run("changes", "-s", "submitted", "-m", "1", "//cbuDepot/cpe/foo/..."  )
+Sync to latest changelist:
+
+p4.run("sync", "//cbuDepot/cpe/foo/...")
+Sync to older changelist:
+
+p4.run("sync", "//cbuDepot/cpe/foo/...@123")
+To use a variable "changelist":
+
+p4.run("sync", "//cbuDepot/cpe/foo/...@"+ changelist) 
+ 
+p4.run_login with necessary credentials to login 

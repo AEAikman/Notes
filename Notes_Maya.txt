@@ -62,4 +62,6 @@ Omni or Surface
 Auto resize
 border both sides
 
-turbulence
+turbulence 
+ 
+Marking menus are extremely useful 
