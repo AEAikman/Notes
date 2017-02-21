@@ -1,3 +1,5 @@
 Notes_UE3.txt
 
-If Decal doesn't show up > Check detail mode
+If Decal doesn't show up > Check detail mode 
+ 
+Click an actor and presss M to make that actors level the current level 
