@@ -63,5 +63,4 @@ Auto resize
 border both sides
 
 turbulence 
- 
-Marking menus are extremely useful 
+

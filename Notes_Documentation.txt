@@ -98,4 +98,7 @@ for holdout Apply post process Material (e.g. stencil), then add Post Tone HDR C
 make sure to reopen render settings if needed
 custom render pass with holdout as final image and PostProcess Tone map 
 add materials library project  
-Add info about who needs to know about ddc 
+Add info about who needs to know about ddc  
+Add note about which content browser search field to type in  
+Note about importing unskinned geo with animation  
+Note about post tonemap HDR color render pass in 4.13 and above
