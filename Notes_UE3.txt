@@ -2,4 +2,8 @@ Notes_UE3.txt
 
 If Decal doesn't show up > Check detail mode 
  
-Click an actor and presss M to make that actors level the current level 
+Click an actor and presss M to make that actors level the current level  
+ 
+Press Ctrl and L and click in order to create a light that matches the color of the area in the viewport you clicked  
+ 
+to attach an actor find the actors name in the persisten level and put that in the slot on the particle etc to attach then pick a bone name then position the particle 

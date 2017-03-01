@@ -101,4 +101,5 @@ add materials library project
 Add info about who needs to know about ddc  
 Add note about which content browser search field to type in  
 Note about importing unskinned geo with animation  
-Note about post tonemap HDR color render pass in 4.13 and above
+Note about post tonemap HDR color render pass in 4.13 and above 
+clarify that a vert cannot have more than 4 influences not geo 

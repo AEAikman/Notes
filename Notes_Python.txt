@@ -380,4 +380,6 @@ def addToClipBoard(text):
     os.system(command)
 
 # Example
-addToClipBoard('penny lane')
+addToClipBoard('penny lane') 
+ 
+Initialize a global variable inside a function with the global keyword 
