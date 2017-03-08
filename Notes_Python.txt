@@ -382,4 +382,11 @@ def addToClipBoard(text):
 # Example
 addToClipBoard('penny lane') 
  
-Initialize a global variable inside a function with the global keyword 
+Initialize a global variable inside a function with the global keyword  
+
+
+
+to compile a py
+ 
+import py_compile
+py_compile.compile('abc.py')

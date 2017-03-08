@@ -1,0 +1,5 @@
+ 
+ 
+Right click within p4v in order to open command prompt with env variables set up  
+ 
+p4 sync -k to flush change drives 
