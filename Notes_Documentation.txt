@@ -74,7 +74,7 @@ sequencer tends to have a number of visibility track issues
 be careful with auto key and camera
 camera imports to 0 automatically
 to slide camera in master scene, need to move all camera keys and adjust start/end frames
-if rotation locks, slide in field transform
+if rotation locks, slide in field transform or close seq
 Visibility is bad
 don't forget actor anm and sequencer anm
 use preroll frames in sequencer renderer if needed for post process effects etc
@@ -106,3 +106,5 @@ clarify that a vert cannot have more than 4 influences not geo
 batch ae
 cd \Program Files\Adobe\Adobe After Effects CC 2017\Support Files
 	aeRender.exe -project <PROJECT> -continueOnMissingFootage	
+scrolling and ctrl scrolling in seq
+mat property track in seq

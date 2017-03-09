@@ -64,3 +64,6 @@ border both sides
 
 turbulence 
 
+ 
+ 
+Go to preferences Slider and change Update View from Active to All 
