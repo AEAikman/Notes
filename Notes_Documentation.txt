@@ -108,3 +108,8 @@ cd \Program Files\Adobe\Adobe After Effects CC 2017\Support Files
 	aeRender.exe -project <PROJECT> -continueOnMissingFootage	
 scrolling and ctrl scrolling in seq
 mat property track in seq
+ by having actors dragging into the level sequence GRAMMAR
+ seq notes -  right-clicking the group and selecting it vs clicking + icon
+ notes thatsince
+ sequencer generic level seqence
+ Note 3 steps
