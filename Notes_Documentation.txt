@@ -108,8 +108,26 @@ cd \Program Files\Adobe\Adobe After Effects CC 2017\Support Files
 	aeRender.exe -project <PROJECT> -continueOnMissingFootage	
 scrolling and ctrl scrolling in seq
 mat property track in seq
- by having actors dragging into the level sequence GRAMMAR
- seq notes -  right-clicking the group and selecting it vs clicking + icon
- notes thatsince
- sequencer generic level seqence
- Note 3 steps
+by having actors dragging into the level sequence GRAMMAR
+seq notes -  right-clicking the group and selecting it vs clicking + icon
+notes thatsince
+sequencer generic level seqence
+Note 3 steps
+Note that Matinee may stil be used
+hEyes geo
+creat engine ready name
+env export
+fac4eCtril try
+Robot needs to be stripped
+fbx unites cm Z-up fbx 29014
+artist vs sub projects setup
+source control
+where to put Uproject
+where to put ddc
+ddc instance i"in the text"
+where to save
+save prject? = no
+"actor" clirification
+clarify "save all process"
+mat vs Seq check doc for clarity
+camera cuts track vs having it already in the template
