@@ -124,10 +124,15 @@ artist vs sub projects setup
 source control
 where to put Uproject
 where to put ddc
-ddc instance i"in the text"
+ddc instance "in the text"
 where to save
 save prject? = no
 "actor" clirification
 clarify "save all process"
 mat vs Seq check doc for clarity
 camera cuts track vs having it already in the template
+seq troubleshooting
+use separate process
+use spawnable actors
+style guide
+https://github.com/Allar/ue4-style-guide#table-of-contents

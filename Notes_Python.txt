@@ -390,3 +390,60 @@ to compile a py
  
 import py_compile
 py_compile.compile('abc.py')
+
+
+##############################################################
+HOWTO: windows shortcut / icon for python script with arguments
+
+Sometimes you may want to create a shortcut / double-clickable icon for a Python script and pass in some arguments. While this should work on Windows out of the box (after installing Python of course) it doesn't always work.
+
+INSTALLING PYTHON
+
+Make sure that you have a version of Python installed. The typical installation path for Python on Windows is directly in C: not in C:\Programm Files. If you don't have python yet, get a copy at python.org/getit.
+
+TEST SCRIPT
+
+The script
+
+Use Notepad to create hello.py on the Desktop, here are the contents:
+
+#!/usr/bin/env python
+
+import time, sys
+
+if __name__ == '__main__':
+    print "hello world", sys.argv
+    time.sleep(10)
+Right click on the icon of hello.py and check Properties->Opens with setting. To be sure, you may want to click Change...->Browse... and select the python executable. Set the checkmark Always use the selected program to open this kind of file.
+
+Passing arguments
+
+Lets create a shortcut that passes some arguments to the script.
+
+hello.py -> Right click -> Create Shortcut
+Shortcut to hello.py -> Right click -> Properties
+Add --somevalue at the end of Target
+"C:\Documents and Settings\Administrator\Desktop\hello.py" --somevalue
+Click Apply
+Double clicking on Shortcut to hello.py should now bring up a console window displaying something similar to
+hello world ['C:\\Documents and Settings\\Administrator\\Desktop\\hello.py", '--somevalue']
+If this works including the --somevalue output you are all done. Otherwise, read on to the interesting part.
+TROUBLE SHOOTING
+
+Check file associations
+
+In a console (i.e. Start->Run...->cmd) check that the file associations are correct:
+C:\>assoc .py
+.py=Python.File
+
+C:\>ftype Python.File
+Python.File="C:\Python27\python.exe" "%1" %*
+The path to Python shown must obviously match the installation path. Important: Make sure there's an %* at the end, else arguments will not be forwarded to python. For more details see Microsoft Technet: Ftype.
+Check registry
+
+Some users have encountered problems even so the file associations were correct when checked in a shell. You can double check in the registry (i.e. Start->Run...->regedit):
+HKEY_CLASSES_ROOT\Applications\python26.exe\shell\open\command
+must end with %* as in
+"C:\Python27\python.exe" "%1" %*
+
+##############################################################
