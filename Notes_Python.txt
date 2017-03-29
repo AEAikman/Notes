@@ -446,4 +446,131 @@ HKEY_CLASSES_ROOT\Applications\python26.exe\shell\open\command
 must end with %* as in
 "C:\Python27\python.exe" "%1" %*
 
-##############################################################
+############################################################## 
+ 
+Checking if process is running 
+
+import subprocess
+
+def processExists(processname):
+    tlcall = 'TASKLIST', '/FI', 'imagename eq %s' % processname
+    # shell=True hides the shell window, stdout to PIPE enables
+    # communicate() to get the tasklist command result
+    tlproc = subprocess.Popen(tlcall, shell=True, stdout=subprocess.PIPE)
+    # trimming it to the actual lines with information
+    tlout = tlproc.communicate()[0].strip().split('\r\n')
+    # if TASKLIST returns single line without processname: it's not running
+    if len(tlout) > 1 and processname in tlout[-1]:
+        print('process "%s" is running!' % processname)
+        return True
+    else:
+        print(tlout[0])
+        print('process "%s" is NOT running!' % processname)
+        return False
+and now you can do:
+
+>>> processExists('eclipse.exe')
+process "eclipse.exe" is running!
+True
+
+>>> processExists('AJKGVSJGSCSeclipse.exe')
+INFO: No tasks are running which match the specified criteria.
+process "AJKGVSJGSCSeclipse.exe" is NOT running!
+False
+To avoid calling this multiple times and have an overview of all the processes this way you could do something like:
+
+# get info dict about all running processes
+tlcall = 'TASKLIST', '/FO', 'CSV'
+tlproc = subprocess.Popen(tlcall, shell=True, stdout=subprocess.PIPE)
+# get rid of extra " and split into lines
+tlout = tlproc.communicate()[0].replace('"', '').split('\r\n')
+tlhead = tlout[0].split(',')
+tllist = [i.split(',') for i in tlout[1:] if i]
+# make dict with proc names as keys and dicts with the extra nfo as values
+processDict = dict( [( i[0], dict(zip(tlhead[1:], i[1:])) ) for i in tllist] )
+print(processDict.keys())
+
+############################################################## 
+
+>>> import re
+>>> re.compile('a') == 'a'  # PatternObject == str  => always false
+False
+>>> re.compile('a').search('a')
+<_sre.SRE_Match object at 0x0000000002933168>
+>>> re.search('a', 'a')
+<_sre.SRE_Match object at 0x00000000029331D0>
+
+############################################################## 
+
+
+Check for and create dir
+
+if not os.path.exists(directory):
+    os.makedirs(directory)
+
+
+############################################################## 
+
+
+Copy File
+
+import shutil
+shutil.copy2('/src/dir/file.ext', '/dst/dir/newname.ext') # complete target filename given
+shutil.copy2('/src/file.ext', '/dst/dir') # target filename is /dst/dir/file.ext
+
+
+
+############################################################## 
+
+
+If pwc doesn't run > add
+
+import sys, os
+if sys.executable.endswith("pythonw.exe"):
+  sys.stdout = open(os.devnull, "w");
+  sys.stderr = open(os.path.join(os.getenv("TEMP"), "stderr-"+os.path.basename(sys.argv[0])), "w")
+
+
+This ensures the following when a script is run with pythonw.exe:
+
+print() calls and explicit calls to sys.stdout() are effectively ignored (are no-ops).
+Stderr output, including from an unhandled fatal exception, is sent to file  %TEMP%\stderr-<scriptFileName>; %TEMP% is a standard Windows environment variable that points to the current user's folder for temporary files.
+In other words: With the above code in place, check file %TEMP%\stderr-<scriptFileName> after your script has failed silently when invoked with pythonw.exe.
+
+For an explanation, read on.
+
+On Windows, pythonw.exe is for launching GUI/no-UI-at-all scripts, which means that the standard in- and output streams - sys.stdin, sys.stdout, sys.stderr are NOT available.
+
+This has two nasty side effects:
+
+Using print() - which targets sys.stdout by default - causes an exception in Python 2.x.
+This problem has been fixed in Python 3.x.
+Any unhandled exception - including one triggered by print() in 2.x - causes the script to abort silently.
+Exception error messages go to sys.stderr by default, which is the very thing not available in this scenario.
+The above code fixes these problems by:
+
+sending stdout output to the null device, effectively ignoring any attempt to output to sys.stdout - whether explicitly, or implicitly via print().
+sending all stderr output to a temporary file.
+Differences between Python 2.x and Python 3.x:
+
+When a script is run with pythonw.exe,  sys.stdin, sys.stdout, and sys.stderr:
+
+in Python 2.x: have invalid file descriptors
+The eventual result when trying to write to sys.stdout or sys.stderr is the following exception: IOError: [Errno 9] Bad file descriptor
+Pitfall: Due to output buffering, this exception may not surface until you've output, say, 4K bytes; you can provoke it instantly by invoking pythonw.exe with -u (for unbuffered output).
+print() blindly tries to sys.stdout (by default), so it provokes this exception sooner or later.
+in Python 3.x: are set to None
+This is complemented with the 3.x print() function performing a no-op (doing nothing) when it finds that sys.stdout is None, so that print() statements can by default safely be used - they'll simply be ignored when run with pythonw.exe
+However, it follows that trying to use sys.stdout.write() and sys.stderr.write() still results in an exception.
+
+
+
+
+
+TO PACKAGE
+use pyInstaller
+e.g.
+pyinstaller --clean --win-private-assemblies --onefile --noconsole --icon=icon.ico OzzyMover.pyw
+
+TO CONVERT PNG TO ICO
+http://convertico.com/

@@ -1,0 +1,12 @@
+ Python QT notes 
+
+
+
+Was able to implement the uic successfully, using compileUiDir, since I have multiple .ui files. Final code was:
+
+from PyQt4 import uic
+folderToConvert = r'filePathGoesHere'
+uic.compileUiDir(folderToConvert,recurse=False)
+This is a .py file that I run or call/execute prior to running the main program. Very handy!
+
+See OzzyMover for other examples

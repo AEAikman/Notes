@@ -9,3 +9,5 @@ Press Ctrl and L and click in order to create a light that matches the color of 
 to attach an actor find the actors name in the persisten level and put that in the slot on the particle etc to attach then pick a bone name then position the particle  
  
 can move actors to level by selecting them right clicking level and choosing make current level and move selected actors to level 
+
+To attach: Select Particle - Click lock in details - select actor to attach to - insert actor with left-point arrow

@@ -249,3 +249,13 @@ has an implicit key binding of:
 
 
 
+ 
+ 
+TO GO TO DEFINTION WITH ANACONDA  
+Ctrl + Alt + G
+
+TO Find usage with anaconda
+CA F (Ctrl + Alt + F)
+
+Ctrl + Shift + R - find all definitions in project
+Ctrl + Alt + R - to Auto format for pep8

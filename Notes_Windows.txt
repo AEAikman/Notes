@@ -119,3 +119,8 @@ Shift + right-click a grouped taskbar button	Show the window menu for the group
 Ctrl + click a grouped taskbar button	Cycle through the windows of the group 
  
 To get to Recycle bin you can click on the arrow at the far left of the path in exploer and choose Recycle bin 
+
+
+#######################################################################
+
+Quick access Toolbar is the toolbar which can house the open with clicker

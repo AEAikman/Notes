@@ -110,24 +110,24 @@ scrolling and ctrl scrolling in seq
 mat property track in seq
 by having actors dragging into the level sequence GRAMMAR
 seq notes -  right-clicking the group and selecting it vs clicking + icon
-notes thatsince
-sequencer generic level seqence
+notes that since
+sequencer generic level sequence
 Note 3 steps
 Note that Matinee may stil be used
 hEyes geo
 creat engine ready name
 env export
-fac4eCtril try
+faceCtrl try
 Robot needs to be stripped
-fbx unites cm Z-up fbx 29014
+fbx unites cm Z-up fbx 2014
 artist vs sub projects setup
 source control
 where to put Uproject
 where to put ddc
 ddc instance "in the text"
 where to save
-save prject? = no
-"actor" clirification
+save project? = no
+"actor" clarification
 clarify "save all process"
 mat vs Seq check doc for clarity
 camera cuts track vs having it already in the template
@@ -136,3 +136,30 @@ use separate process
 use spawnable actors
 style guide
 https://github.com/Allar/ue4-style-guide#table-of-contents
+backup folder with EditorPerProjectUserSettings.ini
+ini for filmback
+[/Script/CinematicCamera.CineCameraComponent]
++FilmbackPresets=(Name="ArriAlexa65",FilmbackSettings=(SensorWidth=23.76,SensorHeight=13.37))
+test out sequencer recordings
+Use Full Precision UVs > to fix weird uv nonsense in unreal
+spawnable!
+decals
+attach track on child in Sequencer
+how to turn off autosave
+split anm track in sequ in order to extend
+go over master material
+expand master material
+weird light at origin issue and how to compensate (lift env)
+note about being able to drag animation into sequencer on top of actor track to input animations
+spawnable now the preferred method in seq
+'\(.+\)' = regex to find () for cc maker
+Actually '(-)?[01]\.\d{3,5}' is better as it finds both sat and sop values
+'\d\.\d+(?=\s\()' will find just the sat values
+'[A-z]{3}(0)\d{3}(?=\s)' finds a shot name as long as the number isn't above 0999
+locking details panel and adding actors to variable
+if can't drag into seq, click Add button to add track to seq
+ls won't play, and everything is hooked up, try recreating the cameras cuts track in case it is buggy
+discuss potential scale issues
+outline simple lerp
+collapsed emitter in cascade
+engine scalability settings
