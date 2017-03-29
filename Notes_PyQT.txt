@@ -40,7 +40,6 @@ import ExampleUI
 def writeInfo(infoToWriteInput):
     if infoToWriteInput != newlines and infoToWriteInput != "\n" and infoToWriteInput != separator:
         ts = time.time()
-        st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
         st = datetime.datetime.fromtimestamp(ts).strftime('%H:%M:%S')
         infoToWrite = (str(st) + " - " + infoToWriteInput + "\n")
     else:
