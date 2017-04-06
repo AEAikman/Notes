@@ -124,3 +124,11 @@ To get to Recycle bin you can click on the arrow at the far left of the path in 
 #######################################################################
 
 Quick access Toolbar is the toolbar which can house the open with clicker
+
+
+#######################################################################
+
+sysinternal suite
+process explorer
+find process
+to find what is using a file

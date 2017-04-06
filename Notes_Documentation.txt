@@ -115,11 +115,11 @@ sequencer generic level sequence
 Note 3 steps
 Note that Matinee may stil be used
 hEyes geo
-creat engine ready name
+create engine ready name
 env export
 faceCtrl try
 Robot needs to be stripped
-fbx unites cm Z-up fbx 2014
+fbx settings units cm Z-up fbx 2014
 artist vs sub projects setup
 source control
 where to put Uproject
@@ -163,3 +163,7 @@ discuss potential scale issues
 outline simple lerp
 collapsed emitter in cascade
 engine scalability settings
+to copy keys in seq > select and right click in the track window instead of the group window
+sometimes don't replace EditorPerProjectUserSettings.ini
+HLSL Custom node
+style guide https://github.com/Allar/ue4-style-guide#table-of-contents
