@@ -29,6 +29,17 @@ send(toSend)
 	return 
 }
 
+
+checkForClover(toSend)
+{
+if WinExist("ahk_class CabinetWClass")
+{
+	WinMinimize, [ WinTitle, WinText, ExcludeTitle, ExcludeText]
+}
+send(toSend)
+return
+}
+
 ; OPENING COMMAND PROMPT TO OPEN FOLDER IF FOLDER OPEN
 #IfWinActive ahk_class CabinetWClass ; for use in explorer.
 #C::
@@ -50,15 +61,15 @@ return
 ;return
 
 
-;#Q::
-;if WinExist("ahk_class Chrome_WidgetWin_1")
-;{
-	;WinActivate
-	;WinMaximize
-;}
-;else
-    ;Run Chrome.exe
-;return
+#T::
+if WinExist("ahk_class Chrome_WidgetWin_1")
+{
+	WinActivate
+	WinMaximize
+}
+else
+    Run Chrome.exe
+return
 
 ; SetTitleMatchMode 2
 ; IfWinExist Google Chrome
@@ -125,7 +136,7 @@ return
 
 
 ; PRINT SCREEN TO CLIPBOARD, OPEN IRFANVIEW AND PASTE CLIPBOARD
-#T::
+#Y::
 send {PrintScreen}
 Run C:\Users\aaikman\AppData\Roaming\IrfanView\i_view32.exe
 sleep %waitTime%
