@@ -1,16 +1,22 @@
-;Hotkey Defined by Aaron Aikman
-
-;Volume Control
-#1::Volume_Down
-#2::Volume_Up
-#3::Volume_Mute
+; HOTKEYS DEFINED BY AARON AIKMAN
 
 
-;Moving to Desktops
-;#IfWinActive ahk_class CabinetWClass ; for use in explorer.
-#Q::send("^#{left}")
-#W::send("^#{right}")
-;#IfWinActive
+; VARIABLES
+waitTime := 300
+
+
+; VOLUME CONTROL
+#3::Volume_Down
+#4::Volume_Up
+#5::Volume_Mute
+
+; DESKTOP CONTROL
+#1::send("^#{left}")
+#2::send("^#{right}")
+#A::send("#{left}")
+#D::send("#{right}")
+#W::send("#{up}")
+#S::send("#{down}")
 
 send(toSend)
 {
@@ -23,7 +29,7 @@ send(toSend)
 	return 
 }
 
-;Opening Command prompt to open folder if folder open
+; OPENING COMMAND PROMPT TO OPEN FOLDER IF FOLDER OPEN
 #IfWinActive ahk_class CabinetWClass ; for use in explorer.
 #C::
 ClipSaved := ClipboardAll
@@ -36,5 +42,92 @@ ClipSaved =
 return
 #IfWinActive
 
-;#F::
-;WinActivate, Calculator
+
+; CHROME STUFF
+;#Q:: 
+;Run, chrome.exe
+;WinWaitActive, ahk_class Chrome_WidgetWin_0,, 2
+;return
+
+
+;#Q::
+;if WinExist("ahk_class Chrome_WidgetWin_1")
+;{
+	;WinActivate
+	;WinMaximize
+;}
+;else
+    ;Run Chrome.exe
+;return
+
+; SetTitleMatchMode 2
+; IfWinExist Google Chrome
+;     WinActivate, Google Chrome
+; else
+;     Run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+; WinWaitActive Google Chrome
+
+
+; SURROUNDING SELECTED TEXT WITH QUOTES
+#Q:: ; Attention:  Strips formatting from the clipboard too!
+Send ^c
+clipboard = "%clipboard%"
+; Remove space introduced by WORD
+StringReplace, clipboard, clipboard,%A_SPACE%",", All
+Send ^v
+return
+
+
+; CLICKING PANDORA
+#P::
+loop, 2
+{
+send("^#{left}")
+sleep 10
+}
+
+
+
+sleep %waitTime%
+send("{Ctrl down}1{ctrl up}")
+
+Click 1106,2048
+sleep %waitTime%
+
+send("^#{right}")
+return
+
+
+; COPY TEXT TO CLIPBOARD AND GOOGLE IT
+#F:: 
+send("^c")
+Run http://www.google.com/search?q=%clipboard%
+return
+
+; DEFAULT AUDIO DEVICE
+;device := "Speakers" ; alternative: device = Speakers
+;F2::
+;if (device = "Speakers") 
+;    device := "TV" ; had to be on the next line
+;else if (device = "TV") 
+;    device := "Headphones" ; had to be on the next line
+;else if (device = "Headphones") 
+;    device := "Speakers" ; had to be on the next line
+;run, nircmd.exe setdefaultsounddevice %device%
+;return
+
+
+; TYPE NAME
+#F2::
+send Aaron Aikman
+return
+
+
+; PRINT SCREEN TO CLIPBOARD, OPEN IRFANVIEW AND PASTE CLIPBOARD
+#T::
+send {PrintScreen}
+Run C:\Users\aaikman\AppData\Roaming\IrfanView\i_view32.exe
+sleep %waitTime%
+send("^v")
+return
