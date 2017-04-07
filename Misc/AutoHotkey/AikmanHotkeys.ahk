@@ -34,7 +34,7 @@ checkForClover(toSend)
 {
 if WinExist("ahk_class CabinetWClass")
 {
-	WinMinimize, [ WinTitle, WinText, ExcludeTitle, ExcludeText]
+	WinMinimize
 }
 send(toSend)
 return
