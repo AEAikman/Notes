@@ -105,6 +105,8 @@ send("{Ctrl down}1{ctrl up}")
 
 Click 1106,2048
 sleep %waitTime%
+Click 3440,1995
+sleep %waitTime%
 
 send("^#{right}")
 return
