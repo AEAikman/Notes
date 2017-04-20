@@ -167,3 +167,27 @@ to copy keys in seq > select and right click in the track window instead of the 
 sometimes don't replace EditorPerProjectUserSettings.ini
 HLSL Custom node
 style guide https://github.com/Allar/ue4-style-guide#table-of-contents
+if texture changes during render, may need to prerun frames
+install symbols for debugging?
+Clarify Static mesh vs skeletal mesh
+disabling plugin warning
+switching engine version
+pivot/world origin concerns
+if weird reflections > check skylight for captured scene
+Distance field shadows
+cast translucent shadows
+the need to apply changes in Mat Editor
+Cable actors and physics contraint actors
+Note that migrate initially outlines dependencies
+autosave is useless
+demo "basic material"
+
+When you bound the skin to the joints, did you have remove unused influences checked?
+if so, unchecking that, may fix that issue in unreal
+Alternatively, you could try checkin Use T0As Ref Pose when importing into unreal
+
+Scaling Joints works sometimes (need anm)
+
+Add "Hide Children" to Postvis suite
+
+If hud in the way, override game mode orrr find hud bp and break connections

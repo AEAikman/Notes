@@ -103,9 +103,43 @@ sleep 10
 sleep %waitTime%
 send("{Ctrl down}1{ctrl up}")
 
-Click 1106,2048
+CoordMode, Mouse, Screen
+
 sleep %waitTime%
-Click 3440,1995
+; Click 1106,2048
+Click -1060,929
+sleep %waitTime%
+; Click 3440,1995
+; Click 1273,876
+sleep %waitTime%
+
+send("^#{right}")
+return
+
+
+; Downvoting PANDORA
+#:::
+loop, 2
+{
+send("^#{left}")
+sleep 10
+}
+
+
+
+sleep %waitTime%
+send("{Ctrl down}1{ctrl up}")
+
+CoordMode, Mouse, Screen
+
+sleep %waitTime%
+; Click 1106,2048
+; Click -1060,929
+; Click 942,3784
+Click -1226,2684
+sleep %waitTime%
+; Click 3440,1995
+; Click 1273,876
 sleep %waitTime%
 
 send("^#{right}")
