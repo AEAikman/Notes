@@ -117,15 +117,15 @@ send("^#{right}")
 return
 
 
+
+
 ; Downvoting PANDORA
-#:::
+#I::
 loop, 2
 {
 send("^#{left}")
 sleep 10
 }
-
-
 
 sleep %waitTime%
 send("{Ctrl down}1{ctrl up}")
@@ -140,6 +140,30 @@ Click -1226,2684
 sleep %waitTime%
 ; Click 3440,1995
 ; Click 1273,876
+sleep %waitTime%
+
+send("^#{right}")
+return
+
+
+
+; Pausing or Playing PANDORA
+#O::
+loop, 2
+{
+send("^#{left}")
+sleep 10
+}
+
+sleep %waitTime%
+send("{Ctrl down}1{ctrl up}")
+
+CoordMode, Mouse, Screen
+
+sleep %waitTime%
+; Click 1076, 3770
+Click -1084, 2678
+sleep %waitTime%
 sleep %waitTime%
 
 send("^#{right}")

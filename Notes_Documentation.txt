@@ -191,3 +191,5 @@ Scaling Joints works sometimes (need anm)
 Add "Hide Children" to Postvis suite
 
 If hud in the way, override game mode orrr find hud bp and break connections
+Moving Camera cuts track start to include frame 0
+no ssr issue may require switching to temporal AA
