@@ -48,3 +48,23 @@ string $result = `promptDialog
 if ($result == "OK") {
     $text = `promptDialog -query -text`;
 }
+
+
+
+
+
+
+
+
+
+
+###############################################################
+
+wrap functions that don't need the viewport in
+paneLayout -e -manage false $gMainPane;
+// do stuff
+paneLayout -e -manage true $gMainPane;
+
+
+###############################################################
+

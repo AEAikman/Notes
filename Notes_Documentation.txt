@@ -193,3 +193,15 @@ Add "Hide Children" to Postvis suite
 If hud in the way, override game mode orrr find hud bp and break connections
 Moving Camera cuts track start to include frame 0
 no ssr issue may require switching to temporal AA
+standards for saving ENV files in Assets > ENV > $Name > Models Subfolder with levels above
+where to access projects - folder vs epic launcher
+be careful about deleting projects from "My Projects" in Epic Games Launcher
+For Save As Crash - delete EditorPerProjectUserSetting.ini only
+Update hRig to not break on geo
+if rig breaks on reimport or import over, then delete and reimport asset
+level building practice - place env assets in ENV folder
+ray traced distance field shadows (note "cast inset shadow" for skeletal meshes)
+if bounds are weird check physics asset and make sure the volumes look ok.  if not, right click skel mesh and create and assign physics asset
+Particle  material can allow custom depth writes for additional shader compile
+Option to completely disable texture streaming in project settings
+if filmback won't hold, make cam possessable
