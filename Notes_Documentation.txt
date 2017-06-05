@@ -205,3 +205,56 @@ if bounds are weird check physics asset and make sure the volumes look ok.  if n
 Particle  material can allow custom depth writes for additional shader compile
 Option to completely disable texture streaming in project settings
 if filmback won't hold, make cam possessable
+confirmed copy just the correct editorPerProjectUserSettings.ini
+
+to manual export
+on parent target actor rotation at 0, 90, 270
+and actor rotation at 0, 0, 90
+
+Locking details panel
+
+you can use {world} in your Output Directory when you render if you want to autoname the output folder
+
+All Possessable or all Spawnable
+
+Getting info out of opacity g buffer requires that there be info in the opacity channel.  IE. SS Profile
+
+Note that USE DOF is antiquated
+
+Force Fixed Frame Interval Playback
+
+r.screenpercentatge 200
+
+r.reflectionQuality
+r.ScreenPercentage=200
+Sparkles may be from a point light with a long source length
+warmup doesn't affect gpu particles
+glow doesn't affect gpu the same
+particles won't play when scrubbing seq
+Ctrl + Alt + Shift to add another Marquee to selection
+
+Copy UAsset folder to Maya asset folder
+Fabric
+
+
+Console commands to put in pvc
+screen percentage
+r.SSR.Quality 4
+stat none
+^ For no fps gui
+
+
+FLEX
+In particle, assign container
+Container holds max particle values
+probably turn off process burst list in flex module in emitter
+turn on Multi-body over lap on actors you want the flex particle to interact with
+material values are set on the material linked in the fluid container which itself needs to be linked in the required module of the particle system
+
+If worlf composition is auto loading hella levels, turn off enable world composition and set desired levels to always loaded
+
+outline approach of ls then level for versioning up
+
+python for engine
+
+fabric?
