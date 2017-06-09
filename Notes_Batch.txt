@@ -190,3 +190,105 @@ You can still abort the delay, but this requires Ctrl+C instead of just any key,
 
 
 IF ERRORLEVEL 1 ECHO error level is 1 or more
+
+
+
+
+
+
+If you want to return from a CALL, you use EXIT command with /B argument (as "EXIT" alone will terminate the batch file).
+
+For example:
+
+CALL :SUB_ONE
+CALL :SUB_TWO
+
+GOTO :EOF
+
+:SUB_ONE
+ECHO Hello from one
+EXIT /B
+
+:SUB_TWO
+ECHO Hello from two
+EXIT /B
+
+:EOF
+
+
+
+Using: echo | set /p= or <NUL set /p= will both work to suppress the newline.
+
+However, this can be very dangerous when writing more advanced scripts when checking the ERRORLEVEL becomes important as setting set /p= without specifying a variable name will set the ERRORLEVEL to 1.
+
+A better approach would be to just use a dummy variable name like so:
+echo | set /p dummyName=Hello World
+
+This will produce exactly what you want without any sneaky stuff going on in the background as I had to find out the hard way, but this only works with the piped version; <NUL set /p dummyName=Hello will still raise the ERRORLEVEL to 1.
+
+
+
+
+
+Assuming we're using a recent-ish version of CMD here, I'm pretty shocked to find no one has posted the following, which allows an arbitrary number of arguments to be processed easily without ever using the clunky shift command:
+
+rem test.bat
+call :subr %*
+exit /b
+
+:subr
+for %%A in (%*) do (
+    echo %%A
+)
+exit /b
+You can also do this same technique right in "main" as well.
+
+This way, you don't eat up your arguments as you process them, and there is need for shift, meaning you can consistently loop through the argument-list more than once if you have complicated calling options and it happens to make your script's logic simpler.
+
+Obviously, if do loop through more than once, it increases computational complexity in exchange for legibility, but neither Bash nor CMD were really built for great speed (as far as I've ever heard) so there's little point in trying to optimize by doing setup all-in-one-go assuming n is any less than 100 or so.
+
+Some sample output:
+
+C:\tmp>test.bat one two three four five six seven eight nine ten eleven
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+ten
+eleven
+edit - On the off chance anyone is processing arguments against another list and part of the work is nested, it's important that an intermediary CALL be used to allow the current argument being processed to be transferred into the inner loop; simply doing set intermediary=%%OUTER appears to simply set intermediary to a an empty string, so it's next simplest to do this:
+
+setlocal enabledelayedexpansion
+rem ^ in my experience, it's always a good idea to set this if for-loops are involved
+for /f %%L in (file.txt) do (
+    call :inner %%L
+)
+exit /b
+
+:inner
+for %%A in (%*) do (
+    if %%A EQU %~1 call dosomething.bat %~1        
+)
+exit /b
+edit 2 - Also, if for whatever reason you want to add the shift approach into the mix here, perhaps trying to pass all arguments other than the 1st to a subroutine by using a shift and then using call :subroutine %*, note that it won't work because %* actually gives you all of the original arguments in order, ignorant of any shifting you have done. 
+It's a shame because there's no native syntax (that I know of) that can group all arguments after a certain one, as one might expect say %3* to do.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

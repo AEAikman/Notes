@@ -1,8 +1,28 @@
 Notes_SubstancePaint.txt
 
 Mesh must be stored locally (i.e. on the C: Drive etc)
-Shift to contrain rotation
-alt right click for light
+Alt + Shift to contrain rotation in texture viewport
+Shift right click for light
 m for material
 c for solo map
 Ctrl+Right or left click to control brush settings
+F - Frame whole mesh
+Click orbit around a spot on the mesh to pivot on that spot
+F1-F3 for viewport options
+Right-click on layer and Add Mask with color selection to use a color id from the baked id map
+Alt click on mask to solo it
+Ctrl + G to group layers
+or right-click
+Can copy and paste mask
+Edit > Project config > Edit mesh to change mesh (but care for physical painting els emight lose brushstrokes)
+substanceShare.com
+Alt + Up or Down - to move later
+Alt click layer to solo
+use generator - mesh generator - scutom contorl mask
+can click emsh poly face to paint
+filter - finish or sharpen etc
+triplanar projection for different projection from standard uv
+shift + click mas to siable
+paint layer - hard light for paintin gmask
+paint layer - stencil > drag into stencil 
+s controls stencil

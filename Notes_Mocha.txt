@@ -1,0 +1,17 @@
+Notes_Mocha.txt
+
+
+CC and later
+You may go to layer properties and set it to subtract
+disable layers via layer window
+can turn on plane ro grid on planar track
+use adjust track and select corner to nudge or move position
+* to fit?
+track tab > Export trackingd data
+
+CS6 and earlier
+surface controls on the view controls window
+Also has stabilize options ( when tracking stabilizations, you may be able to turn off large motion and use small motion instead)
+Parameters, may need to turn on perpective during track
+can use xspline as cutout for layer
+adjust track creates a key

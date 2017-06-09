@@ -1,0 +1,5 @@
+Notes_CodingStyle.txt
+
+Concatenate strings with dictionary tokens when possible
+try to constain to 90 character lines
+newlines for separate processes

@@ -1,0 +1,3 @@
+Notes_SynthEyes.txt
+
+When importing, you can preprocess and downRez in addition to blurring

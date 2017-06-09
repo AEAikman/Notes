@@ -70,19 +70,138 @@ head = 1
 tail = 5
 emphasize the relationship between level and level sequence
 doesn't render all the way > may need to restart
-Launchy
 sequencer tends to have a number of visibility track issues
 be careful with auto key and camera
 camera imports to 0 automatically
 to slide camera in master scene, need to move all camera keys and adjust start/end frames
-if rotation locks, slide in field transform
+if rotation locks, slide in field transform or close seq
 Visibility is bad
 don't forget actor anm and sequencer anm
 use preroll frames in sequencer renderer if needed for post process effects etc
 make sure light is set to movable when keying in matinee
 source control notes (use or don't use, don't add Saved (or intermediate) folder)
 make sure camera enabled in fbx settings for camera export
-LAUNCHY
+<<< LAUNCHY documention >>>
 Show frames through snap settings in Matinee?
 banding from texture compression (vectorDisplacement)
 auto activate on fx?
+Engine publish system
+when creating env reference folders, keep everything in one head folder so it can be collapsed
+make documentation have more images - be easier to read
+git for ue4?
+custom render pass for sep trans A
+actor merging update (Window > Developer Tools > Actor Merging Tab)
+buffer visualization
+make use of lighting model for holdout?
+for stencil post process, make sure stencil is enabled in rendering
+for holdout Apply post process Material (e.g. stencil), then add Post Tone HDR Color to custom render pass and render
+make sure to reopen render settings if needed
+custom render pass with holdout as final image and PostProcess Tone map 
+add materials library project  
+Add info about who needs to know about ddc  
+Add note about which content browser search field to type in  
+Note about importing unskinned geo with animation  
+Note about post tonemap HDR color render pass in 4.13 and above 
+clarify that a vert cannot have more than 4 influences not geo 
+batch ae
+cd \Program Files\Adobe\Adobe After Effects CC 2017\Support Files
+	aeRender.exe -project <PROJECT> -continueOnMissingFootage	
+scrolling and ctrl scrolling in seq
+mat property track in seq
+by having actors dragging into the level sequence GRAMMAR
+seq notes -  right-clicking the group and selecting it vs clicking + icon
+notes that since
+sequencer generic level sequence
+Note 3 steps
+Note that Matinee may stil be used
+hEyes geo
+create engine ready name
+env export
+faceCtrl try
+Robot needs to be stripped
+fbx settings units cm Z-up fbx 2014
+artist vs sub projects setup
+source control
+where to put Uproject
+where to put ddc
+ddc instance "in the text"
+where to save
+save project? = no
+"actor" clarification
+clarify "save all process"
+mat vs Seq check doc for clarity
+camera cuts track vs having it already in the template
+seq troubleshooting
+use separate process
+use spawnable actors
+style guide
+https://github.com/Allar/ue4-style-guide#table-of-contents
+backup folder with EditorPerProjectUserSettings.ini
+ini for filmback
+[/Script/CinematicCamera.CineCameraComponent]
++FilmbackPresets=(Name="ArriAlexa65",FilmbackSettings=(SensorWidth=23.76,SensorHeight=13.37))
+test out sequencer recordings
+Use Full Precision UVs > to fix weird uv nonsense in unreal
+spawnable!
+decals
+attach track on child in Sequencer
+how to turn off autosave
+split anm track in sequ in order to extend
+go over master material
+expand master material
+weird light at origin issue and how to compensate (lift env)
+note about being able to drag animation into sequencer on top of actor track to input animations
+spawnable now the preferred method in seq
+'\(.+\)' = regex to find () for cc maker
+Actually '(-)?[01]\.\d{3,5}' is better as it finds both sat and sop values
+'\d\.\d+(?=\s\()' will find just the sat values
+'[A-z]{3}(0)\d{3}(?=\s)' finds a shot name as long as the number isn't above 0999
+locking details panel and adding actors to variable
+if can't drag into seq, click Add button to add track to seq
+ls won't play, and everything is hooked up, try recreating the cameras cuts track in case it is buggy
+discuss potential scale issues
+outline simple lerp
+collapsed emitter in cascade
+engine scalability settings
+to copy keys in seq > select and right click in the track window instead of the group window
+sometimes don't replace EditorPerProjectUserSettings.ini
+HLSL Custom node
+style guide https://github.com/Allar/ue4-style-guide#table-of-contents
+if texture changes during render, may need to prerun frames
+install symbols for debugging?
+Clarify Static mesh vs skeletal mesh
+disabling plugin warning
+switching engine version
+pivot/world origin concerns
+if weird reflections > check skylight for captured scene
+Distance field shadows
+cast translucent shadows
+the need to apply changes in Mat Editor
+Cable actors and physics contraint actors
+Note that migrate initially outlines dependencies
+autosave is useless
+demo "basic material"
+
+When you bound the skin to the joints, did you have remove unused influences checked?
+if so, unchecking that, may fix that issue in unreal
+Alternatively, you could try checkin Use T0As Ref Pose when importing into unreal
+
+Scaling Joints works sometimes (need anm)
+
+Add "Hide Children" to Postvis suite
+
+If hud in the way, override game mode orrr find hud bp and break connections
+Moving Camera cuts track start to include frame 0
+no ssr issue may require switching to temporal AA
+standards for saving ENV files in Assets > ENV > $Name > Models Subfolder with levels above
+where to access projects - folder vs epic launcher
+be careful about deleting projects from "My Projects" in Epic Games Launcher
+For Save As Crash - delete EditorPerProjectUserSetting.ini only
+Update hRig to not break on geo
+if rig breaks on reimport or import over, then delete and reimport asset
+level building practice - place env assets in ENV folder
+ray traced distance field shadows (note "cast inset shadow" for skeletal meshes)
+if bounds are weird check physics asset and make sure the volumes look ok.  if not, right click skel mesh and create and assign physics asset
+Particle  material can allow custom depth writes for additional shader compile
+Option to completely disable texture streaming in project settings
+if filmback won't hold, make cam possessable
