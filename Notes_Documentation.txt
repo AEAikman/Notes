@@ -57,7 +57,7 @@ Duplicated child unparent fixed now
 actor initial position trickiness
 seq scroll on left window only
 bug with visibility switchs stopping working - have to redo atm
-actor hidden in game track can break
+actor hidden in game track can break (FIXED)
 OpenStreetMapPlugin
 sequencer is not always representative of what you will get
 if sequencer is all red, you likely need to make sure you are in the correct LS
@@ -98,6 +98,7 @@ for holdout Apply post process Material (e.g. stencil), then add Post Tone HDR C
 make sure to reopen render settings if needed
 custom render pass with holdout as final image and PostProcess Tone map 
 add materials library project  
+
 Add info about who needs to know about ddc  
 Add note about which content browser search field to type in  
 Note about importing unskinned geo with animation  
@@ -179,9 +180,11 @@ cast translucent shadows
 the need to apply changes in Mat Editor
 Cable actors and physics contraint actors
 Note that migrate initially outlines dependencies
+may have to close and reopen the engine for dependecies to be properly calculated
 autosave is useless
 demo "basic material"
 
+Invalid Bind Pose
 When you bound the skin to the joints, did you have remove unused influences checked?
 if so, unchecking that, may fix that issue in unreal
 Alternatively, you could try checkin Use T0As Ref Pose when importing into unreal
@@ -189,6 +192,8 @@ Alternatively, you could try checkin Use T0As Ref Pose when importing into unrea
 Scaling Joints works sometimes (need anm)
 
 Add "Hide Children" to Postvis suite
+
+*********************
 
 If hud in the way, override game mode orrr find hud bp and break connections
 Moving Camera cuts track start to include frame 0
@@ -231,6 +236,8 @@ Sparkles may be from a point light with a long source length
 warmup doesn't affect gpu particles
 glow doesn't affect gpu the same
 particles won't play when scrubbing seq
+
+
 Ctrl + Alt + Shift to add another Marquee to selection
 
 Copy UAsset folder to Maya asset folder
@@ -251,10 +258,94 @@ probably turn off process burst list in flex module in emitter
 turn on Multi-body over lap on actors you want the flex particle to interact with
 material values are set on the material linked in the fluid container which itself needs to be linked in the required module of the particle system
 
-If worlf composition is auto loading hella levels, turn off enable world composition and set desired levels to always loaded
+If world composition is auto loading hella levels, turn off enable world composition and set desired levels to always loaded
 
 outline approach of ls then level for versioning up
 
 python for engine
 
 fabric?
+
+
+
+redo export nonsense
+texture streaming console fix
+
+make sure all is spawnable fix
+
+translucent particles (add a when in doubt)
+
+referencing
+
+filmback settings
+
+outline controlling dof
+couldn't save mat and using sep process fix
+sep process and sep process bug
+modifying animation in sequencer?
+
+source control notes (use or don't use, don't add Saved (or intermediate) folder)
+vxgi
+need to enable it in the pp settings
+add key clipping plane to shotcontrol
+test vxgi
+test volumetric particles
+test cloth
+
+HLSL Custom node
+
+rigid body 
+or cloth sim
+test allegorithmic in unreal
+
+learn physics constraints
+
+source control
+talk about asset master?
+
+
+keying particles in sequencer
+sequencer material parameters
+mat property track in seq
+attach track on child in Sequencer
+translating in sequencer
+
+
+actor merging update (Window > Developer Tools > Actor Merging Tab)
+export out of engine
+buffer visualization
+fbx settings units cm Z-up fbx 2014
+
+add materials library project (Substance Source)
+decals
+snapping
+sockets
+Scaling Joints works sometimes (need anm)
+
+
+standards for saving ENV files in Assets > ENV > $Name > Models Subfolder with levels above
+recommended folder structure (e.g. hUnreal, Assets, etc)
+style guide
+https://github.com/Allar/ue4-style-guide#table-of-contents
+
+Whether to use ShotControlNumber to automatically link the ShotControl in the scene without having to select it (or deselect actors).  To find this number, hover over the actor in the world outliner, and input what comes after the last underscore into the ShotControlNumber variable.  Then click AssignShotControl.  If off, the helper will find the ShotControl when it is selected, as per usual.
+
+
+go over master material
+expand master material
+
+
+BP_ShotControl changes
+change it to shotcontrol
+Add "Hide Children" to Postvis suite
+postvis control weight
+Particle  material can allow custom depth writes for additional shader compile
+Note that USE DOF is antiquated
+
+
+******************************
+proofread
+
+UPDATE WIKI
+
+See Cotw doc

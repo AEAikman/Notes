@@ -3,6 +3,7 @@
 
 ; VARIABLES
 waitTime := 300
+longWaitTime := 800
 
 
 ; VOLUME CONTROL
@@ -97,7 +98,6 @@ loop, 2
 send("^#{left}")
 sleep 10
 }
-
 
 
 sleep %waitTime%
@@ -202,3 +202,31 @@ Run C:\Users\aaikman\AppData\Roaming\IrfanView\i_view32.exe
 sleep %waitTime%
 send("^v")
 return
+
+
+
+; Creating Flags
+#0::
+CoordMode, Mouse, Screen
+; Absolute:	2439, 209 (less often used)
+Click 2439,209
+sleep %longWaitTime%
+Click 2508,440
+sleep %longWaitTime%
+Click 1074,666
+sleep %longWaitTime%
+Click 2504,484
+
+
+; Creating FlagsMounted
+#9::
+CoordMode, Mouse, Screen
+; Absolute:	2439, 209 (less often used)
+Click 2319,210
+sleep %longWaitTime%
+Click 2508,440
+sleep %longWaitTime%
+Click 1074,666
+sleep %longWaitTime%
+Click 2504,484
+
