@@ -343,9 +343,30 @@ Particle  material can allow custom depth writes for additional shader compile
 Note that USE DOF is antiquated
 
 
-******************************
 proofread
 
 UPDATE WIKI
 
 See Cotw doc
+******************************   7/13/17
+
+
+Never name a folder Intermediate or Saved
+8k textures 
+Perforce
+simplygon (import > simple reduction chain, with materials > process > check > export)
+
+
+outline plugins
+
+MOTIVE
+navigation in motive
+motive license key (flashdrive)
+capturing
+cleacning mocap
+
+In anm editor > Right-click timeline to edit animation
+
+Sequencer Recording 
+
+Root Motion Root Lock to Zero

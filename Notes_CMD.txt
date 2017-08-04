@@ -12,3 +12,7 @@ to list dir structure
 
 dir
 also works
+
+
+To empty recylce bin for all users
+rd /s c:\$Recycle.Bin
