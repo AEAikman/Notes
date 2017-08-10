@@ -67,3 +67,5 @@ turbulence
  
  
 Go to preferences Slider and change Update View from Active to All 
+
+Shift + M to bring back bar

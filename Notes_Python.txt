@@ -574,3 +574,11 @@ pyinstaller --clean --win-private-assemblies --onefile --noconsole --icon=icon.i
 
 TO CONVERT PNG TO ICO
 http://convertico.com/
+
+
+
+
+Python in Unreal
+inport unreal.engine as ue ?
+dir()
+help()

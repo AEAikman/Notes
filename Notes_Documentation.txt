@@ -349,24 +349,28 @@ UPDATE WIKI
 
 See Cotw doc
 ******************************   7/13/17
-
+navigation in motive
+motive license key (flashdrive)
+capturing
+******************************
+Perforce
 
 Never name a folder Intermediate or Saved
 8k textures 
-Perforce
 simplygon (import > simple reduction chain, with materials > process > check > export)
 
 
 outline plugins
+Plugin compiling
 
 MOTIVE
-navigation in motive
-motive license key (flashdrive)
-capturing
-cleacning mocap
+cleaning mocap
 
 In anm editor > Right-click timeline to edit animation
 
 Sequencer Recording 
 
 Root Motion Root Lock to Zero
+
+
+r.EyeAdaptationQuality=0
