@@ -352,16 +352,19 @@ See Cotw doc
 navigation in motive
 motive license key (flashdrive)
 capturing
-******************************
 Perforce
+outline plugins
+Plugin compiling
+
+******************************
+
+
 
 Never name a folder Intermediate or Saved
 8k textures 
 simplygon (import > simple reduction chain, with materials > process > check > export)
 
 
-outline plugins
-Plugin compiling
 
 MOTIVE
 cleaning mocap
@@ -369,8 +372,32 @@ cleaning mocap
 In anm editor > Right-click timeline to edit animation
 
 Sequencer Recording 
+Right-click actor to add to Sequencer Recorder
 
 Root Motion Root Lock to Zero
 
 
 r.EyeAdaptationQuality=0
+VR
+VR settings
+Add screenshots
+
+Perforce workspace info
+make sure you're on it
+
+
+Image Plate (4.17 or later. Requires that the Image Plate Plugin be enabled)
+Create the Folder in the Project > Content folder and move the image files in File Explorer
+In Unreal, right-click select Media, select Image Plate File Sequence
+Open the Asset
+Choose the Sequence Path
+Choose the filetype wildcard
+Choose the frame rate
+In Modes, find the Image Plate actor, drag it into the scene, parent it to the camera, and move it far enough away from the camera for the proper actors to be in front of it.
+Drag the image plate actor into your level sequence.
+Click the +Track button and choose image Plate.
+On the newly created Render texture track, click the + icon to select your image plate File Sequence.
+Make sure the bar created shows your image sequence.
+If it does not, make sure that you moved your files in File explorer rather than importing uassets in unreal and that you set your image place file sequence settings correctly
+
+Composure

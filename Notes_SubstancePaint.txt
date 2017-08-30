@@ -26,3 +26,6 @@ shift + click mas to siable
 paint layer - hard light for paintin gmask
 paint layer - stencil > drag into stencil 
 s controls stencil
+
+
+Model UVS must be in 0-1
