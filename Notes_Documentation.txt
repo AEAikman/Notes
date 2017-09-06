@@ -347,7 +347,7 @@ proofread
 
 UPDATE WIKI
 
-See Cotw doc
+See Call doc
 ******************************   7/13/17
 navigation in motive
 motive license key (flashdrive)
