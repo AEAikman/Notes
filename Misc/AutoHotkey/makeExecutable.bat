@@ -1,0 +1,1 @@
+pyinstaller --clean --win-private-assemblies --onefile --noconsole VersionUpCSV.py
