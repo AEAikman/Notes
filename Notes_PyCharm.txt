@@ -1,4 +1,8 @@
 Notes_PyCharm
 
 
-Ctrl + Shift + T to surround something with something
+Ctrl + Alt + T to surround something with something
+
+Double Shift to search everywhere
+
+Ctrl + Shift + A to search smart actions
