@@ -11,4 +11,6 @@ Alt + Shift + Insert for Column mode
 
 Tab or Shift tab for indentation
 
-C + S + A +Insert for scratch file
+Ct + Sh + Al +Insert for scratch file
+
+Ct + Al + I  to auto indent
