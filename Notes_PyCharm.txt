@@ -6,3 +6,9 @@ Ctrl + Alt + T to surround something with something
 Double Shift to search everywhere
 
 Ctrl + Shift + A to search smart actions
+
+Alt + Shift + Insert for Column mode
+
+Tab or Shift tab for indentation
+
+C + S + A +Insert for scratch file
