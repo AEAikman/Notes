@@ -14,3 +14,5 @@ Tab or Shift tab for indentation
 Ct + Sh + Al +Insert for scratch file
 
 Ct + Al + I  to auto indent
+
+Settings Repo = sweet
