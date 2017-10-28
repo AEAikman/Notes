@@ -1,0 +1,14 @@
+Rigging
+
+IK RP
+Stickiness : Sticky to stick
+po weight = position orientation weight
+
+
+In ARTv2 in Maya 2017, there is a problem with Export Skeletal mesh
+you must replace in the file
+ARTv2\Core\Scripts\Interfaces\ART_ExportMeshes.py
+replace
+setResizeMode
+with
+setSectionResizeMode
