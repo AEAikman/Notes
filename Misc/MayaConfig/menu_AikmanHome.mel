@@ -4026,32 +4026,6 @@
                 menuEditorMenuItem11;
 
             menuItem
-                -label "Smooth Skin Weights" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SmoothSkinWeights" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "smoothSkinWeights.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem14;
-
-            menuItem
                 -label "Hammer Skin Weights" 
                 -divider 0
                 -subMenu 0
@@ -4065,7 +4039,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "SE" 
+                -radialPosition "W" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -4126,6 +4100,32 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
+
+            menuItem
+                -label "Smooth Skin Weights" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SmoothSkinWeights" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "smoothSkinWeights.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem14;
 
         setParent -m ..;
 
