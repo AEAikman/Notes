@@ -2698,31 +2698,6 @@
             menuEditorMenuItem1;
 
         menuItem
-            -label "ToggleWireframeView" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/ToggleWosView.mel\"; ToggleWosView();" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "NW" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem2;
-
-        menuItem
             -label "Show All UI Elements" 
             -divider 0
             -subMenu 0
@@ -2753,7 +2728,7 @@
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/ToggleXrayObj.mel\"; ToggleXrayObj();" 
+            -command "global proc ToggleXrayObj()\n{\nstring $currentObject[] = `ls -sl`;\n\nint $surfaceXray[] = `displaySurface -q -xRay $currentObject[0]`;\n\n\nif ($surfaceXray[0] == 0)\n{\ndisplaySurface -xRay 1;\n}\n\nelse\n{\ndisplaySurface -xRay 0;\n}\n}\nToggleXrayObj();" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -2775,33 +2750,11 @@
             menuEditorMenuItem5;
 
         menuItem
-            -label "menuEditorMenuItem6" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 1
-            -enable 1
-            -data 0
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem6;
-
-        menuItem
             -label "ToggleXrayView" 
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/ToggleXrayView.mel\"; ToggleXrayView();" 
+            -command "global proc ToggleXRayView()\n{\nstring $currentPanel = `getPanel -underPointer`;\nif (\"\" == $currentPanel)\n{\n$currentPanel = `getPanel -withFocus`;\n}\nif (\"\" != $currentPanel)\n{\nstring $panelType = `getPanel -typeOf $currentPanel`;\nif ($panelType == \"modelPanel\")\n{\nint $state = `modelEditor -q -xray $currentPanel`;\nmodelEditor -e -xray (!$state) $currentPanel;\n}\n}\n}\nToggleXRayView();" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -2821,78 +2774,6 @@
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem7;
-
-        menuItem
-            -label "menuEditorMenuItem8" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 1
-            -enable 1
-            -data 0
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem8;
-
-        menuItem
-            -label "AnmLayout" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "setNamedPanelLayout \"AAikman_LO\"; updateToolbox();" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "S" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem9;
-
-        menuItem
-            -label "PerspOutlinerLayout" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "setNamedPanelLayout \"Persp/Outliner\"; updateToolbox();" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "N" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem10;
 
         menuItem
             -label "ClippingPlanes" 
@@ -3042,6 +2923,81 @@
                 menuEditorMenuItem5;
 
         setParent -m ..;
+
+        menuItem
+            -label "Wireframe on Shaded" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "string $selectedPanel = `getPanel -wf`;\nint $shadedWireState = `modelEditor -q -wos $selectedPanel`;\nif(`modelEditor -ex $selectedPanel`)\n{\nsetWireframeOnShadedOption (!$shadedWireState) $selectedPanel;\n}" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "NW" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem11;
+
+        menuItem
+            -label "PerspOutlinerLayout" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "setNamedPanelLayout \"Persp/Outliner\"; updateToolbox();" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "N" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem10;
+
+        menuItem
+            -label "AnmLayout" 
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -command "setNamedPanelLayout \"AAikman_LO\"; updateToolbox();" 
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "S" 
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 1
+            -echoCommand 0
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem9;
 
     setParent -m ..;
 
@@ -3422,11 +3378,11 @@
             menuEditorMenuItem2;
 
         menuItem
-            -label "MirrorsEdge" 
+            -label "Mirror's Edge" 
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "source \"C:/Users/aaikman/Documents/maya/2016/prefs/scripts/AA/MirrorsEdge.mel\"; MirrorsEdge();" 
+            -command "global proc MirrorsEdge()\n{\n\nif(`window -exists \"MirrorsEdge\"`)\n{\ndeleteUI \"MirrorsEdge\";\n}\n\nwindow MirrorsEdge;\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\nbutton -label \"SINGLE\" -command \"instancecallback\";\n\nsetParent ..;\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\nbutton -label \"BREAK INSTANCE\" -command \"convertcallback\";\n\nsetParent ..;\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\nbutton -label \"CONVERT TO INSTANCE\" -command \"convertInstanceCallback\";\n\nsetParent ..;\n\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\ntext -h 50 -align \"center\" -label \"LINEAR\";\nsetParent ..;\nrowLayout -numberOfColumns 3 -cw3 100 100 100 -ct3 \"both\" \"both\" \"both\" -cl3 \"center\" \"center\" \"center\";\nbutton -label \"X\" -command \"mirrorcallback 1\";\nbutton -label \"Y\" -command \"mirrorcallback 2\";\nbutton -label \"Z\" -command \"mirrorcallback 3\";\n\nsetParent ..;\ntext -h 50 -align \"center\" -label \"RADIAL\";\n\nsetParent..;\nrowLayout -numberOfColumns 3 -cw3 100 100 100 -ct3 \"both\" \"both\" \"both\" -cl3 \"center\" \"center\" \"center\";\nbutton -label \"Radial X\" -command \"radialcallback 1\";\nbutton -label \"Radial Y\" -command \"radialcallback 2\";\nbutton -label \"Radial Z\" -command \"radialcallback 3\";\n\nsetParent ..;\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\ntext -h 50 -align \"center\" -label \"Number of Pieces\";\n\nsetParent ..;\ncolumnLayout -co \"both\" 125 -cw 310;\nintField -w 50 -minValue 3 -value 3 NumSides;\n\n\nwindow -edit -wh 310 330 MirrorsEdge;\nshowWindow MirrorsEdge;\n}\n\nglobal proc instancecallback()\n{\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1) ;\n}\n\nglobal proc convertcallback()\n{\nconvertInstanceToObject;\n}\n\nglobal proc convertInstanceCallback()\n{\nstring $selectedObjs[] = `ls -sl`;\nfloat $stored_translate[] = `xform -q -ws -sp $selectedObjs[1]`;\nfloat $stored_rotate[] = `xform -q -ws -ro $selectedObjs[1]`;\nfloat $stored_scale[] = `xform -q -r -os -s $selectedObjs[1]`;\n\nstring $newMesh[] = `instance $selectedObjs[0]`;\n\n\nmove -a -ws -spr $stored_translate[0] $stored_translate[1] $stored_translate[2] $newMesh;\nrotate -a -ws $stored_rotate[0] $stored_rotate[1] $stored_rotate[2] $newMesh;\nscale -a $stored_scale[0] $stored_scale[1] $stored_scale[2] $newMesh;\n\ndelete $selectedObjs[1];\n\n}\n\n\nglobal proc mirrorcallback(int $Linear)\n{\nswitch($Linear)\n{\ncase 1:\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,-1,1,1);\n\nbreak;\ncase 2:\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,-1,1);\nbreak;\ncase 3:\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,-1);\nbreak;\n\ndefault:\nbreak;\n}\n}\n\nglobal proc radialcallback(int $MirrorAxis)\n{\nint $numInstances = `intField -q -value NumSides`;\nfloat $Division = 360 / float ($numInstances);\n\nswitch($MirrorAxis)\n{\ncase 1:\nduplicatePreset(--$numInstances,0,1,0,0,0,0,0,0,0,0,$Division,0,0,1, 1,1);\nbreak;\n\ncase 2:\nduplicatePreset(--$numInstances,0,1,0,0,0,0,0,0,0,0,0,$Division,0,1, 1,1);\nbreak;\n\ncase 3:\nduplicatePreset(--$numInstances,0,1,0,0,0,0,0,0,0,0,0,0,$Division,1, 1,1);\nbreak;\n\ndefault:\nbreak;\n}\n};\nMirrorsEdge();" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -3439,35 +3395,12 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "commandButton.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 1
+            -boldFont 0
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem5;
-
-        menuItem
-            -label "menuEditorMenuItem6" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 1
-            -enable 1
-            -data 0
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem6;
+            menuEditorMenuItem4;
 
     setParent -m ..;
 
@@ -4212,6 +4145,31 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem5;
+
+            menuItem
+                -label "UVO" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "global proc UVOffset()\n{\n\nif(`window -exists \"UVOffset\"`)\n{\ndeleteUI \"UVOffset\";\n}\n\nwindow UVOffset;\n\ncolumnLayout;\nframeLayout -collapsable 1 -l \"Translation\";\ngridLayout -numberOfColumns 3  -cellWidthHeight 40 40;\nsymbolButton -image \"CCW.bmp\" -command \"UVRotate 1\";\nsymbolButton -image \"Up.bmp\" -command \"UVMove 1\";\nsymbolButton -image \"CW.bmp\" -command \"UVRotate 2\"; \nsymbolButton -image \"Left.bmp\" -command \"UVMove 3\";\nfloatField -w 38 -h 38 -value 1 -pre 3 OffsetValue;\nsymbolButton -image \"Right.bmp\" -command \"UVMove 4\";\nsymbolButton -image \"ScaleU.bmp\" -command \"UVScale 1\";\nsymbolButton -image \"Down.bmp\" -command \"UVMove 2\";\nsymbolButton -image \"ScaleV.bmp\" -command \"UVScale 2\";\n\nsetParent..;\nsetParent..;\n\nframeLayout -collapsable 1 -l \"Tools\";\ngridLayout -numberOfColumns 2 -cellWidthHeight 40 40;\nsymbolButton -image \"ALUVV.bmp\" -command \"AutoLevelUV 1\" -ann \"Auto Level UV Shell on U: Select two UVS as your anchor Points.\";\nsymbolButton -image \"ALUVH.bmp\" -command \"AutoLevelUV 2\" -ann \"Auto Level UV Shell on V: Select two UVS as your anchor Points.\";\nsymbolButton -image \"UNUF.bmp\" -command \"UnitUnfold\" -ann \"Unitize and Unfold : Select Edges for your desired Seams.\";\nsymbolButton -image \"UNLT.bmp\" -command \"UnitLayout\" -ann \"Unitize and Layout : Select Edges for your Seams.\";\nsymbolButton -image \"UnfoldU.bmp\" -command \"UnfoldLimited 1\" -ann \"Unfold U Constraint: UVs stay pinned in U direction.\";\nsymbolButton -image \"UnfoldV.bmp\" -command \"UnfoldLimited 2\" -ann \"Unfold V Constraint: UVs stay pinned in V direction.\";\nsymbolButton -image \"Corner.bmp\" -command \"CornerUnfold\" -ann \"Corner Unfold: Select 4 UVs as anchor points to snap to UV Quadrant Border.\";\n\n\n\nwindow -edit -wh 140 600 UVOffset;\nshowWindow UVOffset;\n}\n\nglobal proc UVMove(int $Direction)\n{\nfloat $moveOffset = `floatField -q -value OffsetValue`; \nswitch($Direction)\n{\ncase 1:\npolyEditUV -v $moveOffset;\nbreak;\n\ncase 2:\npolyEditUV -v ($moveOffset *-1);\nbreak;\n\ncase 3:\npolyEditUV -u ($moveOffset *-1);\nbreak;\n\ncase 4:\npolyEditUV -u $moveOffset;\nbreak;\n\ndefault:\nbreak;\n}\n}\n\n\nglobal proc UVRotate(int $Direction)\n{\nfloat $rotateOffset = `floatField -q -value OffsetValue`;\nswitch($Direction)\n{\ncase 1:\npolyRotateUVs $rotateOffset;\nbreak;\n\ncase 2:\npolyRotateUVs (-1 * $rotateOffset);\nbreak;\n\ndefault:\nbreak;\n}\n}\n\nglobal proc UVScale(int $Direction)\n{\nfloat $scaleOffset = `floatField -q -value OffsetValue`;\nswitch($Direction)\n{\ncase 1:\npolyEditUV -su $scaleOffset;\nbreak;\n\ncase 2:\npolyEditUV -sv $scaleOffset;\nbreak;\n\ndefault:\nbreak;\n}\n}\n\nglobal proc UnfoldLimited(int $Axis)\n{\nswitch($Axis)\n{\ncase 1:\nunfold -i 5000 -ss 0.001 -gb 0 -gmb 0.5 -pub 0 -ps  0 -oa  2 -us off;\nbreak;\n\ncase 2:\nunfold -i 5000 -ss 0.001 -gb 0 -gmb 0.5 -pub 0 -ps  0 -oa  1 -us off;\nbreak;\n\ndefault:\n\nbreak;\n}\n}\n\n\nglobal proc UnitUnfold()\n{\nint $numFaces[] = `polyEvaluate -fc`;\n\nif ($numFaces[0] != 0)\n\n{\n\nstring $Faces[] = `ls -sl`;\n\npolyForceUV -unitize;\n\nselect -r $Faces;\n\nPolySelectConvert 20;\n\nperformPolyMapSewMove 0;\n\nselect -r $Faces;\n\nConvertSelectionToUVs;\n\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\n\nselect -r $Faces;\n\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n\n}\n\nelse\n\n{\n\nstring $Seam[] = `ls -sl`;\npolySelectSp -ring;\nPolySelectConvert 1;\nstring $Shell[] = `ls -sl`;\npolyForceUV -unitize;\nselect -r $Seam;\npolySelectSp -ring;\nPolySelectConvert 1;\nPolySelectConvert 20;\nselect -d $Seam;\nperformPolyMapSewMove 0;\nselect -r $Shell;\nConvertSelectionToUVs;\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\nselect -r $Shell;\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n}\n}\n\n\nglobal proc UnitLayout()\n\n{\n\nint $numFaces[] = `polyEvaluate -fc`;\n\nif ($numFaces[0] != 0)\n\n{\n\nstring $Faces[] = `ls -sl`;\n\npolyForceUV -unitize;\n\nselect -r $Faces;\n\nPolySelectConvert 20;\n\nperformPolyMapSewMove 0;\n\nselect -r $Faces;\n\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n\n}\n\nelse\n\n{\n\nstring $Seam[] = `ls -sl`;\n\npolySelectSp -ring;\n\nPolySelectConvert 1;\n\nstring $Shell[] = `ls -sl`;\n\npolyForceUV -unitize;\n\nselect -r $Seam;\n\npolySelectSp -ring;\n\nPolySelectConvert 1;\n\nPolySelectConvert 20;\n\nselect -d $Seam;\n\nperformPolyMapSewMove 0;\n\nselect -r $Shell;\n\npolyLayoutUV -lm 1 -sc 1 -se 0 -rbf 1 -fr 1 -ps 0.2 -l 2 -ch 1;\n\n}\n\n}\n\n\nglobal proc AutoLevelUV(int $Orient)\n{\nstring $BaseUVS[] = `ls -sl`;\n\nswitch($Orient)\n{\ncase 1:\n\nalignUV 0 0 1 1;\n\nbreak;\n\ncase 2:\n\nalignUV 1 1 0 0;\n\nbreak;\n\ndefault:\n\nbreak;\n}\npolySelectBorderShell 0;\nselect -d $BaseUVS;\n\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\n}\n\nglobal proc CornerUnfold()\n{\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove1\";\nglobal string $CUCORNERS[];\n}\n\nglobal proc CUMove1()\n{\nglobal string $CUCORNERS[];\n$CUCORNERS = `ls -sl -fl`;\npolyEditUV -u 0 -v 0 -r false $CUCORNERS;\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove2\";\n}\n\nglobal proc CUMove2()\n{\nglobal string $CUCORNERS[];\nstring $uvCorner2[] = `ls -sl -fl`;\nappendStringArray($CUCORNERS, $uvCorner2, `size $uvCorner2`);\npolyEditUV -u 0 -v 1 -r false $uvCorner2;\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove3\";\n}\n\nglobal proc CUMove3()\n{\nglobal string $CUCORNERS[];\nstring $uvCorner3[] = `ls -sl -fl`;\nappendStringArray($CUCORNERS, $uvCorner3, `size $uvCorner3`);\npolyEditUV -u 1 -v 1 -r false $uvCorner3;\nscriptJob -ro 1 -e \"SelectionChanged\" \"CUMove4\";\n}\n\nglobal proc CUMove4()\n{\nglobal string $CUCORNERS[];\nstring $uvCorner4[] = `ls -sl -fl`;\nappendStringArray($CUCORNERS, $uvCorner4, `size $uvCorner4`);\npolyEditUV -u 1 -v 0 -r false $uvCorner4;\npolySelectBorderShell 0;\nselect -d $CUCORNERS;\nunfold -i 500 -ss 0.001 -gb 0 -gmb 0.4397 -pub 0 -ps  0 -us off;\n}\n\nUVOffset();" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
 
         setParent -m ..;
 
