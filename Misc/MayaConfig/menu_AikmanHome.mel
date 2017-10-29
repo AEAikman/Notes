@@ -3791,7 +3791,7 @@
         setParent -m ..;
 
         menuItem
-            -label "Skinning and SDK" 
+            -label "Skinning" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -4416,7 +4416,7 @@
         setParent -m ..;
 
         menuItem
-            -label "submenu" 
+            -label "Joints, IK, and SDK" 
             -divider 0
             -subMenu 1
             -tearOff 0
