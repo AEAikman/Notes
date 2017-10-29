@@ -1878,7 +1878,7 @@
             menuEditorMenuItem3;
 
         menuItem
-            -label "Materials" 
+            -label "Instances and Materials" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -1913,7 +1913,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "S" 
+                -radialPosition "SW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -1938,7 +1938,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "E" 
+                -radialPosition "NW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -1948,6 +1948,106 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
+
+            menuItem
+                -label "Instance Z" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "instance; scale -r 1 1 -1;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Instance Y" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "instance; scale -r 1 -1 1;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Instance X" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "instance; scale -r -1 1 1;" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Mirror's Edge" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "global proc MirrorsEdge()\n{\n\nif(`window -exists \"MirrorsEdge\"`)\n{\ndeleteUI \"MirrorsEdge\";\n}\n\nwindow MirrorsEdge;\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\nbutton -label \"SINGLE\" -command \"instancecallback\";\n\nsetParent ..;\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\nbutton -label \"BREAK INSTANCE\" -command \"convertcallback\";\n\nsetParent ..;\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\nbutton -label \"CONVERT TO INSTANCE\" -command \"convertInstanceCallback\";\n\nsetParent ..;\n\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\ntext -h 50 -align \"center\" -label \"LINEAR\";\nsetParent ..;\nrowLayout -numberOfColumns 3 -cw3 100 100 100 -ct3 \"both\" \"both\" \"both\" -cl3 \"center\" \"center\" \"center\";\nbutton -label \"X\" -command \"mirrorcallback 1\";\nbutton -label \"Y\" -command \"mirrorcallback 2\";\nbutton -label \"Z\" -command \"mirrorcallback 3\";\n\nsetParent ..;\ntext -h 50 -align \"center\" -label \"RADIAL\";\n\nsetParent..;\nrowLayout -numberOfColumns 3 -cw3 100 100 100 -ct3 \"both\" \"both\" \"both\" -cl3 \"center\" \"center\" \"center\";\nbutton -label \"Radial X\" -command \"radialcallback 1\";\nbutton -label \"Radial Y\" -command \"radialcallback 2\";\nbutton -label \"Radial Z\" -command \"radialcallback 3\";\n\nsetParent ..;\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\ntext -h 50 -align \"center\" -label \"Number of Pieces\";\n\nsetParent ..;\ncolumnLayout -co \"both\" 125 -cw 310;\nintField -w 50 -minValue 3 -value 3 NumSides;\n\n\nwindow -edit -wh 310 330 MirrorsEdge;\nshowWindow MirrorsEdge;\n}\n\nglobal proc instancecallback()\n{\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1) ;\n}\n\nglobal proc convertcallback()\n{\nconvertInstanceToObject;\n}\n\nglobal proc convertInstanceCallback()\n{\nstring $selectedObjs[] = `ls -sl`;\nfloat $stored_translate[] = `xform -q -ws -sp $selectedObjs[1]`;\nfloat $stored_rotate[] = `xform -q -ws -ro $selectedObjs[1]`;\nfloat $stored_scale[] = `xform -q -r -os -s $selectedObjs[1]`;\n\nstring $newMesh[] = `instance $selectedObjs[0]`;\n\n\nmove -a -ws -spr $stored_translate[0] $stored_translate[1] $stored_translate[2] $newMesh;\nrotate -a -ws $stored_rotate[0] $stored_rotate[1] $stored_rotate[2] $newMesh;\nscale -a $stored_scale[0] $stored_scale[1] $stored_scale[2] $newMesh;\n\ndelete $selectedObjs[1];\n\n}\n\n\nglobal proc mirrorcallback(int $Linear)\n{\nswitch($Linear)\n{\ncase 1:\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,-1,1,1);\n\nbreak;\ncase 2:\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,-1,1);\nbreak;\ncase 3:\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,-1);\nbreak;\n\ndefault:\nbreak;\n}\n}\n\nglobal proc radialcallback(int $MirrorAxis)\n{\nint $numInstances = `intField -q -value NumSides`;\nfloat $Division = 360 / float ($numInstances);\n\nswitch($MirrorAxis)\n{\ncase 1:\nduplicatePreset(--$numInstances,0,1,0,0,0,0,0,0,0,0,$Division,0,0,1, 1,1);\nbreak;\n\ncase 2:\nduplicatePreset(--$numInstances,0,1,0,0,0,0,0,0,0,0,0,$Division,0,1, 1,1);\nbreak;\n\ncase 3:\nduplicatePreset(--$numInstances,0,1,0,0,0,0,0,0,0,0,0,0,$Division,1, 1,1);\nbreak;\n\ndefault:\nbreak;\n}\n};\nMirrorsEdge();" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
 
         setParent -m ..;
 
@@ -3303,11 +3403,11 @@
         menuEditorMenuItem7;
 
         menuItem
-            -label "Instance X" 
+            -label "Hierarchy" 
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "instance; scale -r -1 1 1;" 
+            -command "SelectHierarchy" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -3320,69 +3420,20 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
+            -image "menuIconSelect.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 1
+            -boldFont 0
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem1;
+            menuEditorMenuItem5;
 
         menuItem
-            -label "Instance Z" 
+            -label "Count selected objects" 
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "instance; scale -r 1 1 -1;" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "E" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem3;
-
-        menuItem
-            -label "Instance Y" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "instance; scale -r 1 -1 1;" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "N" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem2;
-
-        menuItem
-            -label "Mirror's Edge" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "global proc MirrorsEdge()\n{\n\nif(`window -exists \"MirrorsEdge\"`)\n{\ndeleteUI \"MirrorsEdge\";\n}\n\nwindow MirrorsEdge;\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\nbutton -label \"SINGLE\" -command \"instancecallback\";\n\nsetParent ..;\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\nbutton -label \"BREAK INSTANCE\" -command \"convertcallback\";\n\nsetParent ..;\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\nbutton -label \"CONVERT TO INSTANCE\" -command \"convertInstanceCallback\";\n\nsetParent ..;\n\n\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\ntext -h 50 -align \"center\" -label \"LINEAR\";\nsetParent ..;\nrowLayout -numberOfColumns 3 -cw3 100 100 100 -ct3 \"both\" \"both\" \"both\" -cl3 \"center\" \"center\" \"center\";\nbutton -label \"X\" -command \"mirrorcallback 1\";\nbutton -label \"Y\" -command \"mirrorcallback 2\";\nbutton -label \"Z\" -command \"mirrorcallback 3\";\n\nsetParent ..;\ntext -h 50 -align \"center\" -label \"RADIAL\";\n\nsetParent..;\nrowLayout -numberOfColumns 3 -cw3 100 100 100 -ct3 \"both\" \"both\" \"both\" -cl3 \"center\" \"center\" \"center\";\nbutton -label \"Radial X\" -command \"radialcallback 1\";\nbutton -label \"Radial Y\" -command \"radialcallback 2\";\nbutton -label \"Radial Z\" -command \"radialcallback 3\";\n\nsetParent ..;\ncolumnLayout -cat \"both\" 0 -cal \"center\" -cw 310;\ntext -h 50 -align \"center\" -label \"Number of Pieces\";\n\nsetParent ..;\ncolumnLayout -co \"both\" 125 -cw 310;\nintField -w 50 -minValue 3 -value 3 NumSides;\n\n\nwindow -edit -wh 310 330 MirrorsEdge;\nshowWindow MirrorsEdge;\n}\n\nglobal proc instancecallback()\n{\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1) ;\n}\n\nglobal proc convertcallback()\n{\nconvertInstanceToObject;\n}\n\nglobal proc convertInstanceCallback()\n{\nstring $selectedObjs[] = `ls -sl`;\nfloat $stored_translate[] = `xform -q -ws -sp $selectedObjs[1]`;\nfloat $stored_rotate[] = `xform -q -ws -ro $selectedObjs[1]`;\nfloat $stored_scale[] = `xform -q -r -os -s $selectedObjs[1]`;\n\nstring $newMesh[] = `instance $selectedObjs[0]`;\n\n\nmove -a -ws -spr $stored_translate[0] $stored_translate[1] $stored_translate[2] $newMesh;\nrotate -a -ws $stored_rotate[0] $stored_rotate[1] $stored_rotate[2] $newMesh;\nscale -a $stored_scale[0] $stored_scale[1] $stored_scale[2] $newMesh;\n\ndelete $selectedObjs[1];\n\n}\n\n\nglobal proc mirrorcallback(int $Linear)\n{\nswitch($Linear)\n{\ncase 1:\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,-1,1,1);\n\nbreak;\ncase 2:\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,-1,1);\nbreak;\ncase 3:\nduplicatePreset(1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,-1);\nbreak;\n\ndefault:\nbreak;\n}\n}\n\nglobal proc radialcallback(int $MirrorAxis)\n{\nint $numInstances = `intField -q -value NumSides`;\nfloat $Division = 360 / float ($numInstances);\n\nswitch($MirrorAxis)\n{\ncase 1:\nduplicatePreset(--$numInstances,0,1,0,0,0,0,0,0,0,0,$Division,0,0,1, 1,1);\nbreak;\n\ncase 2:\nduplicatePreset(--$numInstances,0,1,0,0,0,0,0,0,0,0,0,$Division,0,1, 1,1);\nbreak;\n\ncase 3:\nduplicatePreset(--$numInstances,0,1,0,0,0,0,0,0,0,0,0,0,$Division,1, 1,1);\nbreak;\n\ndefault:\nbreak;\n}\n};\nMirrorsEdge();" 
+            -command "// Count selected objects\nprint (size(`ls -sl`));" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -3395,12 +3446,35 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
+            -image "commandButton.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 1
+            -boldFont 0
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem4;
+            menuEditorMenuItem9;
+
+        menuItem
+            -divider 0
+            -subMenu 0
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 1
+            -enable 1
+            -data 0
+            -allowOptionBoxes 1
+            -postMenuCommandOnce 0
+            -enableCommandRepeat 0
+            -echoCommand 0
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem10;
 
     setParent -m ..;
 
@@ -3425,178 +3499,6 @@
         -sourceType "mel" 
         -longDivider 1
         menuEditorMenuItem8;
-
-        menuItem
-            -label "Selection" 
-            -divider 0
-            -subMenu 1
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "W" 
-            -allowOptionBoxes 1
-            -enableCommandRepeat 1
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem10;
-
-            menuItem
-                -label "Filter Selection for Root" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_FilterSelectionToRoot.mel\";" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem3;
-
-            menuItem
-                -label "menuEditorMenuItem4" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem4;
-
-            menuItem
-                -label "Alternate Selection Window" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_AlternateSelect.mel\";" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem5;
-
-            menuItem
-                -label "Hierarchy" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SelectHierarchy" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "menuIconSelect.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem7;
-
-            menuItem
-                -label "Count selected objects" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "// Count selected objects\nprint (size(`ls -sl`));" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "commandButton.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "menuEditorMenuItem2" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-        setParent -m ..;
 
         menuItem
             -label "Creation" 
@@ -5179,6 +5081,324 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Control Creation" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "W" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem5;
+
+            menuItem
+                -label "Sphere" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "sphere -p 0 0 0 -ax 0 0 1 -ssw 0 -esw 360 -r 1 -d 3 -ut 0 -tol 0.01 -s 8 -nsp 4 -ch 1;objectMoveCommand" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "sphere.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateNURBSSphereOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Circle" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "circle -c 0 0 0 -nr 0 0 1 -sw 360 -r 1 -d 3 -ut 0 -tol 0.01 -s 8 -ch 1; objectMoveCommand" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "circle.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateNURBSCircleOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Square" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "nurbsSquarePreset(0,0,0,0,0,0,1,1,1,1,3,1)" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "square.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateNURBSSquareOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "Cube" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "nurbsCube -p 0 0 0 -ax 0 0 1 -w 1 -lr 1 -hr 1 -d 3 -u 1 -v 1 -ch 1; objectMoveCommand" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "cube.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateNURBSCubeOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "CV Curve Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CVCurveTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "curveCV.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CVCurveToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem10;
+
+            menuItem
+                -label "EP Curve Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "EPCurveTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "curveEP.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem11;
+
+            menuItem
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "EPCurveToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem12;
 
         setParent -m ..;
 
