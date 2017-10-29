@@ -6,3 +6,13 @@ Ctrl + Alt + T to surround something with something
 Double Shift to search everywhere
 
 Ctrl + Shift + A to search smart actions
+
+Alt + Shift + Insert for Column mode
+
+Tab or Shift tab for indentation
+
+Ct + Sh + Al +Insert for scratch file
+
+Ct + Al + I  to auto indent
+
+Settings Repo = sweet

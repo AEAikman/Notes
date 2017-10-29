@@ -356,25 +356,30 @@ Perforce
 outline plugins
 Plugin compiling
 
-******************************
-
-
-
-Never name a folder Intermediate or Saved
-8k textures 
-simplygon (import > simple reduction chain, with materials > process > check > export)
-
-
-
 MOTIVE
 cleaning mocap
 
+
+******************************
+
+Root Motion Root Lock to Zero
 In anm editor > Right-click timeline to edit animation
+
+8k textures (link to Jess)
+Never name a folder Intermediate or Saved
+
+
+
+
 
 Sequencer Recording 
 Right-click actor to add to Sequencer Recorder
 
-Root Motion Root Lock to Zero
+
+
+Perforce workspace info
+make sure you're on it
+
 
 
 r.EyeAdaptationQuality=0
@@ -382,12 +387,14 @@ VR
 VR settings
 Add screenshots
 
-vvCam
+Composure?
+Very postvis related
 
 
-Perforce workspace info
-make sure you're on it
+Level Streaming
+Save all!
 
+simplygon (import > simple reduction chain, with materials > process > check > export): Not preferred (instalod preferred but online docs are better)
 
 Image Plate (4.17 or later. Requires that the Image Plate Plugin be enabled)
 Create the Folder in the Project > Content folder and move the image files in File Explorer
@@ -403,9 +410,69 @@ On the newly created Render texture track, click the + icon to select your image
 Make sure the bar created shows your image sequence.
 If it does not, make sure that you moved your files in File explorer rather than importing uassets in unreal and that you set your image place file sequence settings correctly
 
-Composure
+vvCam
+Z:\training\UnrealEngine\TemplateProjects\VR
+
+outline playing a recorded sequence
+VRvCam Control Layout images
+
+Add the reset the vrvcam record
+
+vive setup
+render is rift right trigger + B
+to use it, just drag it into the scene
+note that the rotation of the cam is driven by your hand
+
+choosing engine version if it asks you to switch
+"opening unreal projects"
+
+vvCam 4.16/17?
+RecordSequence actor CineCamProxy
+StopRecordingSequence
 
 
 Starting a Project Video Tutorial
+Choosing your version
+Finding the right template
+Modifying the DDC File
+Creating your own template projects
+Copying content from the Vault
+Copying Plugins
+
+Using Unreal quick start video (including links to other documentation)
+Z:\training
+Z:\training\UnrealEngine\Documentation
+Interface (Windows/Controls)
+Saving
+Using the manual
+Using the wiki
+
+Basic Materials video
+
+Basic Cascade video
 
 Using Perforce Video Tutorial
+
+Troubleshooting Rig not coming into Unreal
+Single Hierarchy
+All skinned
+No obj named geo 
+etc
+
+General over view
+migration
+making a non-looping particle
+Bounds
+
+vCam 4.16
+
+
+Move projects up to 416 - did MR and Plugins
+
+******************************
+***
+vvCam (CBB)
+add LS playback controls
+Add ability to reset recording to current playback time
+
+
