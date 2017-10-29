@@ -12,3 +12,11 @@ you must replace
 setResizeMode
 with
 setSectionResizeMode
+
+Wire Deformers + blendShape on Curve to do wire for pulley
+
+connnections
+utility nodes (condition) note that it is tab to search nodes
+expressions (if)
+
+Motion paths > Attach to motion paths
