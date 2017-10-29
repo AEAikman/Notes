@@ -357,7 +357,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "W" 
+                -radialPosition "N" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -409,7 +409,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "N" 
+                -radialPosition "W" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -759,7 +759,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem1;
@@ -785,7 +785,7 @@
                 -image "menuIconWindow.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
@@ -811,7 +811,7 @@
                 -image "menuIconWindow.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -837,7 +837,7 @@
                 -image "menuIconWindow.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -863,7 +863,7 @@
                 -image "blendShapeEditor.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
@@ -889,7 +889,7 @@
                 -image "menuIconWindow.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem5;
@@ -915,7 +915,7 @@
                 -image "menuIconWindow.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -941,7 +941,7 @@
                 -image "hypergraph.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem7;
@@ -967,7 +967,7 @@
                 -image "hypergraph.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem8;
@@ -3494,430 +3494,6 @@
         menuEditorMenuItem8;
 
         menuItem
-            -label "Rigging" 
-            -divider 0
-            -subMenu 1
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "E" 
-            -allowOptionBoxes 1
-            -enableCommandRepeat 1
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem2;
-
-            menuItem
-                -label "Bind Skin" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SmoothBindSkin" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "E" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "smoothSkin.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "menuEditorMenuItem2" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SmoothBindSkinOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
-                -label "Paint Skin Weights" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "ArtPaintSkinWeightsTool" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "paintSkinWeights.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem3;
-
-            menuItem
-                -label "menuEditorMenuItem4" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "ArtPaintSkinWeightsToolOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem4;
-
-            menuItem
-                -label "Blend Shapes" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "CreateBlendShape" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "blendShape.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem5;
-
-            menuItem
-                -label "menuEditorMenuItem6" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "CreateBlendShapeOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem6;
-
-            menuItem
-                -label "Parent Constraint" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "ParentConstraint" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "parentConstraint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem7;
-
-            menuItem
-                -label "menuEditorMenuItem8" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "ParentConstraintOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem8;
-
-            menuItem
-                -label "Point Constraint" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PointConstraint" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "posConstraint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem9;
-
-            menuItem
-                -label "menuEditorMenuItem10" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PointConstraintOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem10;
-
-            menuItem
-                -label "Orient Constraint" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "OrientConstraint" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "orientConstraint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem11;
-
-            menuItem
-                -label "menuEditorMenuItem12" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "OrientConstraintOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem12;
-
-            menuItem
-                -label "Aim Constraint" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "AimConstraint" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "aimConstraint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem13;
-
-            menuItem
-                -label "menuEditorMenuItem14" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "AimConstraintOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem14;
-
-            menuItem
-                -label "Pole Vector Constraint" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PoleVectorConstraint" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "poleVectorConstraint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem15;
-
-            menuItem
-                -label "menuEditorMenuItem16" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PoleVectorConstraintOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem16;
-
-        setParent -m ..;
-
-        menuItem
             -label "Selection" 
             -divider 0
             -subMenu 1
@@ -3930,7 +3506,7 @@
             -optionBox 0
             -enable 1
             -data 0
-            -radialPosition "SE" 
+            -radialPosition "E" 
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
@@ -4038,6 +3614,54 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem7;
+
+            menuItem
+                -label "Count selected objects" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "// Count selected objects\nprint (size(`ls -sl`));" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "commandButton.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "menuEditorMenuItem2" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
 
         setParent -m ..;
 
@@ -4189,82 +3813,6 @@
             menuEditorMenuItem12;
 
             menuItem
-                -label "Set..." 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SetDrivenKeyOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "menuIconKeys.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "Paint Vertex Color Tool" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PaintVertexColorTool" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "paintVertexColour.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
-                -label "menuEditorMenuItem3" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PaintVertexColorToolOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem3;
-
-            menuItem
                 -label "Mirror Skin Weights" 
                 -divider 0
                 -subMenu 0
@@ -4369,58 +3917,6 @@
                 menuEditorMenuItem7;
 
             menuItem
-                -label "Mirror Joints" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "mirrorJoint -mirrorYZ -mirrorBehavior -searchReplace \"_L\" \"_R\"" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "kinMirrorJoint_S.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem8;
-
-            menuItem
-                -label "Create Joints" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "JointTool" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "kinJoint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem9;
-
-            menuItem
                 -label "Paint Skin Weights" 
                 -divider 0
                 -subMenu 0
@@ -4434,6 +3930,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
+                -radialPosition "S" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -4467,7 +3964,109 @@
                 -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
+                menuEditorMenuItem11;
+
+            menuItem
+                -label "Bind Skin" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SmoothBindSkin" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "smoothSkin.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
                 menuEditorMenuItem12;
+
+            menuItem
+                -label "menuEditorMenuItem13" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SmoothBindSkinOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem13;
+
+            menuItem
+                -label "Smooth Skin Weights" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SmoothSkinWeights" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "smoothSkinWeights.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem14;
+
+            menuItem
+                -label "Hammer Skin Weights" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "weightHammerVerts" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconSkinning.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem15;
 
         setParent -m ..;
 
@@ -4764,14 +4363,63 @@
                 -longDivider 1
                 menuEditorMenuItem2;
 
+            menuItem
+                -label "Paint Vertex Color Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PaintVertexColorTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "paintVertexColour.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "menuEditorMenuItem5" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PaintVertexColorToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
         setParent -m ..;
 
         menuItem
-            -label "Count selected objects" 
+            -label "submenu" 
             -divider 0
-            -subMenu 0
+            -subMenu 1
             -tearOff 0
-            -command "// Count selected objects\nprint (size(`ls -sl`));" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -4782,37 +4430,595 @@
             -data 0
             -radialPosition "SW" 
             -allowOptionBoxes 1
-            -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "commandButton.png" 
-            -echoCommand 0
             -italicized 0
             -boldFont 1
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem5;
+            menuEditorMenuItem7;
+
+            menuItem
+                -label "Set..." 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetDrivenKeyOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconKeys.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Create Joints" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "JointTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "kinJoint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Mirror Joints" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "mirrorJoint -mirrorYZ -mirrorBehavior -searchReplace \"_L\" \"_R\"" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "kinMirrorJoint_S.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Blend Shapes" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateBlendShape" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "blendShape.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "menuEditorMenuItem9" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateBlendShapeOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+            menuItem
+                -label "Orient Joint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "joint -e  -oj xyz -secondaryAxisOrient yup -ch -zso" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "orientJoint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem10;
+
+            menuItem
+                -label "Insert Joints" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "InsertJointTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "kinInsert.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem11;
+
+            menuItem
+                -label "Create IK Handle" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "IKHandleTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "kinHandle.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem12;
+
+            menuItem
+                -label "Create IK Spline Handle" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "IKSplineHandleTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "kinSplineHandle.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem14;
+
+        setParent -m ..;
 
         menuItem
-            -label "menuEditorMenuItem6" 
+            -label "Constraints" 
             -divider 0
-            -subMenu 0
+            -subMenu 1
             -tearOff 0
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
             -ctrlModifier 0
             -shiftModifier 0
-            -optionBox 1
+            -optionBox 0
             -enable 1
             -data 0
+            -radialPosition "SE" 
             -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 0
+            -enableCommandRepeat 1
             -italicized 0
             -boldFont 1
             -sourceType "mel" 
             -longDivider 1
-            menuEditorMenuItem6;
+            menuEditorMenuItem2;
+
+            menuItem
+                -label "Parent Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "parentConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "parentConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "menuEditorMenuItem8" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ParentConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "Point Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "pointConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "posConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+            menuItem
+                -label "menuEditorMenuItem10" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PointConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem10;
+
+            menuItem
+                -label "Orient Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "orientConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "orientConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem11;
+
+            menuItem
+                -label "menuEditorMenuItem12" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "OrientConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem12;
+
+            menuItem
+                -label "Aim Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "AimConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "aimConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem13;
+
+            menuItem
+                -label "menuEditorMenuItem14" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "AimConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem14;
+
+            menuItem
+                -label "Pole Vector Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PoleVectorConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "poleVectorConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem15;
+
+            menuItem
+                -label "menuEditorMenuItem16" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PoleVectorConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem16;
+
+            menuItem
+                -label "Orient Constraint MO" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "orientConstraint -mo" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Point Constraint MO" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "pointConstraint -mo" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Parent Constraint MO" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "parentConstraint -mo" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+        setParent -m ..;
 
     setParent -m ..;
 
