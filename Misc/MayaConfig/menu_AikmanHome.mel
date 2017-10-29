@@ -3397,7 +3397,7 @@
             -enableCommandRepeat 1
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem4;
@@ -3439,7 +3439,7 @@
             -optionBox 0
             -enable 1
             -data 0
-            -radialPosition "E" 
+            -radialPosition "W" 
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
@@ -3599,7 +3599,7 @@
         setParent -m ..;
 
         menuItem
-            -label "Curves" 
+            -label "Creation" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -3634,7 +3634,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "SE" 
+                -radialPosition "NE" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -3721,6 +3721,132 @@
                 -longDivider 1
                 menuEditorMenuItem4;
 
+            menuItem
+                -label "Create Polygon" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "setToolTo polyCreateFacetContext ; polyCreateFacetCtx -e -pc `optionVar -q polyKeepFacetsPlanar` polyCreateFacetContext" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "polyCreateFacet.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "menuEditorMenuItem6" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "setToolTo polyCreateFacetContext ; polyCreateFacetCtx -e -pc `optionVar -q polyKeepFacetsPlanar` polyCreateFacetContext; toolPropertyWindow" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "Paint Vertex Color Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PaintVertexColorTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "paintVertexColour.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "menuEditorMenuItem8" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PaintVertexColorToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "Create Locator" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_locatorAtSelection.mel\" ;\n" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "locator.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
         setParent -m ..;
 
         menuItem
@@ -3759,7 +3885,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NW" 
+                -radialPosition "SW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -3900,56 +4026,6 @@
                 menuEditorMenuItem11;
 
             menuItem
-                -label "Bind Skin" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SmoothBindSkin" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "smoothSkin.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem12;
-
-            menuItem
-                -label "menuEditorMenuItem13" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SmoothBindSkinOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem13;
-
-            menuItem
                 -label "Smooth Skin Weights" 
                 -divider 0
                 -subMenu 0
@@ -3989,7 +4065,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "SW" 
+                -radialPosition "SE" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -4000,6 +4076,56 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem15;
+
+            menuItem
+                -label "Bind Skin" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SmoothBindSkin" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "smoothSkin.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem12;
+
+            menuItem
+                -label "menuEditorMenuItem13" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SmoothBindSkinOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
 
         setParent -m ..;
 
@@ -4166,7 +4292,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -4224,157 +4350,7 @@
         setParent -m ..;
 
         menuItem
-            -label "Creation" 
-            -divider 0
-            -subMenu 1
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "W" 
-            -allowOptionBoxes 1
-            -enableCommandRepeat 1
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem4;
-
-            menuItem
-                -label "Create Locator" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_locatorAtSelection.mel\" ;\n" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "locator.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem3;
-
-            menuItem
-                -label "Create Polygon" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "setToolTo polyCreateFacetContext ; polyCreateFacetCtx -e -pc `optionVar -q polyKeepFacetsPlanar` polyCreateFacetContext" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "E" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "polyCreateFacet.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "menuEditorMenuItem2" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "setToolTo polyCreateFacetContext ; polyCreateFacetCtx -e -pc `optionVar -q polyKeepFacetsPlanar` polyCreateFacetContext; toolPropertyWindow" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
-                -label "Paint Vertex Color Tool" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PaintVertexColorTool" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "paintVertexColour.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem4;
-
-            menuItem
-                -label "menuEditorMenuItem5" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PaintVertexColorToolOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem5;
-
-        setParent -m ..;
-
-        menuItem
-            -label "Joints, IK, and SDK" 
+            -label "Skeleton etc" 
             -divider 0
             -subMenu 1
             -tearOff 0
@@ -4394,32 +4370,6 @@
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem7;
-
-            menuItem
-                -label "Set..." 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SetDrivenKeyOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "menuIconKeys.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
 
             menuItem
                 -label "Create Joints" 
@@ -4626,6 +4576,32 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem14;
+
+            menuItem
+                -label "Create Locator" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_locatorAtSelection.mel\" ;\n" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "locator.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
 
         setParent -m ..;
 
@@ -4969,6 +4945,234 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Rigging Misc" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "E" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 1
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem4;
+
+            menuItem
+                -label "Paint Vertex Color Tool" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PaintVertexColorTool" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "paintVertexColour.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "menuEditorMenuItem5" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PaintVertexColorToolOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Blend Shapes" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateBlendShape" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "blendShape.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "menuEditorMenuItem7" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "CreateBlendShapeOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "Set..." 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "SetDrivenKeyOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconKeys.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "Shape Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShapeEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "blendShapeEditor.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Expression Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ExpressionEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Node Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "NodeEditorWindow" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
