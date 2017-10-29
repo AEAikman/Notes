@@ -742,6 +742,238 @@
 
         setParent -m ..;
 
+        menuItem
+            -label "Windows_Rigging" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+            menuItem
+                -label "Node Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "NodeEditorWindow" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Connection Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ConnectionEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Component Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ComponentEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Shape Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShapeEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "blendShapeEditor.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Expression Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ExpressionEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Graph Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "GraphEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "Hypergraph: Hierarchy" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "HypergraphHierarchyWindow" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "hypergraph.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "Hypergraph: Connections" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "HypergraphDGWindow" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "hypergraph.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+        setParent -m ..;
+
     setParent -m ..;
 
     menuItem
@@ -4503,12 +4735,13 @@
                 -image "polyCreateFacet.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
 
             menuItem
+                -label "menuEditorMenuItem2" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -4526,7 +4759,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
