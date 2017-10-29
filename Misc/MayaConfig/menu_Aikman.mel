@@ -39,7 +39,6 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/FreezeTransforms.bmp" 
             -echoCommand 0
             -italicized 0
             -boldFont 1
@@ -65,7 +64,6 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/centerPivot.bmp" 
             -echoCommand 0
             -italicized 0
             -boldFont 1
@@ -91,7 +89,6 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/DeleteHistory.bmp" 
             -echoCommand 0
             -italicized 0
             -boldFont 1
@@ -297,11 +294,11 @@
                 menuEditorMenuItem8;
 
             menuItem
-                -label "Show All UI Elements" 
+                -label "Hotkey Editor" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "ShowUIElements" 
+                -command "HotkeyPreferencesWindow" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -314,13 +311,13 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
-                -image "menuIconDisplay.png" 
+                -image "menuIconWindow.png" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
-                menuEditorMenuItem9;
+                menuEditorMenuItem6;
 
         setParent -m ..;
 
@@ -444,82 +441,6 @@
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
                 -image "menuIconFile.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-        setParent -m ..;
-
-        menuItem
-            -label "Playblasting" 
-            -divider 0
-            -subMenu 1
-            -tearOff 0
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "SW" 
-            -allowOptionBoxes 1
-            -enableCommandRepeat 1
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem2;
-
-            menuItem
-                -label "Playblast" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source GUI_Playblast;postvisPlayblast;" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "PlayblastButton.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "toggle HUD" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "hud = hcam.Tools.HUD()\nhud.toggle(hcam.Ui.Cam.List.sls)" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "Slate_HUD.png" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
@@ -673,6 +594,32 @@
                 -longDivider 1
                 menuEditorMenuItem5;
 
+            menuItem
+                -label "Match Pivots" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "MatchPivots" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconModify.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
         setParent -m ..;
 
         menuItem
@@ -692,7 +639,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem7;
@@ -718,12 +665,13 @@
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
 
             menuItem
+                -label "menuEditorMenuItem2" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -738,9 +686,8 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 0
-                -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -766,12 +713,13 @@
                 -image "commandButton.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
 
             menuItem
+                -label "menuEditorMenuItem4" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -786,12 +734,243 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+        setParent -m ..;
+
+        menuItem
+            -label "Windows_Rigging" 
+            -divider 0
+            -subMenu 1
+            -tearOff 0
+            -altModifier 0
+            -optionModifier 0
+            -commandModifier 0
+            -ctrlModifier 0
+            -shiftModifier 0
+            -optionBox 0
+            -enable 1
+            -data 0
+            -radialPosition "SW" 
+            -allowOptionBoxes 1
+            -enableCommandRepeat 1
+            -italicized 0
+            -boldFont 0
+            -sourceType "mel" 
+            -longDivider 1
+            menuEditorMenuItem1;
+
+            menuItem
+                -label "Node Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "NodeEditorWindow" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "E" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem1;
+
+            menuItem
+                -label "Connection Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ConnectionEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Component Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ComponentEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem3;
+
+            menuItem
+                -label "Shape Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ShapeEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "blendShapeEditor.png" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 0
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
+
+            menuItem
+                -label "Expression Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "ExpressionEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem5;
+
+            menuItem
+                -label "Graph Editor" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "GraphEditor" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconWindow.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem6;
+
+            menuItem
+                -label "Hypergraph: Hierarchy" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "HypergraphHierarchyWindow" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "N" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "hypergraph.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem7;
+
+            menuItem
+                -label "Hypergraph: Connections" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "HypergraphDGWindow" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "hypergraph.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 0
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
 
         setParent -m ..;
 
@@ -870,58 +1049,6 @@
             menuEditorMenuItem8;
 
         menuItem
-            -label "make Unreal-ready fbx" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "//this script should be run from an asset scene file.  \n\n//creates an fbx file of your asset ready for importing into Unreal engine\n\n\n    source \"hunreal/ASSET_createEngineReadyFBXFromAsset.mel\";\n" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "SW" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "hunreal/icon32_assetFBX.bmp" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem12;
-
-        menuItem
-            -label "MayaToUnreal_Sims" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "//THIS SCRIPT IS NOT UNDOABLE!  Save scene before exporting scene components to fbx.\n\n//Recommend baking all simulations before executing this script:\n\n//creates a joint for every simulation object\n//skins sim objects to respective joints\n//bakes animation\n//opens export dialogue box\n\n\nsource \"hunreal/MayaToUnreal_Sims.mel\";\n" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "S" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "hunreal/MayaToUnreal_Sim.bmp" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem13;
-
-        menuItem
             -label "GoZ" 
             -divider 0
             -subMenu 0
@@ -939,91 +1066,12 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 1
-            -image "C:/Users/aaikman/Documents/maya/2016/prefs/icons/GoZBrush.xpm" 
             -echoCommand 0
             -italicized 0
             -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem2;
-
-        menuItem
-            -label "MayaToUnreal_Camera" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToUnreal_Camera.mel\";" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "NW" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaToUnreal_Camera.bmp" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem1;
-
-        menuItem
-            -label "MayaToUnreal_hRig" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToUnreal_hRig.mel\";" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "N" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaToUnreal_hRig.bmp" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem3;
-
-        menuItem
-            -label "PRP No Constr" 
-            -divider 0
-            -subMenu 0
-            -tearOff 0
-            -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToUnreal_Prop_NoConstraints.mel\";" 
-            -altModifier 0
-            -optionModifier 0
-            -commandModifier 0
-            -ctrlModifier 0
-            -shiftModifier 0
-            -optionBox 0
-            -enable 1
-            -data 0
-            -radialPosition "NE" 
-            -allowOptionBoxes 1
-            -postMenuCommandOnce 0
-            -enableCommandRepeat 1
-            -image "commandButton.png" 
-            -echoCommand 0
-            -italicized 0
-            -boldFont 1
-            -sourceType "mel" 
-            -longDivider 1
-            menuEditorMenuItem5;
 
     setParent -m ..;
 
@@ -1120,58 +1168,6 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
-
-            menuItem
-                -label "AhSnap" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"UTIL_snapObject.mel\" ;" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/Snap.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
-                -label "AhSwap" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "import swapObjects\nreload(swapObjects)\nswapObjects.display()" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/Swap.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem3;
 
             menuItem
                 -label "Snap Together Tool" 
@@ -1276,6 +1272,84 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem7;
+
+            menuItem
+                -label "Match All Transforms" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "MatchTransform" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "SW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconModify.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
+
+            menuItem
+                -label "Match Rotation" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "MatchRotation" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "W" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconModify.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem8;
+
+            menuItem
+                -label "Match Translation" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "MatchTranslation" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "S" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "menuIconModify.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
 
         setParent -m ..;
 
@@ -2847,7 +2921,7 @@
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".farClipPlane\") 900000000;\r\n    }" 
+                -command "string $cameras[] = `ls -cameras`;\n\nfor ($thisCamera in $cameras) {\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\n    setAttr ($thisCamera + \".farClipPlane\") 900000000;\n    }" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -2860,7 +2934,6 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
-                -image "ClippingPlanes_08.xpm" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
@@ -2886,7 +2959,6 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
-                -image "ClippingPlanes_01.xpm" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
@@ -2899,7 +2971,7 @@
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".farClipPlane\") 9000;\r\n    }" 
+                -command "string $cameras[] = `ls -cameras`;\n\nfor ($thisCamera in $cameras) {\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\n    setAttr ($thisCamera + \".farClipPlane\") 9000;\n    }" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -2912,7 +2984,6 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
-                -image "ClippingPlanes_05.xpm" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
@@ -2925,7 +2996,7 @@
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".nearClipPlane\") 100;\r\n    }" 
+                -command "string $cameras[] = `ls -cameras`;\n\nfor ($thisCamera in $cameras) {\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\n    setAttr ($thisCamera + \".nearClipPlane\") 100;\n    }" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -2938,7 +3009,6 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
-                -image "ClippingPlanes_04.xpm" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
@@ -2951,7 +3021,7 @@
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "string $cameras[] = `ls -cameras`;\r\n\r\nfor ($thisCamera in $cameras) {\r\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\r\n    setAttr ($thisCamera + \".nearClipPlane\") .1;\r\n    }" 
+                -command "string $cameras[] = `ls -cameras`;\n\nfor ($thisCamera in $cameras) {\n    setAttr ($thisCamera + \".bestFitClippingPlanes\") false;\n    setAttr ($thisCamera + \".nearClipPlane\") .1;\n    }" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -2964,7 +3034,6 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
-                -image "ClippingPlanes_01.xpm" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
@@ -3003,7 +3072,7 @@
             -divider 0
             -subMenu 0
             -tearOff 0
-            -command "polySoftEdge;" 
+            -command "polySoftEdge -angle 89;" 
             -altModifier 0
             -optionModifier 0
             -commandModifier 0
@@ -3871,58 +3940,6 @@
             menuEditorMenuItem10;
 
             menuItem
-                -label "SelAll" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "import hAutoRig\nreload(hAutoRig)\nan = hAutoRig.hAnim()\nan.controls_select(an.all)" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "hAnim_metal_b01.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "SelRoot" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "import hAutoRig\nreload(hAutoRig)\nan = hAutoRig.hAnim()\nan.controls_select(an.root)" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "hAnim_metal_b02.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
-
-            menuItem
                 -label "Filter Selection for Root" 
                 -divider 0
                 -subMenu 0
@@ -3995,32 +4012,6 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem5;
-
-            menuItem
-                -label "Select Roots" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_SelectRoots.mel\";" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/selectRoots.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem6;
 
             menuItem
                 -label "Hierarchy" 
@@ -4476,7 +4467,7 @@
                 -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
-                menuEditorMenuItem11;
+                menuEditorMenuItem12;
 
         setParent -m ..;
 
@@ -4648,32 +4639,6 @@
             menuEditorMenuItem3;
 
             menuItem
-                -label "Bake Hierarchy" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "float $startTime = `playbackOptions -q -min`;\nfloat $endTime=`playbackOptions -q -max`;\nbakeResults -simulation true -t ($startTime+\":\"+$endTime) -hierarchy below -sampleBy 1 -disableImplicitControl true -preserveOutsideKeys false -sparseAnimCurveBake false -removeBakedAttributeFromLayer false -removeBakedAnimFromLayer false -bakeOnOverrideLayer false -minimizeRotation true -controlPoints false -shape true ;\nperformEulerFilter graphEditor1FromOutliner;" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/Bake.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
                 -label "oaSmoothKeys" 
                 -divider 0
                 -subMenu 0
@@ -4699,136 +4664,6 @@
                 -longDivider 1
                 menuEditorMenuItem2;
 
-            menuItem
-                -label "Send Prop to Mobu" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/MayaToMobu_Prop.mel\";" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MayaPropMobu.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem3;
-
-            menuItem
-                -label "Import prop from Mobu" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/ANIM_fbxToMayaProp.mel\";" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "E" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/MobuPropMaya.bmp" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem4;
-
-            menuItem
-                -label "Change Namespace of Non-referenced Object" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "source \"//halonblade/hblade/InProd/Orville/assets/SCRIPTS/mel/UTIL_ChangeNamespace.mel\";" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "SE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/ChangeNamespace.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem5;
-
-            menuItem
-                -label "Select Hierarchy And Move Keys" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "SelectHierarchy;\nstring $prompt =`promptDialog -t \"move selected Keys over time\" -m \"enter an integer value\" -b \"move Key\" -b \"cancel\" -db \"move Key\" -cb \"cancel\"`;\nif($prompt==\"move Key\")\n{\n\tstring $moveKey =`promptDialog -q tx`;\n\tprint $moveKey;\n\tfloat $tcFloat=$moveKey\t;\n\tkeyframe -r -tc $tcFloat;\n}\n" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "NW" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "hAnim_metal_b41.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem7;
-
-            menuItem
-                -label "move key" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "string $prompt =`promptDialog -t \"move selected Keys over time\" -m \"enter an integer value\" -b \"move Key\" -b \"cancel\" -db \"move Key\" -cb \"cancel\"`;\nif($prompt==\"move Key\")\n{\n\tstring $moveKey =`promptDialog -q tx`;\n\tprint $moveKey;\n\tfloat $tcFloat=$moveKey\t;\n\tkeyframe -r -tc $tcFloat;\n}\n" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "hAnim_metal_b41.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem6;
-
         setParent -m ..;
 
         menuItem
@@ -4852,32 +4687,6 @@
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem4;
-
-            menuItem
-                -label "Create subject locator" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "mt = hcam.Tools.Measure()\nmt.subject_loc(hcam.Ui.Cam.List.sls)" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "S" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "Slate_subject.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem2;
 
             menuItem
                 -label "Create Locator" 
@@ -4906,37 +4715,11 @@
                 menuEditorMenuItem3;
 
             menuItem
-                -label "Import prod hCam" 
+                -label "Create Polygon" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "default = hcam.Tools.Default()\ncam = default.cam_import()" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "N" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "Slate_Import.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem4;
-
-            menuItem
-                -label "wiz_controllers" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "wiz_controllers ()\n" 
+                -command "setToolTo polyCreateFacetContext ; polyCreateFacetCtx -e -pc `optionVar -q polyKeepFacetsPlanar` polyCreateFacetContext" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
@@ -4949,7 +4732,7 @@
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/Orville/assets/SCRIPTS/icons/wiz_icons/b01.png" 
+                -image "polyCreateFacet.png" 
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
@@ -4958,30 +4741,28 @@
                 menuEditorMenuItem1;
 
             menuItem
-                -label "Magner's Referencer" 
+                -label "menuEditorMenuItem2" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
-                -command "source \"GUI_ImportRefMultipleObjects_AP3S.mel\" ;" 
+                -command "setToolTo polyCreateFacetContext ; polyCreateFacetCtx -e -pc `optionVar -q polyKeepFacetsPlanar` polyCreateFacetContext; toolPropertyWindow" 
                 -altModifier 0
                 -optionModifier 0
                 -commandModifier 0
                 -ctrlModifier 0
                 -shiftModifier 0
-                -optionBox 0
+                -optionBox 1
                 -enable 1
                 -data 0
-                -radialPosition "NW" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "//halonblade/hblade/InProd/AP3S/assets/SCRIPTS/icons/ReferenceSign.png" 
+                -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
                 -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
-                menuEditorMenuItem5;
+                menuEditorMenuItem2;
 
         setParent -m ..;
 
@@ -5006,12 +4787,13 @@
             -image "commandButton.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem5;
 
         menuItem
+            -label "menuEditorMenuItem6" 
             -divider 0
             -subMenu 0
             -tearOff 0
@@ -5026,9 +4808,8 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 0
-            -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem6;
