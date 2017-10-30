@@ -1969,7 +1969,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
@@ -1994,7 +1994,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
@@ -2019,7 +2019,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem5;
@@ -2044,7 +2044,7 @@
                 -enableCommandRepeat 1
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -3423,7 +3423,7 @@
             -image "menuIconSelect.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem5;
@@ -3449,12 +3449,13 @@
             -image "commandButton.png" 
             -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem9;
 
         menuItem
+            -label "menuEditorMenuItem10" 
             -divider 0
             -subMenu 0
             -tearOff 0
@@ -3469,9 +3470,8 @@
             -allowOptionBoxes 1
             -postMenuCommandOnce 0
             -enableCommandRepeat 0
-            -echoCommand 0
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem10;
@@ -4580,56 +4580,6 @@
                 menuEditorMenuItem8;
 
             menuItem
-                -label "Point Constraint" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "pointConstraint" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
-                -radialPosition "W" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -image "posConstraint.png" 
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem9;
-
-            menuItem
-                -label "menuEditorMenuItem10" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "PointConstraintOptions" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 1
-                -enable 1
-                -data 0
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 0
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem10;
-
-            menuItem
                 -label "Orient Constraint" 
                 -divider 0
                 -subMenu 0
@@ -4643,7 +4593,7 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NW" 
+                -radialPosition "W" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
                 -enableCommandRepeat 1
@@ -4793,31 +4743,6 @@
                 -optionBox 0
                 -enable 1
                 -data 0
-                -radialPosition "NE" 
-                -allowOptionBoxes 1
-                -postMenuCommandOnce 0
-                -enableCommandRepeat 1
-                -echoCommand 0
-                -italicized 0
-                -boldFont 1
-                -sourceType "mel" 
-                -longDivider 1
-                menuEditorMenuItem1;
-
-            menuItem
-                -label "Point Constraint MO" 
-                -divider 0
-                -subMenu 0
-                -tearOff 0
-                -command "pointConstraint -mo" 
-                -altModifier 0
-                -optionModifier 0
-                -commandModifier 0
-                -ctrlModifier 0
-                -shiftModifier 0
-                -optionBox 0
-                -enable 1
-                -data 0
                 -radialPosition "E" 
                 -allowOptionBoxes 1
                 -postMenuCommandOnce 0
@@ -4827,7 +4752,7 @@
                 -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
-                menuEditorMenuItem2;
+                menuEditorMenuItem1;
 
             menuItem
                 -label "Parent Constraint MO" 
@@ -4853,6 +4778,81 @@
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
+
+            menuItem
+                -label "Point Constraint" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "pointConstraint" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NW" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -image "posConstraint.png" 
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem9;
+
+            menuItem
+                -label "menuEditorMenuItem10" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "PointConstraintOptions" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 1
+                -enable 1
+                -data 0
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 0
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem4;
+
+            menuItem
+                -label "Point Constraint MO" 
+                -divider 0
+                -subMenu 0
+                -tearOff 0
+                -command "pointConstraint -mo" 
+                -altModifier 0
+                -optionModifier 0
+                -commandModifier 0
+                -ctrlModifier 0
+                -shiftModifier 0
+                -optionBox 0
+                -enable 1
+                -data 0
+                -radialPosition "NE" 
+                -allowOptionBoxes 1
+                -postMenuCommandOnce 0
+                -enableCommandRepeat 1
+                -echoCommand 0
+                -italicized 0
+                -boldFont 1
+                -sourceType "mel" 
+                -longDivider 1
+                menuEditorMenuItem2;
 
         setParent -m ..;
 
@@ -5101,7 +5101,7 @@
             -allowOptionBoxes 1
             -enableCommandRepeat 1
             -italicized 0
-            -boldFont 0
+            -boldFont 1
             -sourceType "mel" 
             -longDivider 1
             menuEditorMenuItem5;
@@ -5127,12 +5127,13 @@
                 -image "sphere.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem1;
 
             menuItem
+                -label "menuEditorMenuItem2" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -5150,7 +5151,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem2;
@@ -5176,12 +5177,13 @@
                 -image "circle.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem3;
 
             menuItem
+                -label "menuEditorMenuItem4" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -5199,7 +5201,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem4;
@@ -5225,12 +5227,13 @@
                 -image "square.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem5;
 
             menuItem
+                -label "menuEditorMenuItem6" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -5248,7 +5251,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem6;
@@ -5274,12 +5277,13 @@
                 -image "cube.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem7;
 
             menuItem
+                -label "menuEditorMenuItem8" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -5297,7 +5301,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem8;
@@ -5323,12 +5327,13 @@
                 -image "curveCV.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem9;
 
             menuItem
+                -label "menuEditorMenuItem10" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -5346,7 +5351,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem10;
@@ -5372,12 +5377,13 @@
                 -image "curveEP.png" 
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem11;
 
             menuItem
+                -label "menuEditorMenuItem12" 
                 -divider 0
                 -subMenu 0
                 -tearOff 0
@@ -5395,7 +5401,7 @@
                 -enableCommandRepeat 0
                 -echoCommand 0
                 -italicized 0
-                -boldFont 0
+                -boldFont 1
                 -sourceType "mel" 
                 -longDivider 1
                 menuEditorMenuItem12;
