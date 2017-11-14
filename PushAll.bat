@@ -1,4 +1,3 @@
-rem PushAllNotes.bat
 rem For commiting and pushing all changes to notes with little effort
 
 git add -A
