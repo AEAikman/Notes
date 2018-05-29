@@ -6,20 +6,35 @@ waitTime := 50
 
 
 ; VOLUME CONTROL
-#1::Volume_Down
-#2::Volume_Up
-#3::Volume_Mute
+#F1::Volume_Down
+#F2::Volume_Up
+#F3::Volume_Mute
+
+; Extra App calls
+#^1::send #6
+#^2::send #7
+#^3::send #8
+#^4::send #9
+
+
+; Get Latest P4V
+#F4::
+send {Home}
+send ^+g
+; send {Ctrl down} {Shift down} {G} {Ctrl up} {Shift up}
+return
+
 
 ;Requires quotes for arg
 send(toSend)
 {
 	oldDelay := A_KeyDelay
 	SetKeyDelay, 30
-	
+
 	send, % toSend
-	
+
 	SetKeyDelay, % oldDelay
-	return 
+	return
 }
 
 ; Must be fixed
@@ -31,7 +46,7 @@ keepClipAndSend(toSend)
 	; sleep %waitTime%
 	send ^v
 	Clipboard = %tempClip%
-	return 
+	return
 }
 
 ;--------- DOS COMMAND HERE DOSCMDHERE -------------
@@ -72,14 +87,16 @@ return
 ; Reactivating PANDORA
 #P::
 
-if WinExist("ahk_class Chrome_WidgetWin_1")
-{
-	WinActivate
-}
-else
+; if WinExist("ahk_class Chrome_WidgetWin_1")
+; {
+; 	WinActivate
+; }
+; else
+Send {LWin down} 4
+; Send {LWin down} 4 4
+Send {LWin up}
 
-send #4
-
+; sleep 100
 send ^1
 
 CoordMode, Mouse, Screen
@@ -96,13 +113,17 @@ return
 ; Downvoting PANDORA
 #I::
 
-if WinExist("ahk_class Chrome_WidgetWin_1")
-{
-	WinActivate
-}
-else
+; if WinExist("ahk_class Chrome_WidgetWin_1")
+; {
+; 	WinActivate
+; }
+; else
 
-send #4
+; send #4
+
+Send {LWin down} 4
+; Send {LWin down} 4 4
+Send {LWin up}
 
 send ^1
 
@@ -117,14 +138,18 @@ return
 
 ; Pause/Play PANDORA
 #O::
-if WinExist("ahk_class Chrome_WidgetWin_1")
-{
-	WinActivate
-}
-else
-{
-send #4
-}
+; if WinExist("ahk_class Chrome_WidgetWin_1")
+; {
+; 	WinActivate
+; }
+; else
+; {
+; send #4
+; }
+
+Send {LWin down} 4
+; Send {LWin down} 4 4
+Send {LWin up}
 
 send ^1
 
@@ -138,7 +163,7 @@ return
 
 
 ; COPY TEXT TO CLIPBOARD AND GOOGLE IT
-#F:: 
+#F::
 send ^c
 ; sleep %waitTime%
 
@@ -148,7 +173,7 @@ if WinExist("ahk_class Chrome_WidgetWin_1")
 }
 else
 {
-send #4 
+send #4
 }
 ; sleep %waitTime%
 send ^t
@@ -162,29 +187,35 @@ return
 
 
 ; TYPE p4_pass
-#F1::
-send p4_blind
-; keepClipAndSend("p4_blind")
-return
+; #F1::
+; send p4_blind
+; ; keepClipAndSend("p4_blind")
+; return
 
 ; TYPE NAME
-#F2::
-send Aaron Aikman
-; keepClipAndSend("Aaron Aikman")
-return
+; #F2::
+; send Aaron Aikman
+; ; keepClipAndSend("Aaron Aikman")
+; return
 
 ; TYPE NAME
-#F3::
-send aaikman@blindsquirrelgames.com
-; keepClipAndSend("aaikman@blindsquirrelgames.com")
+#`::
+send Leaving
 return
+
+;windows key + Ctrl
+#^`::send sounds good
+;windows key + Alt
+#!`::send ?piecharacter=Sumo
+;windows key + Shift
+#+`::send ?piecharacter=Zola
 
 
 ; PRINT SCREEN TO CLIPBOARD, OPEN IRFANVIEW AND PASTE CLIPBOARD
 #Y::
 send {PrintScreen}
 Run C:\Program Files (x86)\IrfanView\i_view32.exe
-sleep 300
+sleep 1000
 ; ClipWait
 send "^v"
 return
